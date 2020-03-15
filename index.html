@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+body { background: #333; }
+path { stroke: #333; stroke-width: 1; }
+path:hover { stroke-width: 3; }
+</style>
+<body>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+<script>
+
+const width = 960,
+    height = 600,
+    padding = 20
+
+var projection = d3.geoAlbersUsa()
+    .precision(0)
+    .scale(height * 2).translate([width / 2, height / 2])
+
+var path = d3.geoPath().projection(projection)
+
+var svg = d3.select('body')
+    .append('svg')
+    .attr('width', width)
+    .attr('height', height)
+
+d3.queue()
+    .defer(d3.csv, 'data.csv', function (d) {
+        return {
+            id: +d.id,
+            name: d.name,
+            cases: +d.cases
+        }
+    })
+    .defer(d3.json, 'us-states.json')
+    .defer(d3.json, 'us-counties.json')
+    .awaitAll(initialize)
+
+function initialize(error, results) {
+    if (error) { throw error }
+
+    var data = results[0]
+    var states = topojson.feature(results[1], results[1].objects.states).features
+    var counties = topojson.feature(results[2], results[2].objects.counties).features
+
+    var max = d3.max(data, function(d) { return +d.cases; } );
+    var color = d3.scaleThreshold()
+        .domain(d3.ticks(1, max, 10))
+        .range(d3.schemeReds[9]);
+
+    states.forEach(function (f) {
+        f.properties = data.find(function (d) { return d.id === f.id })
+    })
+
+    counties.forEach(function (f) {
+        f.properties = data.find(function (d) { return d.id === f.id }) || {}
+    })
+
+    var statePaths = svg.selectAll('.state')
+        .data(states)
+        .enter().append('path')
+        .attr('class', 'state')
+        .attr('d', path)
+        .style('fill', function (d) { return color(d.properties.cases) })
+        .on('click', function (d) { stateZoom(d.id) })
+
+    statePaths.append('svg:title')
+        .text(function (d) { return d.properties.name + ": " + d.properties.cases });
+
+    svg.append("g")
+        .attr("class", "legend")
+        .attr("transform", "translate(850,350)");
+
+    var legend = d3.legendColor()
+        .labelFormat(d3.format("d"))
+        .labels(d3.legendHelpers.thresholdLabels)
+        .scale(color)
+        .title("COVID-2019 Cases")
+        .titleWidth(100)
+
+    svg.select(".legend")
+        .call(legend);
+
+    function usZoom() {
+        var t = d3.transition().duration(800)
+
+        projection.scale(height * 2).translate([width / 2, height / 2])
+
+        statePaths.transition(t)
+            .attr('d', path)
+            .style('fill', function (d) { return color(d.properties.cases) })
+
+        svg.selectAll('.county')
+            .data([])
+            .exit().transition(t)
+            .attr('d', path)
+            .style('opacity', 0)
+            .remove()
+
+        // legend.scale(color);
+        // svg.select(".legend")
+        //     .call(legend);
+    }
+
+    function stateZoom(id) {
+        var state = states.find(function (d) { return d.id === id })
+        var stateCounties = counties.filter(function (d) {
+            return d.id > id && d.id < id + 1000
+        })
+
+        // var max_state = d3.max(stateCounties, function(d) { return +d.properties.cases; } );
+        // var color_state = d3.scaleThreshold()
+        //     .domain(d3.ticks(1, max_state, 5))
+        //     .range(d3.schemeReds[9]);
+
+        var t = d3.transition().duration(800)
+
+        var countyPaths = svg.selectAll('.county')
+            .data(stateCounties, function (d) { return d.id })
+
+        var enterCountyPaths = countyPaths.enter().append('path')
+            .attr('class', 'county')
+            .attr('d', path)
+            .style('fill', function (d) { return color(d.properties.cases) })
+            .style('opacity', 0)
+            .on('click', function () { usZoom() })
+
+        enterCountyPaths.append('svg:title')
+            .text(function (d) { return d.properties.name + ": " + d.properties.cases });
+
+        // legend.scale(color_state);
+        // svg.select(".legend")
+        //     .call(legend);
+
+        projection.fitExtent(
+            [[padding, padding], [width - padding, height - padding]],
+            state
+        )
+
+        statePaths.transition(t)
+            .attr('d', path)
+            .style('fill', '#444')
+
+        enterCountyPaths.transition(t)
+            .attr('d', path)
+            .style('opacity', 1)
+
+        countyPaths.exit().transition(t)
+            .attr('d', path)
+            .style('opacity', 0)
+            .remove()
+    }
+}
+
+</script>
+</body>
