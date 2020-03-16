@@ -46,11 +46,6 @@ function initialize(error, results) {
     var states = topojson.feature(results[1], results[1].objects.states).features
     var counties = topojson.feature(results[2], results[2].objects.counties).features
 
-    var max = d3.max(data, function(d) { return +d.cases; } );
-    var color = d3.scaleThreshold()
-        .domain(d3.ticks(1, max, 10))
-        .range(d3.schemeReds[9]);
-
     states.forEach(function (f) {
         f.properties = data.find(function (d) { return d.id === f.id })
     })
@@ -58,6 +53,11 @@ function initialize(error, results) {
     counties.forEach(function (f) {
         f.properties = data.find(function (d) { return d.id === f.id }) || {}
     })
+
+    var max = d3.max(states, function(d) { return +d.properties.cases; } );
+    var color = d3.scaleQuantize()
+        .domain([0, max])
+        .range(d3.schemeReds[9])
 
     var statePaths = svg.selectAll('.state')
         .data(states)
@@ -100,9 +100,9 @@ function initialize(error, results) {
             .style('opacity', 0)
             .remove()
 
-        // legend.scale(color);
-        // svg.select(".legend")
-        //     .call(legend);
+        legend.scale(color);
+        svg.select(".legend")
+            .call(legend);
     }
 
     function stateZoom(id) {
@@ -111,10 +111,10 @@ function initialize(error, results) {
             return d.id > id && d.id < id + 1000
         })
 
-        // var max_state = d3.max(stateCounties, function(d) { return +d.properties.cases; } );
-        // var color_state = d3.scaleThreshold()
-        //     .domain(d3.ticks(1, max_state, 5))
-        //     .range(d3.schemeReds[9]);
+        var max_state = d3.max(stateCounties, function(d) { return +d.properties.cases; } );
+        var color_state = d3.scaleQuantize()
+            .domain([0, max_state]).nice()
+            .range(d3.schemeReds[5]);
 
         var t = d3.transition().duration(800)
 
@@ -124,19 +124,19 @@ function initialize(error, results) {
         var enterCountyPaths = countyPaths.enter().append('path')
             .attr('class', 'county')
             .attr('d', path)
-            .style('fill', function (d) { return color(d.properties.cases) })
+            .style('fill', function (d) { return color_state(d.properties.cases) })
             .style('opacity', 0)
             .on('click', function () { usZoom() })
 
         enterCountyPaths.append('svg:title')
             .text(function (d) { return d.properties.name + ": " + d.properties.cases });
 
-        // legend.scale(color_state);
-        // svg.select(".legend")
-        //     .call(legend);
+        legend.scale(color_state);
+        svg.select(".legend")
+            .call(legend);
 
         projection.fitExtent(
-            [[padding, padding], [width - padding, height - padding]],
+            [[padding*3, padding], [width - padding*6, height - padding]],
             state
         )
 

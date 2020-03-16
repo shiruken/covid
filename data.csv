@@ -1,5 +1,5 @@
 id,name,cases
-01000,Alabama,6
+01000,Alabama,12
 01001,"Autauga, AL",0
 01003,"Baldwin, AL",0
 01005,"Barbour, AL",0
@@ -97,7 +97,7 @@ id,name,cases
 02275,"Wrangell City And Borough, AK",0
 02282,"Yakutat City And Borough, AK",0
 02290,"Yukon-Koyukuk Census Area, AK",0
-04000,Arizona,12
+04000,Arizona,13
 04001,"Apache, AZ",0
 04003,"Cochise, AZ",0
 04005,"Coconino, AZ",0
@@ -113,7 +113,7 @@ id,name,cases
 04023,"Santa Cruz, AZ",0
 04025,"Yavapai, AZ",0
 04027,"Yuma, AZ",0
-05000,Arkansas,12
+05000,Arkansas,16
 05001,"Arkansas, AR",0
 05003,"Ashley, AR",0
 05005,"Baxter, AR",0
@@ -189,7 +189,7 @@ id,name,cases
 05145,"White, AR",0
 05147,"Woodruff, AR",0
 05149,"Yell, AR",0
-06000,California,340
+06000,California,426
 06001,"Alameda, CA",2
 06003,"Alpine, CA",0
 06005,"Amador, CA",0
@@ -248,7 +248,7 @@ id,name,cases
 06111,"Ventura, CA",0
 06113,"Yolo, CA",1
 06115,"Yuba, CA",0
-08000,Colorado,101
+08000,Colorado,131
 08001,"Adams, CO",0
 08003,"Alamosa, CO",0
 08005,"Arapahoe, CO",0
@@ -313,7 +313,7 @@ id,name,cases
 08121,"Washington, CO",0
 08123,"Weld, CO",0
 08125,"Yuma, CO",0
-09000,Connecticut,22
+09000,Connecticut,24
 09001,"Fairfield, CT",0
 09003,"Hartford, CT",0
 09005,"Litchfield, CT",0
@@ -322,13 +322,13 @@ id,name,cases
 09011,"New London, CT",0
 09013,"Tolland, CT",0
 09015,"Windham, CT",0
-10000,Delaware,6
+10000,Delaware,7
 10001,"Kent, DE",0
 10003,"New Castle, DE",0
 10005,"Sussex, DE",0
 11000,District Of Columbia,0
 11001,"District Of Columbia, DC",0
-12000,Florida,76
+12000,Florida,115
 12001,"Alachua, FL",0
 12003,"Baker, FL",0
 12005,"Bay, FL",0
@@ -396,7 +396,7 @@ id,name,cases
 12129,"Wakulla, FL",0
 12131,"Walton, FL",0
 12133,"Washington, FL",0
-13000,Georgia,66
+13000,Georgia,99
 13001,"Appling, GA",0
 13003,"Atkinson, GA",0
 13005,"Bacon, GA",0
@@ -556,13 +556,13 @@ id,name,cases
 13317,"Wilkes, GA",0
 13319,"Wilkinson, GA",0
 13321,"Worth, GA",0
-15000,Hawaii,4
+15000,Hawaii,6
 15001,"Hawaii, HI",0
 15003,"Honolulu, HI",1
 15005,"Kalawao, HI",0
 15007,"Kauai, HI",0
 15009,"Maui, HI",0
-16000,Idaho,2
+16000,Idaho,5
 16001,"Ada, ID",0
 16003,"Adams, ID",0
 16005,"Bannock, ID",0
@@ -607,7 +607,7 @@ id,name,cases
 16083,"Twin Falls, ID",0
 16085,"Valley, ID",0
 16087,"Washington, ID",0
-17000,Illinois,64
+17000,Illinois,93
 17001,"Adams, IL",0
 17003,"Alexander, IL",0
 17005,"Bond, IL",0
@@ -710,7 +710,7 @@ id,name,cases
 17199,"Williamson, IL",0
 17201,"Winnebago, IL",0
 17203,"Woodford, IL",0
-18000,Indiana,16
+18000,Indiana,20
 18001,"Adams, IN",0
 18003,"Allen, IN",0
 18005,"Bartholomew, IN",0
@@ -803,7 +803,7 @@ id,name,cases
 18179,"Wells, IN",0
 18181,"White, IN",0
 18183,"Whitley, IN",0
-19000,Iowa,17
+19000,Iowa,18
 19001,"Adair, IA",0
 19003,"Adams, IA",0
 19005,"Allamakee, IA",0
@@ -1009,7 +1009,7 @@ id,name,cases
 20205,"Wilson, KS",0
 20207,"Woodson, KS",0
 20209,"Wyandotte, KS",0
-21000,Kentucky,14
+21000,Kentucky,20
 21001,"Adair, KY",0
 21003,"Allen, KY",0
 21005,"Anderson, KY",0
@@ -1130,7 +1130,7 @@ id,name,cases
 21235,"Whitley, KY",0
 21237,"Wolfe, KY",0
 21239,"Woodford, KY",0
-22000,Louisiana,77
+22000,Louisiana,91
 22001,"Acadia Parish, LA",0
 22003,"Allen Parish, LA",0
 22005,"Ascension Parish, LA",0
@@ -1195,7 +1195,7 @@ id,name,cases
 22123,"West Carroll Parish, LA",0
 22125,"West Feliciana Parish, LA",0
 22127,"Winn Parish, LA",0
-23000,Maine,3
+23000,Maine,12
 23001,"Androscoggin, ME",0
 23003,"Aroostook, ME",0
 23005,"Cumberland, ME",0
@@ -1212,7 +1212,7 @@ id,name,cases
 23027,"Waldo, ME",0
 23029,"Washington, ME",0
 23031,"York, ME",0
-24000,Maryland,26
+24000,Maryland,32
 24001,"Allegany, MD",0
 24003,"Anne Arundel, MD",0
 24005,"Baltimore, MD",0
@@ -1237,7 +1237,7 @@ id,name,cases
 24045,"Wicomico, MD",0
 24047,"Worcester, MD",0
 24510,"Baltimore City, MD",0
-25000,Massachusetts,138
+25000,Massachusetts,164
 25001,"Barnstable, MA",0
 25003,"Berkshire, MA",1
 25005,"Bristol, MA",0
@@ -1252,7 +1252,7 @@ id,name,cases
 25023,"Plymouth, MA",0
 25025,"Suffolk, MA",8
 25027,"Worcester, MA",0
-26000,Michigan,25
+26000,Michigan,33
 26001,"Alcona, MI",0
 26003,"Alger, MI",0
 26005,"Allegan, MI",0
@@ -1336,7 +1336,7 @@ id,name,cases
 26161,"Washtenaw, MI",0
 26163,"Wayne, MI",0
 26165,"Wexford, MI",0
-27000,Minnesota,21
+27000,Minnesota,35
 27001,"Aitkin, MN",0
 27003,"Anoka, MN",0
 27005,"Becker, MN",0
@@ -1424,7 +1424,7 @@ id,name,cases
 27169,"Winona, MN",0
 27171,"Wright, MN",0
 27173,"Yellow Medicine, MN",0
-28000,Mississippi,6
+28000,Mississippi,10
 28001,"Adams, MS",0
 28003,"Alcorn, MS",0
 28005,"Amite, MS",0
@@ -1507,7 +1507,7 @@ id,name,cases
 28159,"Winston, MS",0
 28161,"Yalobusha, MS",0
 28163,"Yazoo, MS",0
-29000,Missouri,4
+29000,Missouri,5
 29001,"Adair, MO",0
 29003,"Andrew, MO",0
 29005,"Atchison, MO",0
@@ -1623,7 +1623,7 @@ id,name,cases
 29227,"Worth, MO",0
 29229,"Wright, MO",0
 29510,"St. Louis City, MO",0
-30000,Montana,5
+30000,Montana,7
 30001,"Beaverhead, MT",0
 30003,"Big Horn, MT",0
 30005,"Blaine, MT",0
@@ -1680,7 +1680,7 @@ id,name,cases
 30107,"Wheatland, MT",0
 30109,"Wibaux, MT",0
 30111,"Yellowstone, MT",0
-31000,Nebraska,14
+31000,Nebraska,17
 31001,"Adams, NE",0
 31003,"Antelope, NE",0
 31005,"Arthur, NE",0
@@ -1774,7 +1774,7 @@ id,name,cases
 31181,"Webster, NE",0
 31183,"Wheeler, NE",0
 31185,"York, NE",0
-32000,Nevada,21
+32000,Nevada,24
 32001,"Churchill, NV",0
 32003,"Clark, NV",2
 32005,"Douglas, NV",0
@@ -1792,7 +1792,7 @@ id,name,cases
 32031,"Washoe, NV",2
 32033,"White Pine, NV",0
 32510,"Carson City, NV",0
-33000,New Hampshire,7
+33000,New Hampshire,13
 33001,"Belknap, NH",0
 33003,"Carroll, NH",0
 33005,"Cheshire, NH",0
@@ -1803,7 +1803,7 @@ id,name,cases
 33015,"Rockingham, NH",1
 33017,"Strafford, NH",0
 33019,"Sullivan, NH",0
-34000,New Jersey,69
+34000,New Jersey,98
 34001,"Atlantic, NJ",0
 34003,"Bergen, NJ",4
 34005,"Burlington, NJ",0
@@ -1825,7 +1825,7 @@ id,name,cases
 34037,"Sussex, NJ",0
 34039,"Union, NJ",0
 34041,"Warren, NJ",0
-35000,New Mexico,10
+35000,New Mexico,13
 35001,"Bernalillo, NM",0
 35003,"Catron, NM",0
 35005,"Chaves, NM",0
@@ -1859,7 +1859,7 @@ id,name,cases
 35057,"Torrance, NM",0
 35059,"Union, NM",0
 35061,"Valencia, NM",0
-36000,New York,525
+36000,New York,732
 36001,"Albany, NY",0
 36003,"Allegany, NY",0
 36005,"Bronx, NY",0
@@ -1922,7 +1922,7 @@ id,name,cases
 36119,"Westchester, NY",98
 36121,"Wyoming, NY",0
 36123,"Yates, NY",0
-37000,North Carolina,24
+37000,North Carolina,33
 37001,"Alamance, NC",0
 37003,"Alexander, NC",0
 37005,"Alleghany, NC",0
@@ -2077,7 +2077,7 @@ id,name,cases
 38101,"Ward, ND",0
 38103,"Wells, ND",0
 38105,"Williams, ND",0
-39000,Ohio,26
+39000,Ohio,37
 39001,"Adams, OH",0
 39003,"Allen, OH",0
 39005,"Ashland, OH",0
@@ -2166,7 +2166,7 @@ id,name,cases
 39171,"Williams, OH",0
 39173,"Wood, OH",0
 39175,"Wyandot, OH",0
-40000,Oklahoma,4
+40000,Oklahoma,7
 40001,"Adair, OK",0
 40003,"Alfalfa, OK",0
 40005,"Atoka, OK",0
@@ -2244,7 +2244,7 @@ id,name,cases
 40149,"Washita, OK",0
 40151,"Woods, OK",0
 40153,"Woodward, OK",0
-41000,Oregon,32
+41000,Oregon,36
 41001,"Baker, OR",0
 41003,"Benton, OR",0
 41005,"Clackamas, OR",0
@@ -2281,7 +2281,7 @@ id,name,cases
 41067,"Washington, OR",8
 41069,"Wheeler, OR",0
 41071,"Yamhill, OR",0
-42000,Pennsylvania,47
+42000,Pennsylvania,66
 42001,"Adams, PA",0
 42003,"Allegheny, PA",0
 42005,"Armstrong, PA",0
@@ -2355,7 +2355,7 @@ id,name,cases
 44005,"Newport, RI",0
 44007,"Providence, RI",3
 44009,"Washington, RI",0
-45000,South Carolina,19
+45000,South Carolina,28
 45001,"Abbeville, SC",0
 45003,"Aiken, SC",0
 45005,"Allendale, SC",0
@@ -2469,7 +2469,7 @@ id,name,cases
 46129,"Walworth, SD",0
 46135,"Yankton, SD",0
 46137,"Ziebach, SD",0
-47000,Tennessee,32
+47000,Tennessee,39
 47001,"Anderson, TN",0
 47003,"Bedford, TN",0
 47005,"Benton, TN",0
@@ -2565,7 +2565,7 @@ id,name,cases
 47185,"White, TN",0
 47187,"Williamson, TN",1
 47189,"Wilson, TN",0
-48000,Texas,57
+48000,Texas,72
 48001,"Anderson, TX",0
 48003,"Andrews, TX",0
 48005,"Angelina, TX",0
@@ -2820,7 +2820,7 @@ id,name,cases
 48503,"Young, TX",0
 48505,"Zapata, TX",0
 48507,"Zavala, TX",0
-49000,Utah,10
+49000,Utah,28
 49001,"Beaver, UT",0
 49003,"Box Elder, UT",0
 49005,"Cache, UT",0
@@ -2850,7 +2850,7 @@ id,name,cases
 49053,"Washington, UT",0
 49055,"Wayne, UT",0
 49057,"Weber, UT",0
-50000,Vermont,5
+50000,Vermont,8
 50001,"Addison, VT",0
 50003,"Bennington, VT",1
 50005,"Caledonia, VT",0
@@ -2865,7 +2865,7 @@ id,name,cases
 50023,"Washington, VT",0
 50025,"Windham, VT",0
 50027,"Windsor, VT",0
-51000,Virginia,41
+51000,Virginia,45
 51001,"Accomack, VA",0
 51003,"Albemarle, VA",0
 51005,"Alleghany, VA",0
@@ -3000,7 +3000,7 @@ id,name,cases
 51820,"Waynesboro City, VA",0
 51830,"Williamsburg City, VA",0
 51840,"Winchester City, VA",0
-53000,Washington,572
+53000,Washington,643
 53001,"Adams, WA",0
 53003,"Asotin, WA",0
 53005,"Benton, WA",0
@@ -3096,7 +3096,7 @@ id,name,cases
 54105,"Wirt, WV",0
 54107,"Wood, WV",0
 54109,"Wyoming, WV",0
-55000,Wisconsin,27
+55000,Wisconsin,32
 55001,"Adams, WI",0
 55003,"Ashland, WI",0
 55005,"Barron, WI",0
@@ -3169,7 +3169,7 @@ id,name,cases
 55137,"Waushara, WI",0
 55139,"Winnebago, WI",0
 55141,"Wood, WI",0
-56000,Wyoming,2
+56000,Wyoming,3
 56001,"Albany, WY",0
 56003,"Big Horn, WY",0
 56005,"Campbell, WY",0
