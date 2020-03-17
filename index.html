@@ -55,22 +55,17 @@ function initialize(error, results) {
         f.properties = data.find(function (d) { return d.id === f.id }) || {}
     })
 
-    var max = d3.max(states, function(d) { return d.properties.cases; } );
-    var color = d3.scaleQuantize()
-        .domain([0, max]).nice()
-        .range(d3.schemeReds[6])
+    var domains = [1, 10, 50, 100, 250, 500, 1000];
+    var color = d3.scaleThreshold()
+        .domain(domains)
+        .range(d3.schemeReds[8])
 
     var statePaths = svg.selectAll('.state')
         .data(states)
         .enter().append('path')
         .attr('class', 'state')
         .attr('d', path)
-        .style('fill', function (d) { 
-            if (d.properties.cases > 0)
-                return color(d.properties.cases);
-            else
-                return '#ffffff';
-        })
+        .style('fill', function (d) { return color(d.properties.cases); })
         .on('click', function (d) { stateZoom(d.id) })
 
     statePaths.append('svg:title')
@@ -80,9 +75,21 @@ function initialize(error, results) {
         .attr("class", "legend")
         .attr("transform", "translate(825,390)");
 
+    function labelGenerate(x) {
+        if (x.i === 0) {
+            return `None`;
+        } else if (x.i === x.genLength - 1) {
+            const values = x.generatedLabels[x.i].split(` ${x.labelDelimiter} `);
+            return `${values[0]} or more`;
+        } else {
+            const values = x.generatedLabels[x.i].split(` ${x.labelDelimiter} `);
+            return `${values[0]} to ${values[1] - 1}`;
+        }
+    }
+
     var legend = d3.legendColor()
         .labelFormat(d3.format("d"))
-        .labels(d3.legendHelpers.thresholdLabels)
+        .labels(labelGenerate)
         .scale(color)
         .shapePadding(5);
 
@@ -96,12 +103,7 @@ function initialize(error, results) {
 
         statePaths.transition(t)
             .attr('d', path)
-            .style('fill', function (d) {
-                if (d.properties.cases > 0)
-                    return color(d.properties.cases);
-                else
-                    return '#ffffff';
-             })
+            .style('fill', function (d) { return color(d.properties.cases); })
 
         svg.selectAll('.county')
             .data([])
@@ -122,9 +124,17 @@ function initialize(error, results) {
         })
 
         var max_state = d3.max(stateCounties, function(d) { return d.properties.cases; } );
-        var color_state = d3.scaleQuantize()
-            .domain([0, max_state])
-            .range(d3.schemeReds[6]);
+
+        var index = domains.findIndex(function(x) {
+            return x > max_state;
+        });
+
+        if (index <= 1)
+            index = 2;
+
+        var color_state = d3.scaleThreshold()
+            .domain(domains.slice(0, index))
+            .range(d3.schemeReds[index + 1])
 
         var t = d3.transition().duration(800)
 
@@ -134,13 +144,7 @@ function initialize(error, results) {
         var enterCountyPaths = countyPaths.enter().append('path')
             .attr('class', 'county')
             .attr('d', path)
-            .style('fill', function (d) { 
-                if (d.properties.cases > 0)
-                    return color_state(d.properties.cases);
-                else
-                    return '#ffffff';
-
-             })
+            .style('fill', function (d) { return color_state(d.properties.cases); })
             .style('opacity', 0)
             .on('click', function () { usZoom() })
 
