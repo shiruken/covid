@@ -1,5 +1,5 @@
 id,name,cases
-1000,Alabama,29
+1000,Alabama,39
 1001,"Autauga County, AL",0
 1003,"Baldwin County, AL",1
 1005,"Barbour County, AL",0
@@ -25,7 +25,7 @@ id,name,cases
 1045,"Dale County, AL",0
 1047,"Dallas County, AL",0
 1049,"DeKalb County, AL",0
-1051,"Elmore County, AL",1
+1051,"Elmore County, AL",2
 1053,"Escambia County, AL",0
 1055,"Etowah County, AL",0
 1057,"Fayette County, AL",0
@@ -36,15 +36,15 @@ id,name,cases
 1067,"Henry County, AL",0
 1069,"Houston County, AL",0
 1071,"Jackson County, AL",0
-1073,"Jefferson County, AL",17
+1073,"Jefferson County, AL",21
 1075,"Lamar County, AL",0
 1077,"Lauderdale County, AL",0
 1079,"Lawrence County, AL",0
-1081,"Lee County, AL",1
+1081,"Lee County, AL",3
 1083,"Limestone County, AL",1
 1085,"Lowndes County, AL",0
 1087,"Macon County, AL",0
-1089,"Madison County, AL",0
+1089,"Madison County, AL",1
 1091,"Marengo County, AL",0
 1093,"Marion County, AL",0
 1095,"Marshall County, AL",0
@@ -57,8 +57,8 @@ id,name,cases
 1109,"Pike County, AL",0
 1111,"Randolph County, AL",0
 1113,"Russell County, AL",0
-1115,"St. Clair County, AL",0
-1117,"Shelby County, AL",3
+1115,"St. Clair County, AL",1
+1117,"Shelby County, AL",4
 1119,"Sumter County, AL",0
 1121,"Talladega County, AL",0
 1123,"Tallapoosa County, AL",0
@@ -314,18 +314,18 @@ id,name,cases
 8121,"Washington County, CO",0
 8123,"Weld County, CO",5
 8125,"Yuma County, CO",0
-9000,Connecticut,41
-9001,"Fairfield County, CT",29
-9003,"Hartford County, CT",4
-9005,"Litchfield County, CT",4
+9000,Connecticut,68
+9001,"Fairfield County, CT",48
+9003,"Hartford County, CT",7
+9005,"Litchfield County, CT",5
 9007,"Middlesex County, CT",0
-9009,"New Haven County, CT",4
+9009,"New Haven County, CT",8
 9011,"New London County, CT",0
 9013,"Tolland County, CT",0
 9015,"Windham County, CT",0
-10000,Delaware,8
-10001,"Kent County, DE",0
-10003,"New Castle County, DE",8
+10000,Delaware,16
+10001,"Kent County, DE",1
+10003,"New Castle County, DE",15
 10005,"Sussex County, DE",0
 11000,District of Columbia,22
 11001,"Washington, DC",22
@@ -397,15 +397,15 @@ id,name,cases
 12129,"Wakulla County, FL",0
 12131,"Walton County, FL",0
 12133,"Washington County, FL",0
-13000,Georgia,121
+13000,Georgia,146
 13001,"Appling County, GA",0
 13003,"Atkinson County, GA",0
 13005,"Bacon County, GA",0
 13007,"Baker County, GA",0
 13009,"Baldwin County, GA",0
 13011,"Banks County, GA",0
-13013,"Barrow County, GA",0
-13015,"Bartow County, GA",9
+13013,"Barrow County, GA",1
+13015,"Bartow County, GA",10
 13017,"Ben Hill County, GA",0
 13019,"Berrien County, GA",0
 13021,"Bibb County, GA",0
@@ -428,20 +428,20 @@ id,name,cases
 13057,"Cherokee County, GA",7
 13059,"Clarke County, GA",0
 13061,"Clay County, GA",3
-13063,"Clayton County, GA",5
+13063,"Clayton County, GA",4
 13065,"Clinch County, GA",0
-13067,"Cobb County, GA",22
+13067,"Cobb County, GA",25
 13069,"Coffee County, GA",0
 13071,"Colquitt County, GA",0
-13073,"Columbia County, GA",0
+13073,"Columbia County, GA",1
 13075,"Cook County, GA",0
-13077,"Coweta County, GA",2
+13077,"Coweta County, GA",3
 13079,"Crawford County, GA",0
 13081,"Crisp County, GA",0
 13083,"Dade County, GA",0
 13085,"Dawson County, GA",0
 13087,"Decatur County, GA",0
-13089,"DeKalb County, GA",10
+13089,"DeKalb County, GA",15
 13091,"Dodge County, GA",0
 13093,"Dooly County, GA",0
 13095,"Dougherty County, GA",6
@@ -454,17 +454,17 @@ id,name,cases
 13109,"Evans County, GA",0
 13111,"Fannin County, GA",0
 13113,"Fayette County, GA",5
-13115,"Floyd County, GA",4
+13115,"Floyd County, GA",6
 13117,"Forsyth County, GA",1
 13119,"Franklin County, GA",0
-13121,"Fulton County, GA",27
+13121,"Fulton County, GA",33
 13123,"Gilmer County, GA",0
 13125,"Glascock County, GA",0
 13127,"Glynn County, GA",0
 13129,"Gordon County, GA",0
 13131,"Grady County, GA",0
 13133,"Greene County, GA",0
-13135,"Gwinnett County, GA",5
+13135,"Gwinnett County, GA",7
 13137,"Habersham County, GA",0
 13139,"Hall County, GA",0
 13141,"Hancock County, GA",0
@@ -489,7 +489,7 @@ id,name,cases
 13179,"Liberty County, GA",0
 13181,"Lincoln County, GA",0
 13183,"Long County, GA",0
-13185,"Lowndes County, GA",3
+13185,"Lowndes County, GA",4
 13187,"Lumpkin County, GA",0
 13189,"McDuffie County, GA",1
 13191,"McIntosh County, GA",0
@@ -517,9 +517,9 @@ id,name,cases
 13237,"Putnam County, GA",0
 13239,"Quitman County, GA",0
 13241,"Rabun County, GA",0
-13243,"Randolph County, GA",0
+13243,"Randolph County, GA",1
 13245,"Richmond County, GA",0
-13247,"Rockdale County, GA",0
+13247,"Rockdale County, GA",1
 13249,"Schley County, GA",0
 13251,"Screven County, GA",0
 13253,"Seminole County, GA",0
@@ -538,7 +538,7 @@ id,name,cases
 13279,"Toombs County, GA",0
 13281,"Towns County, GA",0
 13283,"Treutlen County, GA",0
-13285,"Troup County, GA",1
+13285,"Troup County, GA",2
 13287,"Turner County, GA",0
 13289,"Twiggs County, GA",0
 13291,"Union County, GA",0
@@ -1238,21 +1238,21 @@ id,name,cases
 24045,"Wicomico County, MD",0
 24047,"Worcester County, MD",0
 24510,"Baltimore city, MD",1
-25000,Massachusetts,197
-25001,"Barnstable County, MA",1
-25003,"Berkshire County, MA",11
-25005,"Bristol County, MA",2
+25000,Massachusetts,218
+25001,"Barnstable County, MA",2
+25003,"Berkshire County, MA",14
+25005,"Bristol County, MA",5
 25007,"Dukes County, MA",0
 25009,"Essex County, MA",8
 25011,"Franklin County, MA",0
 25013,"Hampden County, MA",1
 25015,"Hampshire County, MA",0
-25017,"Middlesex County, MA",83
+25017,"Middlesex County, MA",89
 25019,"Nantucket County, MA",0
-25021,"Norfolk County, MA",36
-25023,"Plymouth County, MA",3
-25025,"Suffolk County, MA",36
-25027,"Worcester County, MA",6
+25021,"Norfolk County, MA",43
+25023,"Plymouth County, MA",5
+25025,"Suffolk County, MA",42
+25027,"Worcester County, MA",8
 26000,Michigan,54
 26001,"Alcona County, MI",0
 26003,"Alger County, MI",0
@@ -3001,11 +3001,11 @@ id,name,cases
 51820,"Waynesboro city, VA",0
 51830,"Williamsburg city, VA",1
 51840,"Winchester city, VA",0
-53000,Washington,904
+53000,Washington,1012
 53001,"Adams County, WA",0
 53003,"Asotin County, WA",0
 53005,"Benton County, WA",0
-53007,"Chelan County, WA",0
+53007,"Chelan County, WA",2
 53009,"Clallam County, WA",0
 53011,"Clark County, WA",4
 53013,"Columbia County, WA",1
@@ -3014,33 +3014,33 @@ id,name,cases
 53019,"Ferry County, WA",0
 53021,"Franklin County, WA",0
 53023,"Garfield County, WA",0
-53025,"Grant County, WA",3
+53025,"Grant County, WA",7
 53027,"Grays Harbor County, WA",1
-53029,"Island County, WA",7
+53029,"Island County, WA",14
 53031,"Jefferson County, WA",3
-53033,"King County, WA",488
+53033,"King County, WA",569
 53035,"Kitsap County, WA",7
 53037,"Kittitas County, WA",3
-53039,"Klickitat County, WA",0
+53039,"Klickitat County, WA",1
 53041,"Lewis County, WA",1
 53043,"Lincoln County, WA",1
 53045,"Mason County, WA",0
 53047,"Okanogan County, WA",0
 53049,"Pacific County, WA",0
 53051,"Pend Oreille County, WA",0
-53053,"Pierce County, WA",38
+53053,"Pierce County, WA",45
 53055,"San Juan County, WA",0
-53057,"Skagit County, WA",7
+53057,"Skagit County, WA",9
 53059,"Skamania County, WA",0
-53061,"Snohomish County, WA",200
-53063,"Spokane County, WA",3
+53061,"Snohomish County, WA",254
+53063,"Spokane County, WA",4
 53065,"Stevens County, WA",0
-53067,"Thurston County, WA",4
+53067,"Thurston County, WA",5
 53069,"Wahkiakum County, WA",0
 53071,"Walla Walla County, WA",0
-53073,"Whatcom County, WA",3
+53073,"Whatcom County, WA",6
 53075,"Whitman County, WA",0
-53077,"Yakima County, WA",4
+53077,"Yakima County, WA",5
 54000,West Virginia,0
 54001,"Barbour County, WV",0
 54003,"Berkeley County, WV",0
