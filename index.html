@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
-body { background: #333; }
-path { stroke: #333; stroke-width: 1; }
-path:hover { stroke-width: 3; }
+    body { background: #333; }
+    path { stroke: #333; stroke-width: 1; }
+    path:hover { stroke-width: 3; }
+    .legend { font-family: Arial, Helvetica, sans-serif; }
 </style>
 <body>
 <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -54,17 +55,22 @@ function initialize(error, results) {
         f.properties = data.find(function (d) { return d.id === f.id }) || {}
     })
 
-    var max = d3.max(states, function(d) { return +d.properties.cases; } );
+    var max = d3.max(states, function(d) { return d.properties.cases; } );
     var color = d3.scaleQuantize()
-        .domain([0, max])
-        .range(d3.schemeReds[9])
+        .domain([0, max]).nice()
+        .range(d3.schemeReds[6])
 
     var statePaths = svg.selectAll('.state')
         .data(states)
         .enter().append('path')
         .attr('class', 'state')
         .attr('d', path)
-        .style('fill', function (d) { return color(d.properties.cases) })
+        .style('fill', function (d) { 
+            if (d.properties.cases > 0)
+                return color(d.properties.cases);
+            else
+                return '#ffffff';
+        })
         .on('click', function (d) { stateZoom(d.id) })
 
     statePaths.append('svg:title')
@@ -72,14 +78,13 @@ function initialize(error, results) {
 
     svg.append("g")
         .attr("class", "legend")
-        .attr("transform", "translate(850,350)");
+        .attr("transform", "translate(825,390)");
 
     var legend = d3.legendColor()
         .labelFormat(d3.format("d"))
         .labels(d3.legendHelpers.thresholdLabels)
         .scale(color)
-        .title("COVID-2019 Cases")
-        .titleWidth(100)
+        .shapePadding(5);
 
     svg.select(".legend")
         .call(legend);
@@ -91,7 +96,12 @@ function initialize(error, results) {
 
         statePaths.transition(t)
             .attr('d', path)
-            .style('fill', function (d) { return color(d.properties.cases) })
+            .style('fill', function (d) {
+                if (d.properties.cases > 0)
+                    return color(d.properties.cases);
+                else
+                    return '#ffffff';
+             })
 
         svg.selectAll('.county')
             .data([])
@@ -111,10 +121,10 @@ function initialize(error, results) {
             return d.id > id && d.id < id + 1000
         })
 
-        var max_state = d3.max(stateCounties, function(d) { return +d.properties.cases; } );
+        var max_state = d3.max(stateCounties, function(d) { return d.properties.cases; } );
         var color_state = d3.scaleQuantize()
-            .domain([0, max_state]).nice()
-            .range(d3.schemeReds[5]);
+            .domain([0, max_state])
+            .range(d3.schemeReds[6]);
 
         var t = d3.transition().duration(800)
 
@@ -124,7 +134,13 @@ function initialize(error, results) {
         var enterCountyPaths = countyPaths.enter().append('path')
             .attr('class', 'county')
             .attr('d', path)
-            .style('fill', function (d) { return color_state(d.properties.cases) })
+            .style('fill', function (d) { 
+                if (d.properties.cases > 0)
+                    return color_state(d.properties.cases);
+                else
+                    return '#ffffff';
+
+             })
             .style('opacity', 0)
             .on('click', function () { usZoom() })
 
@@ -136,7 +152,7 @@ function initialize(error, results) {
             .call(legend);
 
         projection.fitExtent(
-            [[padding*3, padding], [width - padding*6, height - padding]],
+            [[padding*4, padding], [width - padding*8, height - padding]],
             state
         )
 

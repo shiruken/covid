@@ -8,3 +8,5 @@ https://shiruken.github.io/covid_choropleth/
 
 * Data from [USAFacts](https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/)
 * FIPS state and county codes derived from [kjhealy/fips-codes](https://github.com/kjhealy/fips-codes)
+* Based on [Zoomable Choropleth by Chris Given](https://bl.ocks.org/cmgiven/d39ec773c4f063a463137748097ff52f)
+* Legend generated using [d3-legend by Susie Lu](https://d3-legend.susielu.com/)
