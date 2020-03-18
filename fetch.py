@@ -23,4 +23,4 @@ df['cases'] = df['cases'].astype(int)
 df.loc[df['id'] == 11000, 'cases'] = df[df['id'] == 11001]['cases'].values[0]
 
 # Export to file
-df.to_csv('data.csv', columns=['id', 'name', 'cases'], index=False)
+df.to_csv('docs/data.csv', columns=['id', 'name', 'cases'], index=False)
