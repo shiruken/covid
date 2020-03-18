@@ -1,6 +1,7 @@
 #!/bin/bash
 
 git checkout master && \
+git checkout -- data.csv &&\
 /home/pi/berryconda3/envs/covid_choropleth/bin/python fetch.py && \
 git checkout gh-pages && \
 git add data.csv && \
