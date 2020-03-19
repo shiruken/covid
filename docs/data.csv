@@ -249,14 +249,14 @@ id,name,cases
 6111,"Ventura County, CA",13
 6113,"Yolo County, CA",5
 6115,"Yuba County, CA",0
-8000,Colorado,183
-8001,"Adams County, CO",8
+8000,Colorado,216
+8001,"Adams County, CO",10
 8003,"Alamosa County, CO",0
-8005,"Arapahoe County, CO",18
+8005,"Arapahoe County, CO",22
 8007,"Archuleta County, CO",0
 8009,"Baca County, CO",0
 8011,"Bent County, CO",0
-8013,"Boulder County, CO",8
+8013,"Boulder County, CO",7
 8014,"Broomfield County, CO",0
 8015,"Chaffee County, CO",0
 8017,"Cheyenne County, CO",0
@@ -266,26 +266,26 @@ id,name,cases
 8025,"Crowley County, CO",0
 8027,"Custer County, CO",0
 8029,"Delta County, CO",0
-8031,"Denver County, CO",38
+8031,"Denver County, CO",43
 8033,"Dolores County, CO",0
-8035,"Douglas County, CO",10
-8037,"Eagle County, CO",34
+8035,"Douglas County, CO",11
+8037,"Eagle County, CO",39
 8039,"Elbert County, CO",0
-8041,"El Paso County, CO",6
+8041,"El Paso County, CO",8
 8043,"Fremont County, CO",0
 8045,"Garfield County, CO",2
 8047,"Gilpin County, CO",0
-8049,"Grand County, CO",0
+8049,"Grand County, CO",1
 8051,"Gunnison County, CO",11
 8053,"Hinsdale County, CO",0
 8055,"Huerfano County, CO",0
 8057,"Jackson County, CO",0
-8059,"Jefferson County, CO",17
+8059,"Jefferson County, CO",25
 8061,"Kiowa County, CO",0
 8063,"Kit Carson County, CO",0
 8065,"Lake County, CO",0
 8067,"La Plata County, CO",0
-8069,"Larimer County, CO",2
+8069,"Larimer County, CO",4
 8071,"Las Animas County, CO",0
 8073,"Lincoln County, CO",0
 8075,"Logan County, CO",0
@@ -309,10 +309,10 @@ id,name,cases
 8111,"San Juan County, CO",0
 8113,"San Miguel County, CO",0
 8115,"Sedgwick County, CO",0
-8117,"Summit County, CO",3
+8117,"Summit County, CO",4
 8119,"Teller County, CO",0
 8121,"Washington County, CO",0
-8123,"Weld County, CO",5
+8123,"Weld County, CO",9
 8125,"Yuma County, CO",0
 9000,Connecticut,96
 9001,"Fairfield County, CT",69
@@ -329,22 +329,22 @@ id,name,cases
 10005,"Sussex County, DE",3
 11000,District of Columbia,39
 11001,"Washington, DC",39
-12000,Florida,328
-12001,"Alachua County, FL",7
+12000,Florida,390
+12001,"Alachua County, FL",10
 12003,"Baker County, FL",0
 12005,"Bay County, FL",0
 12007,"Bradford County, FL",0
 12009,"Brevard County, FL",2
-12011,"Broward County, FL",80
+12011,"Broward County, FL",96
 12013,"Calhoun County, FL",0
 12015,"Charlotte County, FL",1
 12017,"Citrus County, FL",3
 12019,"Clay County, FL",4
-12021,"Collier County, FL",13
+12021,"Collier County, FL",18
 12023,"Columbia County, FL",0
 12027,"DeSoto County, FL",0
 12029,"Dixie County, FL",0
-12031,"Duval County, FL",14
+12031,"Duval County, FL",15
 12033,"Escambia County, FL",1
 12035,"Flagler County, FL",0
 12037,"Franklin County, FL",0
@@ -357,7 +357,7 @@ id,name,cases
 12051,"Hendry County, FL",0
 12053,"Hernando County, FL",0
 12055,"Highlands County, FL",0
-12057,"Hillsborough County, FL",14
+12057,"Hillsborough County, FL",19
 12059,"Holmes County, FL",0
 12061,"Indian River County, FL",0
 12063,"Jackson County, FL",0
@@ -365,30 +365,30 @@ id,name,cases
 12067,"Lafayette County, FL",0
 12069,"Lake County, FL",2
 12071,"Lee County, FL",11
-12073,"Leon County, FL",1
+12073,"Leon County, FL",4
 12075,"Levy County, FL",0
 12077,"Liberty County, FL",0
 12079,"Madison County, FL",0
-12081,"Manatee County, FL",8
+12081,"Manatee County, FL",9
 12083,"Marion County, FL",0
 12085,"Martin County, FL",0
-12086,"Miami-Dade County, FL",77
+12086,"Miami-Dade County, FL",86
 12087,"Monroe County, FL",0
 12089,"Nassau County, FL",1
 12091,"Okaloosa County, FL",4
 12093,"Okeechobee County, FL",0
-12095,"Orange County, FL",11
-12097,"Osceola County, FL",8
-12099,"Palm Beach County, FL",21
-12101,"Pasco County, FL",3
-12103,"Pinellas County, FL",12
+12095,"Orange County, FL",15
+12097,"Osceola County, FL",9
+12099,"Palm Beach County, FL",29
+12101,"Pasco County, FL",4
+12103,"Pinellas County, FL",14
 12105,"Polk County, FL",2
 12107,"Putnam County, FL",0
 12109,"St. Johns County, FL",4
 12111,"St. Lucie County, FL",0
-12113,"Santa Rosa County, FL",1
-12115,"Sarasota County, FL",4
-12117,"Seminole County, FL",7
+12113,"Santa Rosa County, FL",2
+12115,"Sarasota County, FL",5
+12117,"Seminole County, FL",8
 12119,"Sumter County, FL",1
 12121,"Suwannee County, FL",0
 12123,"Taylor County, FL",0
@@ -1131,16 +1131,16 @@ id,name,cases
 21235,"Whitley County, KY",0
 21237,"Wolfe County, KY",0
 21239,"Woodford County, KY",0
-22000,Louisiana,280
+22000,Louisiana,347
 22001,"Acadia Parish, LA",0
 22003,"Allen Parish, LA",0
-22005,"Ascension Parish, LA",1
+22005,"Ascension Parish, LA",2
 22007,"Assumption Parish, LA",0
 22009,"Avoyelles Parish, LA",0
 22011,"Beauregard Parish, LA",0
 22013,"Bienville Parish, LA",0
 22015,"Bossier Parish, LA",2
-22017,"Caddo Parish, LA",6
+22017,"Caddo Parish, LA",7
 22019,"Calcasieu Parish, LA",0
 22021,"Caldwell Parish, LA",0
 22023,"Cameron Parish, LA",0
@@ -1148,7 +1148,7 @@ id,name,cases
 22027,"Claiborne Parish, LA",0
 22029,"Concordia Parish, LA",0
 22031,"De Soto Parish, LA",0
-22033,"East Baton Rouge Parish, LA",3
+22033,"East Baton Rouge Parish, LA",5
 22035,"East Carroll Parish, LA",0
 22037,"East Feliciana Parish, LA",0
 22039,"Evangeline Parish, LA",0
@@ -1157,28 +1157,28 @@ id,name,cases
 22045,"Iberia Parish, LA",0
 22047,"Iberville Parish, LA",0
 22049,"Jackson Parish, LA",0
-22051,"Jefferson Parish, LA",45
+22051,"Jefferson Parish, LA",62
 22053,"Jefferson Davis Parish, LA",0
-22055,"Lafayette Parish, LA",0
-22057,"Lafourche Parish, LA",3
+22055,"Lafayette Parish, LA",2
+22057,"Lafourche Parish, LA",4
 22059,"La Salle Parish, LA",0
 22061,"Lincoln Parish, LA",0
 22063,"Livingston Parish, LA",0
 22065,"Madison Parish, LA",0
 22067,"Morehouse Parish, LA",0
 22069,"Natchitoches Parish, LA",0
-22071,"Orleans Parish, LA",196
+22071,"Orleans Parish, LA",231
 22073,"Ouachita Parish, LA",0
-22075,"Plaquemines Parish, LA",0
+22075,"Plaquemines Parish, LA",1
 22077,"Pointe Coupee Parish, LA",0
 22079,"Rapides Parish, LA",0
 22081,"Red River Parish, LA",0
 22083,"Richland Parish, LA",0
 22085,"Sabine Parish, LA",0
-22087,"St. Bernard Parish, LA",3
-22089,"St. Charles Parish, LA",3
+22087,"St. Bernard Parish, LA",4
+22089,"St. Charles Parish, LA",4
 22091,"St. Helena Parish, LA",0
-22093,"St. James Parish, LA",0
+22093,"St. James Parish, LA",1
 22095,"St. John the Baptist Parish, LA",2
 22097,"St. Landry Parish, LA",0
 22099,"St. Martin Parish, LA",0
@@ -1186,13 +1186,13 @@ id,name,cases
 22103,"St. Tammany Parish, LA",10
 22105,"Tangipahoa Parish, LA",0
 22107,"Tensas Parish, LA",0
-22109,"Terrebonne Parish, LA",3
+22109,"Terrebonne Parish, LA",4
 22111,"Union Parish, LA",0
 22113,"Vermilion Parish, LA",0
 22115,"Vernon Parish, LA",0
-22117,"Washington Parish, LA",1
+22117,"Washington Parish, LA",2
 22119,"Webster Parish, LA",0
-22121,"West Baton Rouge Parish, LA",0
+22121,"West Baton Rouge Parish, LA",1
 22123,"West Carroll Parish, LA",0
 22125,"West Feliciana Parish, LA",0
 22127,"Winn Parish, LA",0
@@ -2078,7 +2078,7 @@ id,name,cases
 38101,"Ward County, ND",2
 38103,"Wells County, ND",0
 38105,"Williams County, ND",0
-39000,Ohio,86
+39000,Ohio,119
 39001,"Adams County, OH",0
 39003,"Allen County, OH",0
 39005,"Ashland County, OH",1
@@ -2090,26 +2090,26 @@ id,name,cases
 39017,"Butler County, OH",8
 39019,"Carroll County, OH",0
 39021,"Champaign County, OH",0
-39023,"Clark County, OH",0
+39023,"Clark County, OH",1
 39025,"Clermont County, OH",0
 39027,"Clinton County, OH",0
 39029,"Columbiana County, OH",0
 39031,"Coshocton County, OH",2
 39033,"Crawford County, OH",0
-39035,"Cuyahoga County, OH",38
+39035,"Cuyahoga County, OH",53
 39037,"Darke County, OH",1
 39039,"Defiance County, OH",0
-39041,"Delaware County, OH",0
+39041,"Delaware County, OH",2
 39043,"Erie County, OH",0
 39045,"Fairfield County, OH",0
 39047,"Fayette County, OH",0
-39049,"Franklin County, OH",7
+39049,"Franklin County, OH",10
 39051,"Fulton County, OH",0
 39053,"Gallia County, OH",0
 39055,"Geauga County, OH",1
 39057,"Greene County, OH",0
 39059,"Guernsey County, OH",0
-39061,"Hamilton County, OH",0
+39061,"Hamilton County, OH",1
 39063,"Hancock County, OH",0
 39065,"Hardin County, OH",0
 39067,"Harrison County, OH",0
@@ -2128,14 +2128,14 @@ id,name,cases
 39093,"Lorain County, OH",6
 39095,"Lucas County, OH",1
 39097,"Madison County, OH",0
-39099,"Mahoning County, OH",3
+39099,"Mahoning County, OH",5
 39101,"Marion County, OH",0
-39103,"Medina County, OH",3
+39103,"Medina County, OH",5
 39105,"Meigs County, OH",0
 39107,"Mercer County, OH",0
-39109,"Miami County, OH",0
+39109,"Miami County, OH",1
 39111,"Monroe County, OH",0
-39113,"Montgomery County, OH",0
+39113,"Montgomery County, OH",1
 39115,"Morgan County, OH",0
 39117,"Morrow County, OH",0
 39119,"Muskingum County, OH",0
@@ -2148,14 +2148,14 @@ id,name,cases
 39133,"Portage County, OH",0
 39135,"Preble County, OH",0
 39137,"Putnam County, OH",0
-39139,"Richland County, OH",0
+39139,"Richland County, OH",1
 39141,"Ross County, OH",0
 39143,"Sandusky County, OH",0
 39145,"Scioto County, OH",0
 39147,"Seneca County, OH",0
 39149,"Shelby County, OH",0
-39151,"Stark County, OH",3
-39153,"Summit County, OH",4
+39151,"Stark County, OH",5
+39153,"Summit County, OH",6
 39155,"Trumbull County, OH",2
 39157,"Tuscarawas County, OH",1
 39159,"Union County, OH",0
@@ -2282,28 +2282,28 @@ id,name,cases
 41067,"Washington County, OR",23
 41069,"Wheeler County, OR",0
 41071,"Yamhill County, OR",2
-42000,Pennsylvania,133
-42001,"Adams County, PA",0
-42003,"Allegheny County, PA",11
+42000,Pennsylvania,185
+42001,"Adams County, PA",1
+42003,"Allegheny County, PA",16
 42005,"Armstrong County, PA",0
-42007,"Beaver County, PA",1
+42007,"Beaver County, PA",2
 42009,"Bedford County, PA",0
 42011,"Berks County, PA",1
 42013,"Blair County, PA",0
 42015,"Bradford County, PA",0
-42017,"Bucks County, PA",9
+42017,"Bucks County, PA",12
 42019,"Butler County, PA",0
 42021,"Cambria County, PA",0
 42023,"Cameron County, PA",0
 42025,"Carbon County, PA",0
 42027,"Centre County, PA",0
-42029,"Chester County, PA",9
+42029,"Chester County, PA",10
 42031,"Clarion County, PA",0
 42033,"Clearfield County, PA",0
 42035,"Clinton County, PA",0
 42037,"Columbia County, PA",0
 42039,"Crawford County, PA",0
-42041,"Cumberland County, PA",10
+42041,"Cumberland County, PA",11
 42043,"Dauphin County, PA",0
 42045,"Delaware County, PA",14
 42047,"Elk County, PA",0
@@ -2317,23 +2317,23 @@ id,name,cases
 42063,"Indiana County, PA",0
 42065,"Jefferson County, PA",0
 42067,"Juniata County, PA",0
-42069,"Lackawanna County, PA",1
-42071,"Lancaster County, PA",0
+42069,"Lackawanna County, PA",2
+42071,"Lancaster County, PA",2
 42073,"Lawrence County, PA",0
-42075,"Lebanon County, PA",0
+42075,"Lebanon County, PA",1
 42077,"Lehigh County, PA",1
 42079,"Luzerne County, PA",1
 42081,"Lycoming County, PA",0
 42083,"McKean County, PA",0
 42085,"Mercer County, PA",0
 42087,"Mifflin County, PA",0
-42089,"Monroe County, PA",7
-42091,"Montgomery County, PA",42
+42089,"Monroe County, PA",15
+42091,"Montgomery County, PA",47
 42093,"Montour County, PA",0
-42095,"Northampton County, PA",1
+42095,"Northampton County, PA",5
 42097,"Northumberland County, PA",0
 42099,"Perry County, PA",0
-42101,"Philadelphia County, PA",17
+42101,"Philadelphia County, PA",33
 42103,"Pike County, PA",3
 42105,"Potter County, PA",0
 42107,"Schuylkill County, PA",0
@@ -2345,9 +2345,9 @@ id,name,cases
 42119,"Union County, PA",0
 42121,"Venango County, PA",0
 42123,"Warren County, PA",0
-42125,"Washington County, PA",2
+42125,"Washington County, PA",3
 42127,"Wayne County, PA",1
-42129,"Westmoreland County, PA",0
+42129,"Westmoreland County, PA",2
 42131,"Wyoming County, PA",0
 42133,"York County, PA",2
 44000,Rhode Island,33
@@ -2566,7 +2566,7 @@ id,name,cases
 47185,"White County, TN",0
 47187,"Williamson County, TN",24
 47189,"Wilson County, TN",0
-48000,Texas,84
+48000,Texas,143
 48001,"Anderson County, TX",0
 48003,"Andrews County, TX",0
 48005,"Angelina County, TX",0
@@ -2581,7 +2581,7 @@ id,name,cases
 48023,"Baylor County, TX",0
 48025,"Bee County, TX",0
 48027,"Bell County, TX",1
-48029,"Bexar County, TX",4
+48029,"Bexar County, TX",6
 48031,"Blanco County, TX",0
 48033,"Borden County, TX",0
 48035,"Bosque County, TX",0
@@ -2609,7 +2609,7 @@ id,name,cases
 48079,"Cochran County, TX",0
 48081,"Coke County, TX",0
 48083,"Coleman County, TX",0
-48085,"Collin County, TX",6
+48085,"Collin County, TX",7
 48087,"Collingsworth County, TX",0
 48089,"Colorado County, TX",0
 48091,"Comal County, TX",0
@@ -2623,12 +2623,12 @@ id,name,cases
 48107,"Crosby County, TX",0
 48109,"Culberson County, TX",0
 48111,"Dallam County, TX",0
-48113,"Dallas County, TX",15
+48113,"Dallas County, TX",20
 48115,"Dawson County, TX",0
 48117,"Deaf Smith County, TX",0
 48119,"Delta County, TX",0
 48121,"Denton County, TX",4
-48123,"DeWitt County, TX",0
+48123,"DeWitt County, TX",1
 48125,"Dickens County, TX",0
 48127,"Dimmit County, TX",0
 48129,"Donley County, TX",0
@@ -2667,11 +2667,11 @@ id,name,cases
 48195,"Hansford County, TX",0
 48197,"Hardeman County, TX",0
 48199,"Hardin County, TX",0
-48201,"Harris County, TX",11
+48201,"Harris County, TX",10
 48203,"Harrison County, TX",0
 48205,"Hartley County, TX",0
 48207,"Haskell County, TX",0
-48209,"Hays County, TX",1
+48209,"Hays County, TX",3
 48211,"Hemphill County, TX",0
 48213,"Henderson County, TX",0
 48215,"Hidalgo County, TX",0
@@ -2692,7 +2692,7 @@ id,name,cases
 48245,"Jefferson County, TX",0
 48247,"Jim Hogg County, TX",0
 48249,"Jim Wells County, TX",0
-48251,"Johnson County, TX",0
+48251,"Johnson County, TX",2
 48253,"Jones County, TX",0
 48255,"Karnes County, TX",0
 48257,"Kaufman County, TX",0
@@ -2721,15 +2721,15 @@ id,name,cases
 48303,"Lubbock County, TX",0
 48305,"Lynn County, TX",0
 48307,"McCulloch County, TX",0
-48309,"McLennan County, TX",0
+48309,"McLennan County, TX",1
 48311,"McMullen County, TX",0
 48313,"Madison County, TX",0
 48315,"Marion County, TX",0
 48317,"Martin County, TX",0
 48319,"Mason County, TX",0
-48321,"Matagorda County, TX",1
+48321,"Matagorda County, TX",3
 48323,"Maverick County, TX",0
-48325,"Medina County, TX",1
+48325,"Medina County, TX",6
 48327,"Menard County, TX",0
 48329,"Midland County, TX",0
 48331,"Milam County, TX",0
@@ -2793,7 +2793,7 @@ id,name,cases
 48447,"Throckmorton County, TX",0
 48449,"Titus County, TX",0
 48451,"Tom Green County, TX",0
-48453,"Travis County, TX",4
+48453,"Travis County, TX",7
 48455,"Trinity County, TX",0
 48457,"Tyler County, TX",0
 48459,"Upshur County, TX",0
@@ -2812,7 +2812,7 @@ id,name,cases
 48485,"Wichita County, TX",0
 48487,"Wilbarger County, TX",0
 48489,"Willacy County, TX",0
-48491,"Williamson County, TX",0
+48491,"Williamson County, TX",2
 48493,"Wilson County, TX",0
 48495,"Winkler County, TX",0
 48497,"Wise County, TX",0
