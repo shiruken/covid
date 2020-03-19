@@ -1,5 +1,5 @@
 id,name,cases
-1000,Alabama,51
+1000,Alabama,68
 1001,"Autauga County, AL",0
 1003,"Baldwin County, AL",1
 1005,"Barbour County, AL",0
@@ -8,7 +8,7 @@ id,name,cases
 1011,"Bullock County, AL",0
 1013,"Butler County, AL",0
 1015,"Calhoun County, AL",1
-1017,"Chambers County, AL",0
+1017,"Chambers County, AL",1
 1019,"Cherokee County, AL",0
 1021,"Chilton County, AL",0
 1023,"Choctaw County, AL",0
@@ -25,7 +25,7 @@ id,name,cases
 1045,"Dale County, AL",0
 1047,"Dallas County, AL",0
 1049,"DeKalb County, AL",0
-1051,"Elmore County, AL",4
+1051,"Elmore County, AL",5
 1053,"Escambia County, AL",0
 1055,"Etowah County, AL",0
 1057,"Fayette County, AL",0
@@ -36,11 +36,11 @@ id,name,cases
 1067,"Henry County, AL",0
 1069,"Houston County, AL",0
 1071,"Jackson County, AL",0
-1073,"Jefferson County, AL",25
+1073,"Jefferson County, AL",31
 1075,"Lamar County, AL",0
 1077,"Lauderdale County, AL",0
 1079,"Lawrence County, AL",0
-1081,"Lee County, AL",8
+1081,"Lee County, AL",10
 1083,"Limestone County, AL",1
 1085,"Lowndes County, AL",0
 1087,"Macon County, AL",0
@@ -58,12 +58,12 @@ id,name,cases
 1111,"Randolph County, AL",0
 1113,"Russell County, AL",0
 1115,"St. Clair County, AL",1
-1117,"Shelby County, AL",4
+1117,"Shelby County, AL",8
 1119,"Sumter County, AL",0
-1121,"Talladega County, AL",0
+1121,"Talladega County, AL",1
 1123,"Tallapoosa County, AL",0
-1125,"Tuscaloosa County, AL",3
-1127,"Walker County, AL",0
+1125,"Tuscaloosa County, AL",4
+1127,"Walker County, AL",1
 1129,"Washington County, AL",0
 1131,"Wilcox County, AL",0
 1133,"Winston County, AL",0
@@ -113,7 +113,7 @@ id,name,cases
 4023,"Santa Cruz County, AZ",0
 4025,"Yavapai County, AZ",0
 4027,"Yuma County, AZ",0
-5000,Arkansas,37
+5000,Arkansas,62
 5001,"Arkansas County, AR",0
 5003,"Ashley County, AR",0
 5005,"Baxter County, AR",0
@@ -123,13 +123,13 @@ id,name,cases
 5013,"Calhoun County, AR",0
 5015,"Carroll County, AR",0
 5017,"Chicot County, AR",0
-5019,"Clark County, AR",0
+5019,"Clark County, AR",1
 5021,"Clay County, AR",0
-5023,"Cleburne County, AR",1
+5023,"Cleburne County, AR",10
 5025,"Cleveland County, AR",1
 5027,"Columbia County, AR",0
 5029,"Conway County, AR",0
-5031,"Craighead County, AR",0
+5031,"Craighead County, AR",1
 5033,"Crawford County, AR",0
 5035,"Crittenden County, AR",0
 5037,"Cross County, AR",0
@@ -140,15 +140,15 @@ id,name,cases
 5047,"Franklin County, AR",0
 5049,"Fulton County, AR",0
 5051,"Garland County, AR",1
-5053,"Grant County, AR",0
+5053,"Grant County, AR",1
 5055,"Greene County, AR",0
 5057,"Hempstead County, AR",0
 5059,"Hot Spring County, AR",0
 5061,"Howard County, AR",0
-5063,"Independence County, AR",0
+5063,"Independence County, AR",1
 5065,"Izard County, AR",0
 5067,"Jackson County, AR",0
-5069,"Jefferson County, AR",5
+5069,"Jefferson County, AR",10
 5071,"Johnson County, AR",0
 5073,"Lafayette County, AR",0
 5075,"Lawrence County, AR",0
@@ -169,22 +169,22 @@ id,name,cases
 5105,"Perry County, AR",0
 5107,"Phillips County, AR",0
 5109,"Pike County, AR",0
-5111,"Poinsett County, AR",0
+5111,"Poinsett County, AR",1
 5113,"Polk County, AR",0
-5115,"Pope County, AR",0
+5115,"Pope County, AR",1
 5117,"Prairie County, AR",0
-5119,"Pulaski County, AR",5
+5119,"Pulaski County, AR",10
 5121,"Randolph County, AR",0
 5123,"St. Francis County, AR",0
 5125,"Saline County, AR",1
 5127,"Scott County, AR",0
-5129,"Searcy County, AR",0
+5129,"Searcy County, AR",1
 5131,"Sebastian County, AR",0
-5133,"Sevier County, AR",0
+5133,"Sevier County, AR",1
 5135,"Sharp County, AR",0
 5137,"Stone County, AR",0
 5139,"Union County, AR",0
-5141,"Van Buren County, AR",0
+5141,"Van Buren County, AR",1
 5143,"Washington County, AR",1
 5145,"White County, AR",0
 5147,"Woodruff County, AR",0
