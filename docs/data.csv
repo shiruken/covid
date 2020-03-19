@@ -1,5 +1,5 @@
 id,name,cases
-1000,Alabama,46
+1000,Alabama,51
 1001,"Autauga County, AL",0
 1003,"Baldwin County, AL",1
 1005,"Barbour County, AL",0
@@ -25,7 +25,7 @@ id,name,cases
 1045,"Dale County, AL",0
 1047,"Dallas County, AL",0
 1049,"DeKalb County, AL",0
-1051,"Elmore County, AL",2
+1051,"Elmore County, AL",4
 1053,"Escambia County, AL",0
 1055,"Etowah County, AL",0
 1057,"Fayette County, AL",0
@@ -36,11 +36,11 @@ id,name,cases
 1067,"Henry County, AL",0
 1069,"Houston County, AL",0
 1071,"Jackson County, AL",0
-1073,"Jefferson County, AL",23
+1073,"Jefferson County, AL",25
 1075,"Lamar County, AL",0
 1077,"Lauderdale County, AL",0
 1079,"Lawrence County, AL",0
-1081,"Lee County, AL",7
+1081,"Lee County, AL",8
 1083,"Limestone County, AL",1
 1085,"Lowndes County, AL",0
 1087,"Macon County, AL",0
@@ -70,17 +70,17 @@ id,name,cases
 2000,Alaska,6
 2013,"Aleutians East Borough, AK",0
 2016,"Aleutians West Census Area, AK",0
-2020,"Anchorage Municipality, AK",1
+2020,"Anchorage Municipality, AK",2
 2050,"Bethel Census Area, AK",0
 2060,"Bristol Bay Borough, AK",0
 2068,"Denali Borough, AK",0
 2070,"Dillingham Census Area, AK",0
-2090,"Fairbanks North Star Borough, AK",2
+2090,"Fairbanks North Star Borough, AK",3
 2100,"Haines Borough, AK",0
 2105,"Hoonah-Angoon Census Area, AK",0
 2110,"Juneau City and Borough, AK",0
 2122,"Kenai Peninsula Borough, AK",0
-2130,"Ketchikan Gateway Borough, AK",0
+2130,"Ketchikan Gateway Borough, AK",1
 2150,"Kodiak Island Borough, AK",0
 2164,"Lake and Peninsula Borough, AK",0
 2170,"Matanuska-Susitna Borough, AK",0
@@ -314,21 +314,21 @@ id,name,cases
 8121,"Washington County, CO",0
 8123,"Weld County, CO",5
 8125,"Yuma County, CO",0
-9000,Connecticut,68
-9001,"Fairfield County, CT",48
-9003,"Hartford County, CT",7
+9000,Connecticut,96
+9001,"Fairfield County, CT",69
+9003,"Hartford County, CT",11
 9005,"Litchfield County, CT",5
-9007,"Middlesex County, CT",0
-9009,"New Haven County, CT",8
+9007,"Middlesex County, CT",1
+9009,"New Haven County, CT",10
 9011,"New London County, CT",0
 9013,"Tolland County, CT",0
 9015,"Windham County, CT",0
-10000,Delaware,19
-10001,"Kent County, DE",1
-10003,"New Castle County, DE",17
-10005,"Sussex County, DE",1
-11000,District of Columbia,31
-11001,"Washington, DC",31
+10000,Delaware,26
+10001,"Kent County, DE",3
+10003,"New Castle County, DE",20
+10005,"Sussex County, DE",3
+11000,District of Columbia,39
+11001,"Washington, DC",39
 12000,Florida,216
 12001,"Alachua County, FL",6
 12003,"Baker County, FL",0
@@ -608,7 +608,7 @@ id,name,cases
 16083,"Twin Falls County, ID",0
 16085,"Valley County, ID",0
 16087,"Washington County, ID",0
-17000,Illinois,160
+17000,Illinois,288
 17001,"Adams County, IL",0
 17003,"Alexander County, IL",0
 17005,"Bond County, IL",0
@@ -622,15 +622,15 @@ id,name,cases
 17021,"Christian County, IL",0
 17023,"Clark County, IL",0
 17025,"Clay County, IL",0
-17027,"Clinton County, IL",2
+17027,"Clinton County, IL",3
 17029,"Coles County, IL",0
-17031,"Cook County, IL",107
+17031,"Cook County, IL",178
 17033,"Crawford County, IL",0
 17035,"Cumberland County, IL",1
 17037,"DeKalb County, IL",0
 17039,"De Witt County, IL",0
 17041,"Douglas County, IL",0
-17043,"DuPage County, IL",26
+17043,"DuPage County, IL",45
 17045,"Edgar County, IL",0
 17047,"Edwards County, IL",0
 17049,"Effingham County, IL",0
@@ -653,22 +653,22 @@ id,name,cases
 17083,"Jersey County, IL",0
 17085,"Jo Daviess County, IL",0
 17087,"Johnson County, IL",0
-17089,"Kane County, IL",3
+17089,"Kane County, IL",4
 17091,"Kankakee County, IL",0
-17093,"Kendall County, IL",0
+17093,"Kendall County, IL",2
 17095,"Knox County, IL",0
-17097,"Lake County, IL",7
+17097,"Lake County, IL",18
 17099,"LaSalle County, IL",0
 17101,"Lawrence County, IL",0
 17103,"Lee County, IL",0
 17105,"Livingston County, IL",0
 17107,"Logan County, IL",0
 17109,"McDonough County, IL",0
-17111,"McHenry County, IL",2
+17111,"McHenry County, IL",4
 17113,"McLean County, IL",0
 17115,"Macon County, IL",0
 17117,"Macoupin County, IL",0
-17119,"Madison County, IL",0
+17119,"Madison County, IL",1
 17121,"Marion County, IL",0
 17123,"Marshall County, IL",0
 17125,"Mason County, IL",0
@@ -680,7 +680,7 @@ id,name,cases
 17137,"Morgan County, IL",0
 17139,"Moultrie County, IL",0
 17141,"Ogle County, IL",0
-17143,"Peoria County, IL",1
+17143,"Peoria County, IL",3
 17145,"Perry County, IL",0
 17147,"Piatt County, IL",0
 17149,"Pike County, IL",0
@@ -690,7 +690,7 @@ id,name,cases
 17157,"Randolph County, IL",0
 17159,"Richland County, IL",0
 17161,"Rock Island County, IL",0
-17163,"St. Clair County, IL",2
+17163,"St. Clair County, IL",3
 17165,"Saline County, IL",0
 17167,"Sangamon County, IL",3
 17169,"Schuyler County, IL",0
@@ -707,7 +707,7 @@ id,name,cases
 17191,"Wayne County, IL",0
 17193,"White County, IL",0
 17195,"Whiteside County, IL",1
-17197,"Will County, IL",2
+17197,"Will County, IL",3
 17199,"Williamson County, IL",0
 17201,"Winnebago County, IL",1
 17203,"Woodford County, IL",1
@@ -1131,7 +1131,7 @@ id,name,cases
 21235,"Whitley County, KY",0
 21237,"Wolfe County, KY",0
 21239,"Woodford County, KY",0
-22000,Louisiana,196
+22000,Louisiana,280
 22001,"Acadia Parish, LA",0
 22003,"Allen Parish, LA",0
 22005,"Ascension Parish, LA",1
@@ -1139,8 +1139,8 @@ id,name,cases
 22009,"Avoyelles Parish, LA",0
 22011,"Beauregard Parish, LA",0
 22013,"Bienville Parish, LA",0
-22015,"Bossier Parish, LA",1
-22017,"Caddo Parish, LA",4
+22015,"Bossier Parish, LA",2
+22017,"Caddo Parish, LA",6
 22019,"Calcasieu Parish, LA",0
 22021,"Caldwell Parish, LA",0
 22023,"Cameron Parish, LA",0
@@ -1148,7 +1148,7 @@ id,name,cases
 22027,"Claiborne Parish, LA",0
 22029,"Concordia Parish, LA",0
 22031,"De Soto Parish, LA",0
-22033,"East Baton Rouge Parish, LA",0
+22033,"East Baton Rouge Parish, LA",3
 22035,"East Carroll Parish, LA",0
 22037,"East Feliciana Parish, LA",0
 22039,"Evangeline Parish, LA",0
@@ -1157,17 +1157,17 @@ id,name,cases
 22045,"Iberia Parish, LA",0
 22047,"Iberville Parish, LA",0
 22049,"Jackson Parish, LA",0
-22051,"Jefferson Parish, LA",35
+22051,"Jefferson Parish, LA",45
 22053,"Jefferson Davis Parish, LA",0
 22055,"Lafayette Parish, LA",0
-22057,"Lafourche Parish, LA",2
+22057,"Lafourche Parish, LA",3
 22059,"La Salle Parish, LA",0
 22061,"Lincoln Parish, LA",0
 22063,"Livingston Parish, LA",0
 22065,"Madison Parish, LA",0
 22067,"Morehouse Parish, LA",0
 22069,"Natchitoches Parish, LA",0
-22071,"Orleans Parish, LA",136
+22071,"Orleans Parish, LA",196
 22073,"Ouachita Parish, LA",0
 22075,"Plaquemines Parish, LA",0
 22077,"Pointe Coupee Parish, LA",0
@@ -1175,22 +1175,22 @@ id,name,cases
 22081,"Red River Parish, LA",0
 22083,"Richland Parish, LA",0
 22085,"Sabine Parish, LA",0
-22087,"St. Bernard Parish, LA",2
+22087,"St. Bernard Parish, LA",3
 22089,"St. Charles Parish, LA",3
 22091,"St. Helena Parish, LA",0
 22093,"St. James Parish, LA",0
-22095,"St. John the Baptist Parish, LA",1
+22095,"St. John the Baptist Parish, LA",2
 22097,"St. Landry Parish, LA",0
 22099,"St. Martin Parish, LA",0
 22101,"St. Mary Parish, LA",0
-22103,"St. Tammany Parish, LA",6
+22103,"St. Tammany Parish, LA",10
 22105,"Tangipahoa Parish, LA",0
 22107,"Tensas Parish, LA",0
 22109,"Terrebonne Parish, LA",3
 22111,"Union Parish, LA",0
 22113,"Vermilion Parish, LA",0
 22115,"Vernon Parish, LA",0
-22117,"Washington Parish, LA",0
+22117,"Washington Parish, LA",1
 22119,"Webster Parish, LA",0
 22121,"West Baton Rouge Parish, LA",0
 22123,"West Carroll Parish, LA",0
@@ -1238,22 +1238,22 @@ id,name,cases
 24045,"Wicomico County, MD",0
 24047,"Worcester County, MD",0
 24510,"Baltimore city, MD",1
-25000,Massachusetts,218
+25000,Massachusetts,256
 25001,"Barnstable County, MA",2
-25003,"Berkshire County, MA",14
+25003,"Berkshire County, MA",17
 25005,"Bristol County, MA",5
 25007,"Dukes County, MA",0
-25009,"Essex County, MA",8
-25011,"Franklin County, MA",0
-25013,"Hampden County, MA",1
+25009,"Essex County, MA",14
+25011,"Franklin County, MA",1
+25013,"Hampden County, MA",2
 25015,"Hampshire County, MA",0
-25017,"Middlesex County, MA",89
+25017,"Middlesex County, MA",100
 25019,"Nantucket County, MA",0
-25021,"Norfolk County, MA",43
+25021,"Norfolk County, MA",45
 25023,"Plymouth County, MA",5
-25025,"Suffolk County, MA",42
-25027,"Worcester County, MA",8
-26000,Michigan,65
+25025,"Suffolk County, MA",51
+25027,"Worcester County, MA",10
+26000,Michigan,80
 26001,"Alcona County, MI",0
 26003,"Alger County, MI",0
 26005,"Allegan County, MI",0
@@ -1303,7 +1303,7 @@ id,name,cases
 26093,"Livingston County, MI",0
 26095,"Luce County, MI",0
 26097,"Mackinac County, MI",0
-26099,"Macomb County, MI",8
+26099,"Macomb County, MI",10
 26101,"Manistee County, MI",0
 26103,"Marquette County, MI",0
 26105,"Mason County, MI",0
@@ -1316,7 +1316,7 @@ id,name,cases
 26119,"Montmorency County, MI",0
 26121,"Muskegon County, MI",0
 26123,"Newaygo County, MI",0
-26125,"Oakland County, MI",16
+26125,"Oakland County, MI",23
 26127,"Oceana County, MI",0
 26129,"Ogemaw County, MI",0
 26131,"Ontonagon County, MI",0
@@ -1335,7 +1335,7 @@ id,name,cases
 26157,"Tuscola County, MI",0
 26159,"Van Buren County, MI",0
 26161,"Washtenaw County, MI",7
-26163,"Wayne County, MI",17
+26163,"Wayne County, MI",23
 26165,"Wexford County, MI",0
 27000,Minnesota,60
 27001,"Aitkin County, MN",0
@@ -1793,15 +1793,15 @@ id,name,cases
 32031,"Washoe County, NV",12
 32033,"White Pine County, NV",0
 32510,"Carson City, NV",1
-33000,New Hampshire,26
-33001,"Belknap County, NH",0
-33003,"Carroll County, NH",1
+33000,New Hampshire,39
+33001,"Belknap County, NH",2
+33003,"Carroll County, NH",4
 33005,"Cheshire County, NH",0
 33007,"Coos County, NH",0
 33009,"Grafton County, NH",7
-33011,"Hillsborough County, NH",4
-33013,"Merrimack County, NH",0
-33015,"Rockingham County, NH",14
+33011,"Hillsborough County, NH",8
+33013,"Merrimack County, NH",1
+33015,"Rockingham County, NH",17
 33017,"Strafford County, NH",0
 33019,"Sullivan County, NH",0
 34000,New Jersey,267
@@ -2282,22 +2282,22 @@ id,name,cases
 41067,"Washington County, OR",21
 41069,"Wheeler County, OR",0
 41071,"Yamhill County, OR",1
-42000,Pennsylvania,96
+42000,Pennsylvania,133
 42001,"Adams County, PA",0
-42003,"Allegheny County, PA",7
+42003,"Allegheny County, PA",11
 42005,"Armstrong County, PA",0
 42007,"Beaver County, PA",1
 42009,"Bedford County, PA",0
-42011,"Berks County, PA",0
+42011,"Berks County, PA",1
 42013,"Blair County, PA",0
 42015,"Bradford County, PA",0
-42017,"Bucks County, PA",8
+42017,"Bucks County, PA",9
 42019,"Butler County, PA",0
 42021,"Cambria County, PA",0
 42023,"Cameron County, PA",0
 42025,"Carbon County, PA",0
 42027,"Centre County, PA",0
-42029,"Chester County, PA",4
+42029,"Chester County, PA",9
 42031,"Clarion County, PA",0
 42033,"Clearfield County, PA",0
 42035,"Clinton County, PA",0
@@ -2305,7 +2305,7 @@ id,name,cases
 42039,"Crawford County, PA",0
 42041,"Cumberland County, PA",10
 42043,"Dauphin County, PA",0
-42045,"Delaware County, PA",9
+42045,"Delaware County, PA",14
 42047,"Elk County, PA",0
 42049,"Erie County, PA",0
 42051,"Fayette County, PA",0
@@ -2317,7 +2317,7 @@ id,name,cases
 42063,"Indiana County, PA",0
 42065,"Jefferson County, PA",0
 42067,"Juniata County, PA",0
-42069,"Lackawanna County, PA",0
+42069,"Lackawanna County, PA",1
 42071,"Lancaster County, PA",0
 42073,"Lawrence County, PA",0
 42075,"Lebanon County, PA",0
@@ -2327,14 +2327,14 @@ id,name,cases
 42083,"McKean County, PA",0
 42085,"Mercer County, PA",0
 42087,"Mifflin County, PA",0
-42089,"Monroe County, PA",8
-42091,"Montgomery County, PA",32
+42089,"Monroe County, PA",7
+42091,"Montgomery County, PA",42
 42093,"Montour County, PA",0
 42095,"Northampton County, PA",1
 42097,"Northumberland County, PA",0
 42099,"Perry County, PA",0
-42101,"Philadelphia County, PA",10
-42103,"Pike County, PA",1
+42101,"Philadelphia County, PA",17
+42103,"Pike County, PA",3
 42105,"Potter County, PA",0
 42107,"Schuylkill County, PA",0
 42109,"Snyder County, PA",0
@@ -2349,24 +2349,24 @@ id,name,cases
 42127,"Wayne County, PA",1
 42129,"Westmoreland County, PA",0
 42131,"Wyoming County, PA",0
-42133,"York County, PA",0
+42133,"York County, PA",2
 44000,Rhode Island,23
 44001,"Bristol County, RI",0
 44003,"Kent County, RI",0
 44005,"Newport County, RI",0
 44007,"Providence County, RI",4
 44009,"Washington County, RI",2
-45000,South Carolina,47
+45000,South Carolina,59
 45001,"Abbeville County, SC",0
 45003,"Aiken County, SC",0
 45005,"Allendale County, SC",0
 45007,"Anderson County, SC",2
 45009,"Bamberg County, SC",0
 45011,"Barnwell County, SC",0
-45013,"Beaufort County, SC",4
+45013,"Beaufort County, SC",6
 45015,"Berkeley County, SC",0
 45017,"Calhoun County, SC",1
-45019,"Charleston County, SC",3
+45019,"Charleston County, SC",4
 45021,"Cherokee County, SC",0
 45023,"Chester County, SC",0
 45025,"Chesterfield County, SC",0
@@ -2376,19 +2376,19 @@ id,name,cases
 45033,"Dillon County, SC",0
 45035,"Dorchester County, SC",0
 45037,"Edgefield County, SC",0
-45039,"Fairfield County, SC",1
+45039,"Fairfield County, SC",0
 45041,"Florence County, SC",0
 45043,"Georgetown County, SC",0
-45045,"Greenville County, SC",2
+45045,"Greenville County, SC",3
 45047,"Greenwood County, SC",0
 45049,"Hampton County, SC",0
-45051,"Horry County, SC",4
+45051,"Horry County, SC",5
 45053,"Jasper County, SC",0
-45055,"Kershaw County, SC",22
+45055,"Kershaw County, SC",25
 45057,"Lancaster County, SC",2
 45059,"Laurens County, SC",0
-45061,"Lee County, SC",0
-45063,"Lexington County, SC",3
+45061,"Lee County, SC",1
+45063,"Lexington County, SC",4
 45065,"McCormick County, SC",0
 45067,"Marion County, SC",0
 45069,"Marlboro County, SC",0
@@ -2396,7 +2396,7 @@ id,name,cases
 45073,"Oconee County, SC",0
 45075,"Orangeburg County, SC",0
 45077,"Pickens County, SC",0
-45079,"Richland County, SC",1
+45079,"Richland County, SC",4
 45081,"Saluda County, SC",0
 45083,"Spartanburg County, SC",1
 45085,"Sumter County, SC",0
@@ -2470,7 +2470,7 @@ id,name,cases
 46129,"Walworth County, SD",0
 46135,"Yankton County, SD",0
 46137,"Ziebach County, SD",0
-47000,Tennessee,73
+47000,Tennessee,98
 47001,"Anderson County, TN",0
 47003,"Bedford County, TN",0
 47005,"Benton County, TN",0
@@ -2481,7 +2481,7 @@ id,name,cases
 47015,"Cannon County, TN",0
 47017,"Carroll County, TN",0
 47019,"Carter County, TN",0
-47021,"Cheatham County, TN",0
+47021,"Cheatham County, TN",1
 47023,"Chester County, TN",0
 47025,"Claiborne County, TN",0
 47027,"Clay County, TN",0
@@ -2489,7 +2489,7 @@ id,name,cases
 47031,"Coffee County, TN",0
 47033,"Crockett County, TN",0
 47035,"Cumberland County, TN",0
-47037,"Davidson County, TN",42
+47037,"Davidson County, TN",58
 47039,"Decatur County, TN",0
 47041,"DeKalb County, TN",0
 47043,"Dickson County, TN",0
@@ -2544,16 +2544,16 @@ id,name,cases
 47141,"Putnam County, TN",0
 47143,"Rhea County, TN",0
 47145,"Roane County, TN",0
-47147,"Robertson County, TN",0
+47147,"Robertson County, TN",1
 47149,"Rutherford County, TN",1
 47151,"Scott County, TN",0
 47153,"Sequatchie County, TN",0
 47155,"Sevier County, TN",1
-47157,"Shelby County, TN",2
+47157,"Shelby County, TN",4
 47159,"Smith County, TN",0
 47161,"Stewart County, TN",0
 47163,"Sullivan County, TN",1
-47165,"Sumner County, TN",0
+47165,"Sumner County, TN",2
 47167,"Tipton County, TN",0
 47169,"Trousdale County, TN",0
 47171,"Unicoi County, TN",0
@@ -2564,7 +2564,7 @@ id,name,cases
 47181,"Wayne County, TN",0
 47183,"Weakley County, TN",0
 47185,"White County, TN",0
-47187,"Williamson County, TN",21
+47187,"Williamson County, TN",24
 47189,"Wilson County, TN",0
 48000,Texas,84
 48001,"Anderson County, TX",0
@@ -2821,13 +2821,13 @@ id,name,cases
 48503,"Young County, TX",0
 48505,"Zapata County, TX",0
 48507,"Zavala County, TX",0
-49000,Utah,51
+49000,Utah,65
 49001,"Beaver County, UT",0
 49003,"Box Elder County, UT",1
-49005,"Cache County, UT",0
+49005,"Cache County, UT",2
 49007,"Carbon County, UT",0
 49009,"Daggett County, UT",0
-49011,"Davis County, UT",4
+49011,"Davis County, UT",6
 49013,"Duchesne County, UT",0
 49015,"Emery County, UT",0
 49017,"Garfield County, UT",0
@@ -2839,11 +2839,11 @@ id,name,cases
 49029,"Morgan County, UT",0
 49031,"Piute County, UT",0
 49033,"Rich County, UT",0
-49035,"Salt Lake County, UT",22
+49035,"Salt Lake County, UT",24
 49037,"San Juan County, UT",0
 49039,"Sanpete County, UT",0
 49041,"Sevier County, UT",0
-49043,"Summit County, UT",15
+49043,"Summit County, UT",22
 49045,"Tooele County, UT",1
 49047,"Uintah County, UT",0
 49049,"Utah County, UT",0
@@ -2866,14 +2866,14 @@ id,name,cases
 50023,"Washington County, VT",1
 50025,"Windham County, VT",0
 50027,"Windsor County, VT",1
-51000,Virginia,67
+51000,Virginia,77
 51001,"Accomack County, VA",0
 51003,"Albemarle County, VA",0
 51005,"Alleghany County, VA",0
 51007,"Amelia County, VA",0
 51009,"Amherst County, VA",0
 51011,"Appomattox County, VA",0
-51013,"Arlington County, VA",13
+51013,"Arlington County, VA",14
 51015,"Augusta County, VA",0
 51017,"Bath County, VA",0
 51019,"Bedford County, VA",0
@@ -2885,9 +2885,9 @@ id,name,cases
 51031,"Campbell County, VA",0
 51033,"Caroline County, VA",0
 51035,"Carroll County, VA",0
-51036,"Charles City County, VA",0
+51036,"Charles City County, VA",1
 51037,"Charlotte County, VA",0
-51041,"Chesterfield County, VA",4
+51041,"Chesterfield County, VA",5
 51043,"Clarke County, VA",0
 51045,"Craig County, VA",0
 51047,"Culpeper County, VA",0
@@ -2895,7 +2895,7 @@ id,name,cases
 51051,"Dickenson County, VA",0
 51053,"Dinwiddie County, VA",0
 51057,"Essex County, VA",0
-51059,"Fairfax County, VA",12
+51059,"Fairfax County, VA",14
 51061,"Fauquier County, VA",0
 51063,"Floyd County, VA",0
 51065,"Fluvanna County, VA",0
@@ -2913,7 +2913,7 @@ id,name,cases
 51089,"Henry County, VA",0
 51091,"Highland County, VA",0
 51093,"Isle of Wight County, VA",0
-51095,"James City County, VA",12
+51095,"James City County, VA",13
 51097,"King and Queen County, VA",0
 51099,"King George County, VA",0
 51101,"King William County, VA",0
@@ -2952,7 +2952,7 @@ id,name,cases
 51173,"Smyth County, VA",0
 51175,"Southampton County, VA",0
 51177,"Spotsylvania County, VA",1
-51179,"Stafford County, VA",1
+51179,"Stafford County, VA",2
 51181,"Surry County, VA",0
 51183,"Sussex County, VA",0
 51185,"Tazewell County, VA",0
@@ -2992,7 +2992,7 @@ id,name,cases
 51735,"Poquoson city, VA",0
 51740,"Portsmouth city, VA",0
 51750,"Radford city, VA",0
-51760,"Richmond city, VA",0
+51760,"Richmond city, VA",3
 51770,"Roanoke city, VA",0
 51775,"Salem city, VA",0
 51790,"Staunton city, VA",0
@@ -3001,7 +3001,7 @@ id,name,cases
 51820,"Waynesboro city, VA",0
 51830,"Williamsburg city, VA",1
 51840,"Winchester city, VA",0
-53000,Washington,1012
+53000,Washington,1187
 53001,"Adams County, WA",0
 53003,"Asotin County, WA",0
 53005,"Benton County, WA",0
@@ -3012,36 +3012,36 @@ id,name,cases
 53015,"Cowlitz County, WA",0
 53017,"Douglas County, WA",0
 53019,"Ferry County, WA",0
-53021,"Franklin County, WA",0
+53021,"Franklin County, WA",1
 53023,"Garfield County, WA",0
-53025,"Grant County, WA",7
+53025,"Grant County, WA",8
 53027,"Grays Harbor County, WA",1
-53029,"Island County, WA",14
-53031,"Jefferson County, WA",3
-53033,"King County, WA",569
-53035,"Kitsap County, WA",7
-53037,"Kittitas County, WA",3
+53029,"Island County, WA",16
+53031,"Jefferson County, WA",4
+53033,"King County, WA",562
+53035,"Kitsap County, WA",9
+53037,"Kittitas County, WA",4
 53039,"Klickitat County, WA",1
 53041,"Lewis County, WA",1
 53043,"Lincoln County, WA",1
-53045,"Mason County, WA",0
+53045,"Mason County, WA",1
 53047,"Okanogan County, WA",0
 53049,"Pacific County, WA",0
 53051,"Pend Oreille County, WA",0
-53053,"Pierce County, WA",45
+53053,"Pierce County, WA",56
 53055,"San Juan County, WA",0
-53057,"Skagit County, WA",9
+53057,"Skagit County, WA",14
 53059,"Skamania County, WA",0
-53061,"Snohomish County, WA",254
+53061,"Snohomish County, WA",310
 53063,"Spokane County, WA",4
 53065,"Stevens County, WA",0
-53067,"Thurston County, WA",5
+53067,"Thurston County, WA",6
 53069,"Wahkiakum County, WA",0
 53071,"Walla Walla County, WA",0
-53073,"Whatcom County, WA",6
+53073,"Whatcom County, WA",7
 53075,"Whitman County, WA",0
-53077,"Yakima County, WA",5
-54000,West Virginia,1
+53077,"Yakima County, WA",7
+54000,West Virginia,2
 54001,"Barbour County, WV",0
 54003,"Berkeley County, WV",0
 54005,"Boone County, WV",0
@@ -3060,7 +3060,7 @@ id,name,cases
 54031,"Hardy County, WV",0
 54033,"Harrison County, WV",0
 54035,"Jackson County, WV",0
-54037,"Jefferson County, WV",0
+54037,"Jefferson County, WV",1
 54039,"Kanawha County, WV",0
 54041,"Lewis County, WV",0
 54043,"Lincoln County, WV",0
@@ -3069,7 +3069,7 @@ id,name,cases
 54049,"Marion County, WV",0
 54051,"Marshall County, WV",0
 54053,"Mason County, WV",0
-54055,"Mercer County, WV",0
+54055,"Mercer County, WV",1
 54057,"Mineral County, WV",0
 54059,"Mingo County, WV",0
 54061,"Monongalia County, WV",0
@@ -3097,12 +3097,12 @@ id,name,cases
 54105,"Wirt County, WV",0
 54107,"Wood County, WV",0
 54109,"Wyoming County, WV",0
-55000,Wisconsin,72
+55000,Wisconsin,106
 55001,"Adams County, WI",0
 55003,"Ashland County, WI",0
 55005,"Barron County, WI",0
 55007,"Bayfield County, WI",0
-55009,"Brown County, WI",0
+55009,"Brown County, WI",1
 55011,"Buffalo County, WI",0
 55013,"Burnett County, WI",0
 55015,"Calumet County, WI",0
@@ -3110,14 +3110,14 @@ id,name,cases
 55019,"Clark County, WI",0
 55021,"Columbia County, WI",0
 55023,"Crawford County, WI",0
-55025,"Dane County, WI",19
+55025,"Dane County, WI",23
 55027,"Dodge County, WI",0
 55029,"Door County, WI",0
 55031,"Douglas County, WI",0
 55033,"Dunn County, WI",0
 55035,"Eau Claire County, WI",0
 55037,"Florence County, WI",0
-55039,"Fond du Lac County, WI",11
+55039,"Fond du Lac County, WI",12
 55041,"Forest County, WI",0
 55043,"Grant County, WI",0
 55045,"Green County, WI",0
@@ -3129,7 +3129,7 @@ id,name,cases
 55057,"Juneau County, WI",0
 55059,"Kenosha County, WI",4
 55061,"Kewaunee County, WI",0
-55063,"La Crosse County, WI",0
+55063,"La Crosse County, WI",1
 55065,"Lafayette County, WI",0
 55067,"Langlade County, WI",0
 55069,"Lincoln County, WI",0
@@ -3138,7 +3138,7 @@ id,name,cases
 55075,"Marinette County, WI",0
 55077,"Marquette County, WI",0
 55078,"Menominee County, WI",0
-55079,"Milwaukee County, WI",24
+55079,"Milwaukee County, WI",47
 55081,"Monroe County, WI",0
 55083,"Oconto County, WI",0
 55085,"Oneida County, WI",0
@@ -3157,20 +3157,20 @@ id,name,cases
 55111,"Sauk County, WI",0
 55113,"Sawyer County, WI",0
 55115,"Shawano County, WI",0
-55117,"Sheboygan County, WI",3
+55117,"Sheboygan County, WI",4
 55119,"Taylor County, WI",0
 55121,"Trempealeau County, WI",0
 55123,"Vernon County, WI",0
 55125,"Vilas County, WI",0
 55127,"Walworth County, WI",0
 55129,"Washburn County, WI",0
-55131,"Washington County, WI",0
-55133,"Waukesha County, WI",4
+55131,"Washington County, WI",2
+55133,"Waukesha County, WI",5
 55135,"Waupaca County, WI",0
 55137,"Waushara County, WI",0
 55139,"Winnebago County, WI",3
 55141,"Wood County, WI",1
-56000,Wyoming,15
+56000,Wyoming,19
 56001,"Albany County, WY",0
 56003,"Big Horn County, WY",0
 56005,"Campbell County, WY",0
@@ -3181,7 +3181,7 @@ id,name,cases
 56015,"Goshen County, WY",0
 56017,"Hot Springs County, WY",0
 56019,"Johnson County, WY",0
-56021,"Laramie County, WY",2
+56021,"Laramie County, WY",4
 56023,"Lincoln County, WY",0
 56025,"Natrona County, WY",0
 56027,"Niobrara County, WY",0
@@ -3190,7 +3190,7 @@ id,name,cases
 56033,"Sheridan County, WY",4
 56035,"Sublette County, WY",0
 56037,"Sweetwater County, WY",0
-56039,"Teton County, WY",0
+56039,"Teton County, WY",1
 56041,"Uinta County, WY",0
 56043,"Washakie County, WY",0
 56045,"Weston County, WY",0
