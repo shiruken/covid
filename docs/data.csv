@@ -1,5 +1,5 @@
 id,name,cases
-1000,Alabama,51
+1000,Alabama,0
 1001,"Autauga County, AL",0
 1003,"Baldwin County, AL",1
 1005,"Barbour County, AL",0
@@ -97,19 +97,19 @@ id,name,cases
 2275,"Wrangell City and Borough, AK",0
 2282,"Yakutat City and Borough, AK",0
 2290,"Yukon-Koyukuk Census Area, AK",0
-4000,Arizona,27
+4000,Arizona,44
 4001,"Apache County, AZ",0
 4003,"Cochise County, AZ",0
-4005,"Coconino County, AZ",0
+4005,"Coconino County, AZ",1
 4007,"Gila County, AZ",0
 4009,"Graham County, AZ",1
 4011,"Greenlee County, AZ",0
 4012,"La Paz County, AZ",0
-4013,"Maricopa County, AZ",11
+4013,"Maricopa County, AZ",22
 4015,"Mohave County, AZ",0
-4017,"Navajo County, AZ",2
-4019,"Pima County, AZ",5
-4021,"Pinal County, AZ",8
+4017,"Navajo County, AZ",3
+4019,"Pima County, AZ",7
+4021,"Pinal County, AZ",10
 4023,"Santa Cruz County, AZ",0
 4025,"Yavapai County, AZ",0
 4027,"Yuma County, AZ",0
@@ -323,9 +323,9 @@ id,name,cases
 9011,"New London County, CT",0
 9013,"Tolland County, CT",0
 9015,"Windham County, CT",0
-10000,Delaware,26
-10001,"Kent County, DE",3
-10003,"New Castle County, DE",20
+10000,Delaware,30
+10001,"Kent County, DE",4
+10003,"New Castle County, DE",23
 10005,"Sussex County, DE",3
 11000,District of Columbia,39
 11001,"Washington, DC",39
@@ -1860,8 +1860,8 @@ id,name,cases
 35057,"Torrance County, NM",0
 35059,"Union County, NM",0
 35061,"Valencia County, NM",0
-36000,New York,2382
-36001,"Albany County, NY",36
+36000,New York,4152
+36001,"Albany County, NY",43
 36003,"Allegany County, NY",2
 36005,"Bronx County, NY",0
 36007,"Broome County, NY",1
@@ -1874,7 +1874,7 @@ id,name,cases
 36021,"Columbia County, NY",0
 36023,"Cortland County, NY",0
 36025,"Delaware County, NY",1
-36027,"Dutchess County, NY",20
+36027,"Dutchess County, NY",31
 36029,"Erie County, NY",7
 36031,"Essex County, NY",1
 36033,"Franklin County, NY",0
@@ -1888,15 +1888,15 @@ id,name,cases
 36049,"Lewis County, NY",0
 36051,"Livingston County, NY",0
 36053,"Madison County, NY",0
-36055,"Monroe County, NY",14
+36055,"Monroe County, NY",27
 36057,"Montgomery County, NY",2
-36059,"Nassau County, NY",183
-36061,"New York County, NY",1339
+36059,"Nassau County, NY",372
+36061,"New York County, NY",2469
 36063,"Niagara County, NY",0
 36065,"Oneida County, NY",0
 36067,"Onondaga County, NY",2
 36069,"Ontario County, NY",1
-36071,"Orange County, NY",32
+36071,"Orange County, NY",51
 36073,"Orleans County, NY",0
 36075,"Oswego County, NY",0
 36077,"Otsego County, NY",0
@@ -1904,7 +1904,7 @@ id,name,cases
 36081,"Queens County, NY",0
 36083,"Rensselaer County, NY",4
 36085,"Richmond County, NY",0
-36087,"Rockland County, NY",30
+36087,"Rockland County, NY",53
 36089,"St. Lawrence County, NY",0
 36091,"Saratoga County, NY",14
 36093,"Schenectady County, NY",14
@@ -1912,7 +1912,7 @@ id,name,cases
 36097,"Schuyler County, NY",0
 36099,"Seneca County, NY",0
 36101,"Steuben County, NY",0
-36103,"Suffolk County, NY",116
+36103,"Suffolk County, NY",178
 36105,"Sullivan County, NY",1
 36107,"Tioga County, NY",1
 36109,"Tompkins County, NY",3
@@ -1920,10 +1920,10 @@ id,name,cases
 36113,"Warren County, NY",1
 36115,"Washington County, NY",1
 36117,"Wayne County, NY",0
-36119,"Westchester County, NY",538
+36119,"Westchester County, NY",798
 36121,"Wyoming County, NY",1
 36123,"Yates County, NY",0
-37000,North Carolina,63
+37000,North Carolina,96
 37001,"Alamance County, NC",0
 37003,"Alexander County, NC",0
 37005,"Alleghany County, NC",0
@@ -1955,24 +1955,24 @@ id,name,cases
 37057,"Davidson County, NC",0
 37059,"Davie County, NC",0
 37061,"Duplin County, NC",0
-37063,"Durham County, NC",12
+37063,"Durham County, NC",32
 37065,"Edgecombe County, NC",0
 37067,"Forsyth County, NC",2
 37069,"Franklin County, NC",0
-37071,"Gaston County, NC",0
+37071,"Gaston County, NC",1
 37073,"Gates County, NC",0
 37075,"Graham County, NC",0
 37077,"Granville County, NC",0
 37079,"Greene County, NC",0
-37081,"Guilford County, NC",1
+37081,"Guilford County, NC",2
 37083,"Halifax County, NC",0
 37085,"Harnett County, NC",4
 37087,"Haywood County, NC",0
 37089,"Henderson County, NC",0
 37091,"Hertford County, NC",0
-37093,"Hoke County, NC",0
+37093,"Hoke County, NC",1
 37095,"Hyde County, NC",0
-37097,"Iredell County, NC",1
+37097,"Iredell County, NC",2
 37099,"Jackson County, NC",0
 37101,"Johnston County, NC",2
 37103,"Jones County, NC",0
@@ -1983,7 +1983,7 @@ id,name,cases
 37113,"Macon County, NC",0
 37115,"Madison County, NC",0
 37117,"Martin County, NC",0
-37119,"Mecklenburg County, NC",11
+37119,"Mecklenburg County, NC",13
 37121,"Mitchell County, NC",0
 37123,"Montgomery County, NC",0
 37125,"Moore County, NC",0
@@ -2013,15 +2013,15 @@ id,name,cases
 37173,"Swain County, NC",0
 37175,"Transylvania County, NC",0
 37177,"Tyrrell County, NC",0
-37179,"Union County, NC",0
+37179,"Union County, NC",1
 37181,"Vance County, NC",0
-37183,"Wake County, NC",17
+37183,"Wake County, NC",22
 37185,"Warren County, NC",0
 37187,"Washington County, NC",0
-37189,"Watauga County, NC",1
+37189,"Watauga County, NC",2
 37191,"Wayne County, NC",1
 37193,"Wilkes County, NC",0
-37195,"Wilson County, NC",1
+37195,"Wilson County, NC",2
 37197,"Yadkin County, NC",0
 37199,"Yancey County, NC",0
 38000,North Dakota,7
@@ -2167,7 +2167,7 @@ id,name,cases
 39171,"Williams County, OH",0
 39173,"Wood County, OH",0
 39175,"Wyandot County, OH",0
-40000,Oklahoma,29
+40000,Oklahoma,44
 40001,"Adair County, OK",0
 40003,"Alfalfa County, OK",0
 40005,"Atoka County, OK",0
@@ -2181,19 +2181,19 @@ id,name,cases
 40021,"Cherokee County, OK",0
 40023,"Choctaw County, OK",0
 40025,"Cimarron County, OK",0
-40027,"Cleveland County, OK",4
+40027,"Cleveland County, OK",8
 40029,"Coal County, OK",0
 40031,"Comanche County, OK",0
 40033,"Cotton County, OK",0
 40035,"Craig County, OK",0
 40037,"Creek County, OK",0
-40039,"Custer County, OK",0
+40039,"Custer County, OK",1
 40041,"Delaware County, OK",0
 40043,"Dewey County, OK",0
 40045,"Ellis County, OK",0
 40047,"Garfield County, OK",0
 40049,"Garvin County, OK",0
-40051,"Grady County, OK",0
+40051,"Grady County, OK",1
 40053,"Grant County, OK",0
 40055,"Greer County, OK",0
 40057,"Harmon County, OK",0
@@ -2209,9 +2209,9 @@ id,name,cases
 40077,"Latimer County, OK",0
 40079,"Le Flore County, OK",0
 40081,"Lincoln County, OK",0
-40083,"Logan County, OK",0
+40083,"Logan County, OK",1
 40085,"Love County, OK",0
-40087,"McClain County, OK",0
+40087,"McClain County, OK",1
 40089,"McCurtain County, OK",0
 40091,"McIntosh County, OK",0
 40093,"Major County, OK",0
@@ -2222,7 +2222,7 @@ id,name,cases
 40103,"Noble County, OK",0
 40105,"Nowata County, OK",0
 40107,"Okfuskee County, OK",0
-40109,"Oklahoma County, OK",14
+40109,"Oklahoma County, OK",18
 40111,"Okmulgee County, OK",0
 40113,"Osage County, OK",0
 40115,"Ottawa County, OK",0
@@ -2236,12 +2236,12 @@ id,name,cases
 40131,"Rogers County, OK",0
 40133,"Seminole County, OK",0
 40135,"Sequoyah County, OK",0
-40137,"Stephens County, OK",0
+40137,"Stephens County, OK",1
 40139,"Texas County, OK",0
 40141,"Tillman County, OK",0
-40143,"Tulsa County, OK",4
+40143,"Tulsa County, OK",5
 40145,"Wagoner County, OK",0
-40147,"Washington County, OK",0
+40147,"Washington County, OK",1
 40149,"Washita County, OK",0
 40151,"Woods County, OK",0
 40153,"Woodward County, OK",0
