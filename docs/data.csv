@@ -1804,28 +1804,28 @@ id,name,cases
 33015,"Rockingham County, NH",17
 33017,"Strafford County, NH",0
 33019,"Sullivan County, NH",0
-34000,New Jersey,417
+34000,New Jersey,742
 34001,"Atlantic County, NJ",3
-34003,"Bergen County, NJ",114
-34005,"Burlington County, NJ",10
-34007,"Camden County, NJ",8
-34009,"Cape May County, NJ",0
+34003,"Bergen County, NJ",195
+34005,"Burlington County, NJ",14
+34007,"Camden County, NJ",13
+34009,"Cape May County, NJ",1
 34011,"Cumberland County, NJ",0
-34013,"Essex County, NJ",45
-34015,"Gloucester County, NJ",2
-34017,"Hudson County, NJ",34
-34019,"Hunterdon County, NJ",6
-34021,"Mercer County, NJ",15
-34023,"Middlesex County, NJ",40
-34025,"Monmouth County, NJ",32
-34027,"Morris County, NJ",19
-34029,"Ocean County, NJ",8
-34031,"Passaic County, NJ",18
+34013,"Essex County, NJ",63
+34015,"Gloucester County, NJ",3
+34017,"Hudson County, NJ",55
+34019,"Hunterdon County, NJ",8
+34021,"Mercer County, NJ",20
+34023,"Middlesex County, NJ",64
+34025,"Monmouth County, NJ",43
+34027,"Morris County, NJ",26
+34029,"Ocean County, NJ",33
+34031,"Passaic County, NJ",38
 34033,"Salem County, NJ",0
-34035,"Somerset County, NJ",16
-34037,"Sussex County, NJ",0
-34039,"Union County, NJ",26
-34041,"Warren County, NJ",0
+34035,"Somerset County, NJ",21
+34037,"Sussex County, NJ",2
+34039,"Union County, NJ",29
+34041,"Warren County, NJ",3
 35000,New Mexico,28
 35001,"Bernalillo County, NM",16
 35003,"Catron County, NM",0
