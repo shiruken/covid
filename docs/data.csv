@@ -608,7 +608,7 @@ id,name,cases
 16083,"Twin Falls County, ID",1
 16085,"Valley County, ID",0
 16087,"Washington County, ID",0
-17000,Illinois,288
+17000,Illinois,422
 17001,"Adams County, IL",0
 17003,"Alexander County, IL",0
 17005,"Bond County, IL",0
@@ -624,13 +624,13 @@ id,name,cases
 17025,"Clay County, IL",0
 17027,"Clinton County, IL",3
 17029,"Coles County, IL",0
-17031,"Cook County, IL",178
+17031,"Cook County, IL",278
 17033,"Crawford County, IL",0
 17035,"Cumberland County, IL",1
 17037,"DeKalb County, IL",0
 17039,"De Witt County, IL",0
 17041,"Douglas County, IL",0
-17043,"DuPage County, IL",45
+17043,"DuPage County, IL",54
 17045,"Edgar County, IL",0
 17047,"Edwards County, IL",0
 17049,"Effingham County, IL",0
@@ -647,18 +647,18 @@ id,name,cases
 17071,"Henderson County, IL",0
 17073,"Henry County, IL",0
 17075,"Iroquois County, IL",0
-17077,"Jackson County, IL",0
+17077,"Jackson County, IL",1
 17079,"Jasper County, IL",0
 17081,"Jefferson County, IL",0
 17083,"Jersey County, IL",0
 17085,"Jo Daviess County, IL",0
 17087,"Johnson County, IL",0
-17089,"Kane County, IL",4
-17091,"Kankakee County, IL",0
+17089,"Kane County, IL",6
+17091,"Kankakee County, IL",1
 17093,"Kendall County, IL",2
 17095,"Knox County, IL",0
-17097,"Lake County, IL",18
-17099,"LaSalle County, IL",0
+17097,"Lake County, IL",37
+17099,"LaSalle County, IL",1
 17101,"Lawrence County, IL",0
 17103,"Lee County, IL",0
 17105,"Livingston County, IL",0
@@ -692,7 +692,7 @@ id,name,cases
 17161,"Rock Island County, IL",0
 17163,"St. Clair County, IL",3
 17165,"Saline County, IL",0
-17167,"Sangamon County, IL",3
+17167,"Sangamon County, IL",4
 17169,"Schuyler County, IL",0
 17171,"Scott County, IL",0
 17173,"Shelby County, IL",0
@@ -703,14 +703,14 @@ id,name,cases
 17183,"Vermilion County, IL",0
 17185,"Wabash County, IL",0
 17187,"Warren County, IL",0
-17189,"Washington County, IL",0
+17189,"Washington County, IL",1
 17191,"Wayne County, IL",0
 17193,"White County, IL",0
 17195,"Whiteside County, IL",1
-17197,"Will County, IL",3
-17199,"Williamson County, IL",0
+17197,"Will County, IL",9
+17199,"Williamson County, IL",1
 17201,"Winnebago County, IL",1
-17203,"Woodford County, IL",1
+17203,"Woodford County, IL",2
 18000,Indiana,35
 18001,"Adams County, IN",1
 18003,"Allen County, IN",0
@@ -1253,7 +1253,7 @@ id,name,cases
 25023,"Plymouth County, MA",5
 25025,"Suffolk County, MA",51
 25027,"Worcester County, MA",10
-26000,Michigan,80
+26000,Michigan,334
 26001,"Alcona County, MI",0
 26003,"Alger County, MI",0
 26005,"Allegan County, MI",0
@@ -1272,11 +1272,11 @@ id,name,cases
 26031,"Cheboygan County, MI",0
 26033,"Chippewa County, MI",0
 26035,"Clare County, MI",0
-26037,"Clinton County, MI",0
+26037,"Clinton County, MI",1
 26039,"Crawford County, MI",0
 26041,"Delta County, MI",0
 26043,"Dickinson County, MI",0
-26045,"Eaton County, MI",0
+26045,"Eaton County, MI",2
 26047,"Emmet County, MI",0
 26049,"Genesee County, MI",0
 26051,"Gladwin County, MI",0
@@ -1286,7 +1286,7 @@ id,name,cases
 26059,"Hillsdale County, MI",0
 26061,"Houghton County, MI",0
 26063,"Huron County, MI",0
-26065,"Ingham County, MI",2
+26065,"Ingham County, MI",6
 26067,"Ionia County, MI",0
 26069,"Iosco County, MI",0
 26071,"Iron County, MI",0
@@ -1294,29 +1294,29 @@ id,name,cases
 26075,"Jackson County, MI",1
 26077,"Kalamazoo County, MI",0
 26079,"Kalkaska County, MI",0
-26081,"Kent County, MI",5
+26081,"Kent County, MI",7
 26083,"Keweenaw County, MI",0
 26085,"Lake County, MI",0
 26087,"Lapeer County, MI",0
 26089,"Leelanau County, MI",1
 26091,"Lenawee County, MI",0
-26093,"Livingston County, MI",0
+26093,"Livingston County, MI",1
 26095,"Luce County, MI",0
 26097,"Mackinac County, MI",0
-26099,"Macomb County, MI",10
+26099,"Macomb County, MI",55
 26101,"Manistee County, MI",0
 26103,"Marquette County, MI",0
 26105,"Mason County, MI",0
 26107,"Mecosta County, MI",0
 26109,"Menominee County, MI",0
-26111,"Midland County, MI",0
+26111,"Midland County, MI",1
 26113,"Missaukee County, MI",0
-26115,"Monroe County, MI",1
+26115,"Monroe County, MI",2
 26117,"Montcalm County, MI",1
 26119,"Montmorency County, MI",0
 26121,"Muskegon County, MI",0
 26123,"Newaygo County, MI",0
-26125,"Oakland County, MI",23
+26125,"Oakland County, MI",105
 26127,"Oceana County, MI",0
 26129,"Ogemaw County, MI",0
 26131,"Ontonagon County, MI",0
@@ -1327,15 +1327,15 @@ id,name,cases
 26141,"Presque Isle County, MI",0
 26143,"Roscommon County, MI",0
 26145,"Saginaw County, MI",0
-26147,"St. Clair County, MI",2
+26147,"St. Clair County, MI",4
 26149,"St. Joseph County, MI",0
 26151,"Sanilac County, MI",0
 26153,"Schoolcraft County, MI",0
 26155,"Shiawassee County, MI",0
 26157,"Tuscola County, MI",0
 26159,"Van Buren County, MI",0
-26161,"Washtenaw County, MI",7
-26163,"Wayne County, MI",23
+26161,"Washtenaw County, MI",14
+26163,"Wayne County, MI",119
 26165,"Wexford County, MI",0
 27000,Minnesota,77
 27001,"Aitkin County, MN",0
@@ -3001,39 +3001,39 @@ id,name,cases
 51820,"Waynesboro city, VA",0
 51830,"Williamsburg city, VA",1
 51840,"Winchester city, VA",0
-53000,Washington,1187
+53000,Washington,1376
 53001,"Adams County, WA",0
 53003,"Asotin County, WA",0
-53005,"Benton County, WA",0
+53005,"Benton County, WA",1
 53007,"Chelan County, WA",2
-53009,"Clallam County, WA",0
+53009,"Clallam County, WA",1
 53011,"Clark County, WA",4
 53013,"Columbia County, WA",1
 53015,"Cowlitz County, WA",0
 53017,"Douglas County, WA",0
 53019,"Ferry County, WA",0
-53021,"Franklin County, WA",1
+53021,"Franklin County, WA",2
 53023,"Garfield County, WA",0
 53025,"Grant County, WA",8
 53027,"Grays Harbor County, WA",1
-53029,"Island County, WA",16
+53029,"Island County, WA",17
 53031,"Jefferson County, WA",4
-53033,"King County, WA",562
-53035,"Kitsap County, WA",9
+53033,"King County, WA",693
+53035,"Kitsap County, WA",12
 53037,"Kittitas County, WA",4
-53039,"Klickitat County, WA",1
+53039,"Klickitat County, WA",2
 53041,"Lewis County, WA",1
 53043,"Lincoln County, WA",1
 53045,"Mason County, WA",1
 53047,"Okanogan County, WA",0
 53049,"Pacific County, WA",0
 53051,"Pend Oreille County, WA",0
-53053,"Pierce County, WA",56
+53053,"Pierce County, WA",75
 53055,"San Juan County, WA",0
-53057,"Skagit County, WA",14
+53057,"Skagit County, WA",18
 53059,"Skamania County, WA",0
-53061,"Snohomish County, WA",310
-53063,"Spokane County, WA",4
+53061,"Snohomish County, WA",348
+53063,"Spokane County, WA",9
 53065,"Stevens County, WA",0
 53067,"Thurston County, WA",6
 53069,"Wahkiakum County, WA",0
@@ -3097,27 +3097,27 @@ id,name,cases
 54105,"Wirt County, WV",0
 54107,"Wood County, WV",0
 54109,"Wyoming County, WV",0
-55000,Wisconsin,106
+55000,Wisconsin,155
 55001,"Adams County, WI",0
 55003,"Ashland County, WI",0
 55005,"Barron County, WI",0
-55007,"Bayfield County, WI",0
-55009,"Brown County, WI",1
+55007,"Bayfield County, WI",1
+55009,"Brown County, WI",2
 55011,"Buffalo County, WI",0
 55013,"Burnett County, WI",0
-55015,"Calumet County, WI",0
+55015,"Calumet County, WI",1
 55017,"Chippewa County, WI",0
 55019,"Clark County, WI",0
-55021,"Columbia County, WI",0
+55021,"Columbia County, WI",4
 55023,"Crawford County, WI",0
-55025,"Dane County, WI",23
+55025,"Dane County, WI",27
 55027,"Dodge County, WI",0
 55029,"Door County, WI",0
 55031,"Douglas County, WI",0
 55033,"Dunn County, WI",0
-55035,"Eau Claire County, WI",0
+55035,"Eau Claire County, WI",1
 55037,"Florence County, WI",0
-55039,"Fond du Lac County, WI",12
+55039,"Fond du Lac County, WI",14
 55041,"Forest County, WI",0
 55043,"Grant County, WI",0
 55045,"Green County, WI",0
@@ -3129,7 +3129,7 @@ id,name,cases
 55057,"Juneau County, WI",0
 55059,"Kenosha County, WI",4
 55061,"Kewaunee County, WI",0
-55063,"La Crosse County, WI",1
+55063,"La Crosse County, WI",2
 55065,"Lafayette County, WI",0
 55067,"Langlade County, WI",0
 55069,"Lincoln County, WI",0
@@ -3138,37 +3138,37 @@ id,name,cases
 55075,"Marinette County, WI",0
 55077,"Marquette County, WI",0
 55078,"Menominee County, WI",0
-55079,"Milwaukee County, WI",47
+55079,"Milwaukee County, WI",62
 55081,"Monroe County, WI",0
 55083,"Oconto County, WI",0
 55085,"Oneida County, WI",0
 55087,"Outagamie County, WI",1
-55089,"Ozaukee County, WI",0
+55089,"Ozaukee County, WI",3
 55091,"Pepin County, WI",0
 55093,"Pierce County, WI",1
 55095,"Polk County, WI",0
 55097,"Portage County, WI",0
 55099,"Price County, WI",0
-55101,"Racine County, WI",1
+55101,"Racine County, WI",3
 55103,"Richland County, WI",0
 55105,"Rock County, WI",0
 55107,"Rusk County, WI",0
 55109,"St. Croix County, WI",0
-55111,"Sauk County, WI",0
+55111,"Sauk County, WI",1
 55113,"Sawyer County, WI",0
 55115,"Shawano County, WI",0
-55117,"Sheboygan County, WI",4
+55117,"Sheboygan County, WI",6
 55119,"Taylor County, WI",0
 55121,"Trempealeau County, WI",0
 55123,"Vernon County, WI",0
 55125,"Vilas County, WI",0
-55127,"Walworth County, WI",0
+55127,"Walworth County, WI",2
 55129,"Washburn County, WI",0
 55131,"Washington County, WI",2
-55133,"Waukesha County, WI",5
+55133,"Waukesha County, WI",12
 55135,"Waupaca County, WI",0
 55137,"Waushara County, WI",0
-55139,"Winnebago County, WI",3
+55139,"Winnebago County, WI",5
 55141,"Wood County, WI",1
 56000,Wyoming,18
 56001,"Albany County, WY",0
