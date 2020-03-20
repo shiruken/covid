@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
-    body { background: #333; }
+    body { background: #333; font-family: Arial, Helvetica, sans-serif; color: #fff; }
+    h1 { text-align: center; }
+    div#content, div#footer { width: 1000px; margin: auto; }
+    div#footer { text-align: center; position: fixed; left: 0px; bottom: 0px; width: 100%; margin-bottom: 10px; }
     path { stroke: #333; stroke-width: 1; }
     path:hover { stroke-width: 3; }
-    .legend { font-family: Arial, Helvetica, sans-serif; }
+    .legend text.label { fill: white; }
+    a, a:visited { color: #ffffff; text-decoration: none; }
+    a:hover, a:active { border-bottom: 1px dotted #ffffff; }
 </style>
 <body>
+
+<h1>Confirmed COVID-19 Case Tracker</h1>
+<div id="content"></div>
+<div id="footer">Data by <a href="https://usafacts.org/" target="_blank">USAFacts</a> | <a href="https://github.com/shiruken/covid_choropleth" target="_blank">View on GitHub</a></div>
+
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 <script src="https://d3js.org/topojson.v1.min.js"></script>
@@ -23,7 +33,7 @@ var projection = d3.geoAlbersUsa()
 
 var path = d3.geoPath().projection(projection)
 
-var svg = d3.select('body')
+var svg = d3.select('#content')
     .append('svg')
     .attr('width', width)
     .attr('height', height)
