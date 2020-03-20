@@ -138,8 +138,10 @@ function initialize(error, results) {
         var index = domains.findIndex(function(x) {
             return x > max_state;
         });
-
-        if (index <= 1)
+        
+        if (index == -1)
+            index = domains.length;
+        else if (index <= 1)
             index = 2;
 
         var color_state = d3.scaleThreshold()
