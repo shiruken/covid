@@ -1337,7 +1337,7 @@ id,name,cases
 26161,"Washtenaw County, MI",16
 26163,"Wayne County, MI",216
 26165,"Wexford County, MI",0
-27000,Minnesota,89
+27000,Minnesota,115
 27001,"Aitkin County, MN",0
 27003,"Anoka County, MN",5
 27005,"Becker County, MN",0
@@ -1347,10 +1347,10 @@ id,name,cases
 27013,"Blue Earth County, MN",2
 27015,"Brown County, MN",0
 27017,"Carlton County, MN",0
-27019,"Carver County, MN",1
+27019,"Carver County, MN",3
 27021,"Cass County, MN",0
 27023,"Chippewa County, MN",0
-27025,"Chisago County, MN",0
+27025,"Chisago County, MN",1
 27027,"Clay County, MN",1
 27029,"Clearwater County, MN",0
 27031,"Cook County, MN",0
@@ -1360,11 +1360,11 @@ id,name,cases
 27039,"Dodge County, MN",0
 27041,"Douglas County, MN",0
 27043,"Faribault County, MN",0
-27045,"Fillmore County, MN",0
+27045,"Fillmore County, MN",2
 27047,"Freeborn County, MN",0
 27049,"Goodhue County, MN",0
 27051,"Grant County, MN",0
-27053,"Hennepin County, MN",33
+27053,"Hennepin County, MN",45
 27055,"Houston County, MN",0
 27057,"Hubbard County, MN",0
 27059,"Isanti County, MN",0
@@ -1383,7 +1383,7 @@ id,name,cases
 27085,"McLeod County, MN",0
 27087,"Mahnomen County, MN",0
 27089,"Marshall County, MN",0
-27091,"Martin County, MN",3
+27091,"Martin County, MN",4
 27093,"Meeker County, MN",0
 27095,"Mille Lacs County, MN",0
 27097,"Morrison County, MN",0
@@ -1392,14 +1392,14 @@ id,name,cases
 27103,"Nicollet County, MN",2
 27105,"Nobles County, MN",0
 27107,"Norman County, MN",0
-27109,"Olmsted County, MN",6
+27109,"Olmsted County, MN",11
 27111,"Otter Tail County, MN",0
 27113,"Pennington County, MN",0
 27115,"Pine County, MN",0
 27117,"Pipestone County, MN",0
 27119,"Polk County, MN",0
 27121,"Pope County, MN",0
-27123,"Ramsey County, MN",12
+27123,"Ramsey County, MN",16
 27125,"Red Lake County, MN",0
 27127,"Redwood County, MN",0
 27129,"Renville County, MN",1
@@ -1407,7 +1407,7 @@ id,name,cases
 27133,"Rock County, MN",0
 27135,"Roseau County, MN",0
 27137,"St. Louis County, MN",0
-27139,"Scott County, MN",1
+27139,"Scott County, MN",2
 27141,"Sherburne County, MN",0
 27143,"Sibley County, MN",0
 27145,"Stearns County, MN",4
@@ -1793,38 +1793,38 @@ id,name,cases
 32031,"Washoe County, NV",14
 32033,"White Pine County, NV",0
 32510,"Carson City, NV",1
-33000,New Hampshire,44
+33000,New Hampshire,55
 33001,"Belknap County, NH",3
-33003,"Carroll County, NH",4
-33005,"Cheshire County, NH",0
-33007,"Coos County, NH",0
-33009,"Grafton County, NH",9
-33011,"Hillsborough County, NH",8
-33013,"Merrimack County, NH",2
-33015,"Rockingham County, NH",18
+33003,"Carroll County, NH",5
+33005,"Cheshire County, NH",1
+33007,"Coos County, NH",1
+33009,"Grafton County, NH",12
+33011,"Hillsborough County, NH",10
+33013,"Merrimack County, NH",3
+33015,"Rockingham County, NH",20
 33017,"Strafford County, NH",0
 33019,"Sullivan County, NH",0
-34000,New Jersey,742
+34000,New Jersey,880
 34001,"Atlantic County, NJ",3
-34003,"Bergen County, NJ",195
-34005,"Burlington County, NJ",14
-34007,"Camden County, NJ",13
+34003,"Bergen County, NJ",249
+34005,"Burlington County, NJ",17
+34007,"Camden County, NJ",11
 34009,"Cape May County, NJ",1
-34011,"Cumberland County, NJ",0
-34013,"Essex County, NJ",63
+34011,"Cumberland County, NJ",1
+34013,"Essex County, NJ",73
 34015,"Gloucester County, NJ",3
-34017,"Hudson County, NJ",55
-34019,"Hunterdon County, NJ",8
-34021,"Mercer County, NJ",20
-34023,"Middlesex County, NJ",64
-34025,"Monmouth County, NJ",43
-34027,"Morris County, NJ",26
-34029,"Ocean County, NJ",33
-34031,"Passaic County, NJ",38
+34017,"Hudson County, NJ",66
+34019,"Hunterdon County, NJ",11
+34021,"Mercer County, NJ",22
+34023,"Middlesex County, NJ",76
+34025,"Monmouth County, NJ",53
+34027,"Morris County, NJ",35
+34029,"Ocean County, NJ",49
+34031,"Passaic County, NJ",49
 34033,"Salem County, NJ",0
-34035,"Somerset County, NJ",21
-34037,"Sussex County, NJ",2
-34039,"Union County, NJ",29
+34035,"Somerset County, NJ",28
+34037,"Sussex County, NJ",3
+34039,"Union County, NJ",43
 34041,"Warren County, NJ",3
 35000,New Mexico,35
 35001,"Bernalillo County, NM",20
@@ -3001,24 +3001,24 @@ id,name,cases
 51820,"Waynesboro city, VA",0
 51830,"Williamsburg city, VA",4
 51840,"Winchester city, VA",0
-53000,Washington,1376
+53000,Washington,1524
 53001,"Adams County, WA",0
 53003,"Asotin County, WA",0
-53005,"Benton County, WA",1
+53005,"Benton County, WA",2
 53007,"Chelan County, WA",2
 53009,"Clallam County, WA",1
-53011,"Clark County, WA",4
+53011,"Clark County, WA",6
 53013,"Columbia County, WA",1
-53015,"Cowlitz County, WA",0
+53015,"Cowlitz County, WA",1
 53017,"Douglas County, WA",0
 53019,"Ferry County, WA",0
 53021,"Franklin County, WA",2
 53023,"Garfield County, WA",0
 53025,"Grant County, WA",8
 53027,"Grays Harbor County, WA",1
-53029,"Island County, WA",17
+53029,"Island County, WA",19
 53031,"Jefferson County, WA",4
-53033,"King County, WA",693
+53033,"King County, WA",793
 53035,"Kitsap County, WA",12
 53037,"Kittitas County, WA",4
 53039,"Klickitat County, WA",2
@@ -3028,19 +3028,19 @@ id,name,cases
 53047,"Okanogan County, WA",0
 53049,"Pacific County, WA",0
 53051,"Pend Oreille County, WA",0
-53053,"Pierce County, WA",75
+53053,"Pierce County, WA",83
 53055,"San Juan County, WA",0
-53057,"Skagit County, WA",18
+53057,"Skagit County, WA",25
 53059,"Skamania County, WA",0
-53061,"Snohomish County, WA",348
-53063,"Spokane County, WA",9
+53061,"Snohomish County, WA",385
+53063,"Spokane County, WA",11
 53065,"Stevens County, WA",0
 53067,"Thurston County, WA",6
 53069,"Wahkiakum County, WA",0
 53071,"Walla Walla County, WA",0
-53073,"Whatcom County, WA",7
+53073,"Whatcom County, WA",10
 53075,"Whitman County, WA",0
-53077,"Yakima County, WA",7
+53077,"Yakima County, WA",10
 54000,West Virginia,7
 54001,"Barbour County, WV",0
 54003,"Berkeley County, WV",0
