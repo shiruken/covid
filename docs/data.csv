@@ -2566,7 +2566,7 @@ id,name,cases
 47185,"White County, TN",0
 47187,"Williamson County, TN",30
 47189,"Wilson County, TN",1
-48000,Texas,143
+48000,Texas,260
 48001,"Anderson County, TX",0
 48003,"Andrews County, TX",0
 48005,"Angelina County, TX",0
@@ -2580,14 +2580,14 @@ id,name,cases
 48021,"Bastrop County, TX",0
 48023,"Baylor County, TX",0
 48025,"Bee County, TX",0
-48027,"Bell County, TX",1
-48029,"Bexar County, TX",6
+48027,"Bell County, TX",2
+48029,"Bexar County, TX",12
 48031,"Blanco County, TX",0
 48033,"Borden County, TX",0
 48035,"Bosque County, TX",0
 48037,"Bowie County, TX",1
-48039,"Brazoria County, TX",2
-48041,"Brazos County, TX",1
+48039,"Brazoria County, TX",3
+48041,"Brazos County, TX",2
 48043,"Brewster County, TX",0
 48045,"Briscoe County, TX",0
 48047,"Brooks County, TX",0
@@ -2597,7 +2597,7 @@ id,name,cases
 48055,"Caldwell County, TX",0
 48057,"Calhoun County, TX",0
 48059,"Callahan County, TX",0
-48061,"Cameron County, TX",0
+48061,"Cameron County, TX",1
 48063,"Camp County, TX",0
 48065,"Carson County, TX",0
 48067,"Cass County, TX",0
@@ -2609,7 +2609,7 @@ id,name,cases
 48079,"Cochran County, TX",0
 48081,"Coke County, TX",0
 48083,"Coleman County, TX",0
-48085,"Collin County, TX",7
+48085,"Collin County, TX",12
 48087,"Collingsworth County, TX",0
 48089,"Colorado County, TX",0
 48091,"Comal County, TX",0
@@ -2618,16 +2618,16 @@ id,name,cases
 48097,"Cooke County, TX",0
 48099,"Coryell County, TX",0
 48101,"Cottle County, TX",0
-48103,"Crane County, TX",0
+48103,"Crane County, TX",1
 48105,"Crockett County, TX",0
 48107,"Crosby County, TX",0
 48109,"Culberson County, TX",0
 48111,"Dallam County, TX",0
-48113,"Dallas County, TX",20
+48113,"Dallas County, TX",74
 48115,"Dawson County, TX",0
 48117,"Deaf Smith County, TX",0
 48119,"Delta County, TX",0
-48121,"Denton County, TX",4
+48121,"Denton County, TX",6
 48123,"DeWitt County, TX",1
 48125,"Dickens County, TX",0
 48127,"Dimmit County, TX",0
@@ -2636,21 +2636,21 @@ id,name,cases
 48133,"Eastland County, TX",0
 48135,"Ector County, TX",0
 48137,"Edwards County, TX",0
-48139,"Ellis County, TX",0
+48139,"Ellis County, TX",2
 48141,"El Paso County, TX",3
 48143,"Erath County, TX",0
 48145,"Falls County, TX",0
-48147,"Fannin County, TX",0
+48147,"Fannin County, TX",1
 48149,"Fayette County, TX",0
 48151,"Fisher County, TX",0
 48153,"Floyd County, TX",0
 48155,"Foard County, TX",0
-48157,"Fort Bend County, TX",9
+48157,"Fort Bend County, TX",11
 48159,"Franklin County, TX",0
 48161,"Freestone County, TX",0
 48163,"Frio County, TX",0
 48165,"Gaines County, TX",0
-48167,"Galveston County, TX",2
+48167,"Galveston County, TX",4
 48169,"Garza County, TX",0
 48171,"Gillespie County, TX",0
 48173,"Glasscock County, TX",0
@@ -2667,16 +2667,16 @@ id,name,cases
 48195,"Hansford County, TX",0
 48197,"Hardeman County, TX",0
 48199,"Hardin County, TX",0
-48201,"Harris County, TX",10
+48201,"Harris County, TX",24
 48203,"Harrison County, TX",0
 48205,"Hartley County, TX",0
 48207,"Haskell County, TX",0
-48209,"Hays County, TX",3
+48209,"Hays County, TX",4
 48211,"Hemphill County, TX",0
 48213,"Henderson County, TX",0
 48215,"Hidalgo County, TX",0
 48217,"Hill County, TX",0
-48219,"Hockley County, TX",0
+48219,"Hockley County, TX",1
 48221,"Hood County, TX",0
 48223,"Hopkins County, TX",0
 48225,"Houston County, TX",0
@@ -2718,10 +2718,10 @@ id,name,cases
 48297,"Live Oak County, TX",0
 48299,"Llano County, TX",0
 48301,"Loving County, TX",0
-48303,"Lubbock County, TX",0
+48303,"Lubbock County, TX",1
 48305,"Lynn County, TX",0
 48307,"McCulloch County, TX",0
-48309,"McLennan County, TX",1
+48309,"McLennan County, TX",7
 48311,"McMullen County, TX",0
 48313,"Madison County, TX",0
 48315,"Marion County, TX",0
@@ -2729,14 +2729,14 @@ id,name,cases
 48319,"Mason County, TX",0
 48321,"Matagorda County, TX",3
 48323,"Maverick County, TX",0
-48325,"Medina County, TX",6
+48325,"Medina County, TX",1
 48327,"Menard County, TX",0
 48329,"Midland County, TX",0
 48331,"Milam County, TX",0
 48333,"Mills County, TX",0
 48335,"Mitchell County, TX",0
 48337,"Montague County, TX",0
-48339,"Montgomery County, TX",3
+48339,"Montgomery County, TX",4
 48341,"Moore County, TX",0
 48343,"Morris County, TX",0
 48345,"Motley County, TX",0
@@ -2786,14 +2786,14 @@ id,name,cases
 48433,"Stonewall County, TX",0
 48435,"Sutton County, TX",0
 48437,"Swisher County, TX",0
-48439,"Tarrant County, TX",5
+48439,"Tarrant County, TX",19
 48441,"Taylor County, TX",0
 48443,"Terrell County, TX",0
 48445,"Terry County, TX",0
 48447,"Throckmorton County, TX",0
 48449,"Titus County, TX",0
 48451,"Tom Green County, TX",0
-48453,"Travis County, TX",7
+48453,"Travis County, TX",21
 48455,"Trinity County, TX",0
 48457,"Tyler County, TX",0
 48459,"Upshur County, TX",0
@@ -2809,10 +2809,10 @@ id,name,cases
 48479,"Webb County, TX",1
 48481,"Wharton County, TX",0
 48483,"Wheeler County, TX",0
-48485,"Wichita County, TX",0
+48485,"Wichita County, TX",1
 48487,"Wilbarger County, TX",0
 48489,"Willacy County, TX",0
-48491,"Williamson County, TX",2
+48491,"Williamson County, TX",8
 48493,"Wilson County, TX",0
 48495,"Winkler County, TX",0
 48497,"Wise County, TX",0
