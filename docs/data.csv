@@ -2851,23 +2851,23 @@ id,name,cases
 49053,"Washington County, UT",1
 49055,"Wayne County, UT",0
 49057,"Weber County, UT",4
-50000,Vermont,22
+50000,Vermont,28
 50001,"Addison County, VT",0
-50003,"Bennington County, VT",4
+50003,"Bennington County, VT",5
 50005,"Caledonia County, VT",0
 50007,"Chittenden County, VT",5
 50009,"Essex County, VT",0
 50011,"Franklin County, VT",0
 50013,"Grand Isle County, VT",0
 50015,"Lamoille County, VT",0
-50017,"Orange County, VT",3
+50017,"Orange County, VT",4
 50019,"Orleans County, VT",0
 50021,"Rutland County, VT",0
 50023,"Washington County, VT",1
 50025,"Windham County, VT",0
 50027,"Windsor County, VT",1
-51000,Virginia,94
-51001,"Accomack County, VA",0
+51000,Virginia,113
+51001,"Accomack County, VA",1
 51003,"Albemarle County, VA",0
 51005,"Alleghany County, VA",0
 51007,"Amelia County, VA",0
@@ -2887,7 +2887,7 @@ id,name,cases
 51035,"Carroll County, VA",0
 51036,"Charles City County, VA",1
 51037,"Charlotte County, VA",0
-51041,"Chesterfield County, VA",6
+51041,"Chesterfield County, VA",5
 51043,"Clarke County, VA",0
 51045,"Craig County, VA",0
 51047,"Culpeper County, VA",0
@@ -2902,7 +2902,7 @@ id,name,cases
 51067,"Franklin County, VA",0
 51069,"Frederick County, VA",0
 51071,"Giles County, VA",0
-51073,"Gloucester County, VA",0
+51073,"Gloucester County, VA",1
 51075,"Goochland County, VA",1
 51077,"Grayson County, VA",0
 51079,"Greene County, VA",0
@@ -2913,13 +2913,13 @@ id,name,cases
 51089,"Henry County, VA",0
 51091,"Highland County, VA",0
 51093,"Isle of Wight County, VA",0
-51095,"James City County, VA",14
+51095,"James City County, VA",19
 51097,"King and Queen County, VA",0
 51099,"King George County, VA",0
 51101,"King William County, VA",0
 51103,"Lancaster County, VA",0
 51105,"Lee County, VA",0
-51107,"Loudoun County, VA",5
+51107,"Loudoun County, VA",9
 51109,"Louisa County, VA",0
 51111,"Lunenburg County, VA",0
 51113,"Madison County, VA",0
@@ -2939,7 +2939,7 @@ id,name,cases
 51145,"Powhatan County, VA",0
 51147,"Prince Edward County, VA",1
 51149,"Prince George County, VA",0
-51153,"Prince William County, VA",11
+51153,"Prince William County, VA",12
 51155,"Pulaski County, VA",0
 51157,"Rappahannock County, VA",0
 51159,"Richmond County, VA",0
@@ -2961,8 +2961,8 @@ id,name,cases
 51193,"Westmoreland County, VA",0
 51195,"Wise County, VA",0
 51197,"Wythe County, VA",0
-51199,"York County, VA",1
-51510,"Alexandria city, VA",4
+51199,"York County, VA",3
+51510,"Alexandria city, VA",3
 51515,"Bedford city, VA",0
 51520,"Bristol city, VA",0
 51530,"Buena Vista city, VA",0
@@ -2986,20 +2986,20 @@ id,name,cases
 51685,"Manassas Park city, VA",0
 51690,"Martinsville city, VA",0
 51700,"Newport News city, VA",0
-51710,"Norfolk city, VA",0
+51710,"Norfolk city, VA",1
 51720,"Norton city, VA",0
 51730,"Petersburg city, VA",0
 51735,"Poquoson city, VA",0
-51740,"Portsmouth city, VA",0
+51740,"Portsmouth city, VA",1
 51750,"Radford city, VA",0
-51760,"Richmond city, VA",3
+51760,"Richmond city, VA",5
 51770,"Roanoke city, VA",0
 51775,"Salem city, VA",0
 51790,"Staunton city, VA",0
 51800,"Suffolk city, VA",0
 51810,"Virginia Beach city, VA",4
 51820,"Waynesboro city, VA",0
-51830,"Williamsburg city, VA",1
+51830,"Williamsburg city, VA",4
 51840,"Winchester city, VA",0
 53000,Washington,1376
 53001,"Adams County, WA",0
@@ -3041,7 +3041,7 @@ id,name,cases
 53073,"Whatcom County, WA",7
 53075,"Whitman County, WA",0
 53077,"Yakima County, WA",7
-54000,West Virginia,5
+54000,West Virginia,7
 54001,"Barbour County, WV",0
 54003,"Berkeley County, WV",0
 54005,"Boone County, WV",0
@@ -3059,8 +3059,8 @@ id,name,cases
 54029,"Hancock County, WV",0
 54031,"Hardy County, WV",0
 54033,"Harrison County, WV",0
-54035,"Jackson County, WV",0
-54037,"Jefferson County, WV",1
+54035,"Jackson County, WV",1
+54037,"Jefferson County, WV",2
 54039,"Kanawha County, WV",0
 54041,"Lewis County, WV",0
 54043,"Lincoln County, WV",0
@@ -3072,7 +3072,7 @@ id,name,cases
 54055,"Mercer County, WV",1
 54057,"Mineral County, WV",0
 54059,"Mingo County, WV",0
-54061,"Monongalia County, WV",2
+54061,"Monongalia County, WV",1
 54063,"Monroe County, WV",0
 54065,"Morgan County, WV",0
 54067,"Nicholas County, WV",0
@@ -3088,7 +3088,7 @@ id,name,cases
 54087,"Roane County, WV",0
 54089,"Summers County, WV",0
 54091,"Taylor County, WV",0
-54093,"Tucker County, WV",1
+54093,"Tucker County, WV",2
 54095,"Tyler County, WV",0
 54097,"Upshur County, WV",0
 54099,"Wayne County, WV",0
