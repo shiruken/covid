@@ -1793,15 +1793,15 @@ id,name,cases
 32031,"Washoe County, NV",14
 32033,"White Pine County, NV",0
 32510,"Carson City, NV",1
-33000,New Hampshire,39
-33001,"Belknap County, NH",2
+33000,New Hampshire,44
+33001,"Belknap County, NH",3
 33003,"Carroll County, NH",4
 33005,"Cheshire County, NH",0
 33007,"Coos County, NH",0
-33009,"Grafton County, NH",7
+33009,"Grafton County, NH",9
 33011,"Hillsborough County, NH",8
-33013,"Merrimack County, NH",1
-33015,"Rockingham County, NH",17
+33013,"Merrimack County, NH",2
+33015,"Rockingham County, NH",18
 33017,"Strafford County, NH",0
 33019,"Sullivan County, NH",0
 34000,New Jersey,742
@@ -1826,8 +1826,8 @@ id,name,cases
 34037,"Sussex County, NJ",2
 34039,"Union County, NJ",29
 34041,"Warren County, NJ",3
-35000,New Mexico,28
-35001,"Bernalillo County, NM",16
+35000,New Mexico,35
+35001,"Bernalillo County, NM",20
 35003,"Catron County, NM",0
 35005,"Chaves County, NM",0
 35006,"Cibola County, NM",0
@@ -1852,38 +1852,38 @@ id,name,cases
 35041,"Roosevelt County, NM",0
 35043,"Sandoval County, NM",4
 35045,"San Juan County, NM",0
-35047,"San Miguel County, NM",0
-35049,"Santa Fe County, NM",5
+35047,"San Miguel County, NM",1
+35049,"Santa Fe County, NM",7
 35051,"Sierra County, NM",0
 35053,"Socorro County, NM",2
 35055,"Taos County, NM",1
 35057,"Torrance County, NM",0
 35059,"Union County, NM",0
 35061,"Valencia County, NM",0
-36000,New York,4152
+36000,New York,5637
 36001,"Albany County, NY",43
 36003,"Allegany County, NY",2
 36005,"Bronx County, NY",0
-36007,"Broome County, NY",1
+36007,"Broome County, NY",2
 36009,"Cattaraugus County, NY",0
 36011,"Cayuga County, NY",0
 36013,"Chautauqua County, NY",0
 36015,"Chemung County, NY",0
-36017,"Chenango County, NY",1
-36019,"Clinton County, NY",1
+36017,"Chenango County, NY",2
+36019,"Clinton County, NY",2
 36021,"Columbia County, NY",0
 36023,"Cortland County, NY",0
 36025,"Delaware County, NY",1
 36027,"Dutchess County, NY",31
-36029,"Erie County, NY",7
+36029,"Erie County, NY",28
 36031,"Essex County, NY",1
 36033,"Franklin County, NY",0
-36035,"Fulton County, NY",0
-36037,"Genesee County, NY",0
+36035,"Fulton County, NY",1
+36037,"Genesee County, NY",1
 36039,"Greene County, NY",2
-36041,"Hamilton County, NY",1
+36041,"Hamilton County, NY",2
 36043,"Herkimer County, NY",1
-36045,"Jefferson County, NY",0
+36045,"Jefferson County, NY",1
 36047,"Kings County, NY",0
 36049,"Lewis County, NY",0
 36051,"Livingston County, NY",0
@@ -1891,39 +1891,39 @@ id,name,cases
 36055,"Monroe County, NY",27
 36057,"Montgomery County, NY",2
 36059,"Nassau County, NY",372
-36061,"New York County, NY",2469
-36063,"Niagara County, NY",0
-36065,"Oneida County, NY",0
-36067,"Onondaga County, NY",2
+36061,"New York County, NY",3954
+36063,"Niagara County, NY",1
+36065,"Oneida County, NY",2
+36067,"Onondaga County, NY",5
 36069,"Ontario County, NY",1
 36071,"Orange County, NY",51
 36073,"Orleans County, NY",0
 36075,"Oswego County, NY",0
 36077,"Otsego County, NY",0
-36079,"Putnam County, NY",2
+36079,"Putnam County, NY",5
 36081,"Queens County, NY",0
-36083,"Rensselaer County, NY",4
+36083,"Rensselaer County, NY",6
 36085,"Richmond County, NY",0
 36087,"Rockland County, NY",53
 36089,"St. Lawrence County, NY",0
-36091,"Saratoga County, NY",14
-36093,"Schenectady County, NY",14
-36095,"Schoharie County, NY",0
+36091,"Saratoga County, NY",18
+36093,"Schenectady County, NY",18
+36095,"Schoharie County, NY",1
 36097,"Schuyler County, NY",0
 36099,"Seneca County, NY",0
 36101,"Steuben County, NY",0
 36103,"Suffolk County, NY",178
-36105,"Sullivan County, NY",1
+36105,"Sullivan County, NY",3
 36107,"Tioga County, NY",1
-36109,"Tompkins County, NY",3
-36111,"Ulster County, NY",9
+36109,"Tompkins County, NY",6
+36111,"Ulster County, NY",10
 36113,"Warren County, NY",1
 36115,"Washington County, NY",1
-36117,"Wayne County, NY",0
+36117,"Wayne County, NY",1
 36119,"Westchester County, NY",798
-36121,"Wyoming County, NY",1
+36121,"Wyoming County, NY",2
 36123,"Yates County, NY",0
-37000,North Carolina,97
+37000,North Carolina,137
 37001,"Alamance County, NC",0
 37003,"Alexander County, NC",0
 37005,"Alleghany County, NC",0
@@ -1936,7 +1936,7 @@ id,name,cases
 37019,"Brunswick County, NC",1
 37021,"Buncombe County, NC",0
 37023,"Burke County, NC",0
-37025,"Cabarrus County, NC",1
+37025,"Cabarrus County, NC",2
 37027,"Caldwell County, NC",0
 37029,"Camden County, NC",0
 37031,"Carteret County, NC",0
@@ -1948,25 +1948,25 @@ id,name,cases
 37043,"Clay County, NC",0
 37045,"Cleveland County, NC",0
 37047,"Columbus County, NC",0
-37049,"Craven County, NC",1
+37049,"Craven County, NC",2
 37051,"Cumberland County, NC",0
 37053,"Currituck County, NC",0
 37055,"Dare County, NC",0
-37057,"Davidson County, NC",0
+37057,"Davidson County, NC",1
 37059,"Davie County, NC",0
 37061,"Duplin County, NC",0
-37063,"Durham County, NC",32
+37063,"Durham County, NC",33
 37065,"Edgecombe County, NC",0
-37067,"Forsyth County, NC",2
+37067,"Forsyth County, NC",7
 37069,"Franklin County, NC",0
 37071,"Gaston County, NC",1
 37073,"Gates County, NC",0
 37075,"Graham County, NC",0
 37077,"Granville County, NC",0
 37079,"Greene County, NC",0
-37081,"Guilford County, NC",2
+37081,"Guilford County, NC",4
 37083,"Halifax County, NC",0
-37085,"Harnett County, NC",4
+37085,"Harnett County, NC",6
 37087,"Haywood County, NC",0
 37089,"Henderson County, NC",0
 37091,"Hertford County, NC",0
@@ -1983,27 +1983,27 @@ id,name,cases
 37113,"Macon County, NC",0
 37115,"Madison County, NC",0
 37117,"Martin County, NC",0
-37119,"Mecklenburg County, NC",13
+37119,"Mecklenburg County, NC",28
 37121,"Mitchell County, NC",0
 37123,"Montgomery County, NC",0
-37125,"Moore County, NC",0
+37125,"Moore County, NC",2
 37127,"Nash County, NC",0
-37129,"New Hanover County, NC",0
+37129,"New Hanover County, NC",1
 37131,"Northampton County, NC",0
 37133,"Onslow County, NC",1
-37135,"Orange County, NC",0
+37135,"Orange County, NC",4
 37137,"Pamlico County, NC",0
-37139,"Pasquotank County, NC",0
+37139,"Pasquotank County, NC",1
 37141,"Pender County, NC",0
 37143,"Perquimans County, NC",0
 37145,"Person County, NC",0
-37147,"Pitt County, NC",0
+37147,"Pitt County, NC",1
 37149,"Polk County, NC",0
 37151,"Randolph County, NC",0
 37153,"Richmond County, NC",0
 37155,"Robeson County, NC",0
 37157,"Rockingham County, NC",0
-37159,"Rowan County, NC",0
+37159,"Rowan County, NC",1
 37161,"Rutherford County, NC",0
 37163,"Sampson County, NC",1
 37165,"Scotland County, NC",0
@@ -2013,9 +2013,9 @@ id,name,cases
 37173,"Swain County, NC",0
 37175,"Transylvania County, NC",0
 37177,"Tyrrell County, NC",0
-37179,"Union County, NC",1
+37179,"Union County, NC",2
 37181,"Vance County, NC",0
-37183,"Wake County, NC",22
+37183,"Wake County, NC",23
 37185,"Warren County, NC",0
 37187,"Washington County, NC",0
 37189,"Watauga County, NC",2
@@ -2024,7 +2024,7 @@ id,name,cases
 37195,"Wilson County, NC",2
 37197,"Yadkin County, NC",0
 37199,"Yancey County, NC",0
-38000,North Dakota,7
+38000,North Dakota,19
 38001,"Adams County, ND",0
 38003,"Barnes County, ND",0
 38005,"Benson County, ND",0
@@ -2032,7 +2032,7 @@ id,name,cases
 38009,"Bottineau County, ND",0
 38011,"Bowman County, ND",0
 38013,"Burke County, ND",0
-38015,"Burleigh County, ND",2
+38015,"Burleigh County, ND",11
 38017,"Cass County, ND",1
 38019,"Cavalier County, ND",0
 38021,"Dickey County, ND",0
@@ -2054,7 +2054,7 @@ id,name,cases
 38053,"McKenzie County, ND",0
 38055,"McLean County, ND",0
 38057,"Mercer County, ND",0
-38059,"Morton County, ND",2
+38059,"Morton County, ND",4
 38061,"Mountrail County, ND",0
 38063,"Nelson County, ND",0
 38065,"Oliver County, ND",0
@@ -2075,7 +2075,7 @@ id,name,cases
 38095,"Towner County, ND",0
 38097,"Traill County, ND",0
 38099,"Walsh County, ND",0
-38101,"Ward County, ND",2
+38101,"Ward County, ND",3
 38103,"Wells County, ND",0
 38105,"Williams County, ND",0
 39000,Ohio,119
@@ -2245,9 +2245,9 @@ id,name,cases
 40149,"Washita County, OK",0
 40151,"Woods County, OK",0
 40153,"Woodward County, OK",0
-41000,Oregon,75
+41000,Oregon,88
 41001,"Baker County, OR",0
-41003,"Benton County, OR",3
+41003,"Benton County, OR",2
 41005,"Clackamas County, OR",6
 41007,"Clatsop County, OR",0
 41009,"Columbia County, OR",0
@@ -2267,11 +2267,11 @@ id,name,cases
 41037,"Lake County, OR",0
 41039,"Lane County, OR",2
 41041,"Lincoln County, OR",0
-41043,"Linn County, OR",15
+41043,"Linn County, OR",18
 41045,"Malheur County, OR",0
-41047,"Marion County, OR",8
+41047,"Marion County, OR",13
 41049,"Morrow County, OR",0
-41051,"Multnomah County, OR",3
+41051,"Multnomah County, OR",7
 41053,"Polk County, OR",1
 41055,"Sherman County, OR",0
 41057,"Tillamook County, OR",0
@@ -2279,7 +2279,7 @@ id,name,cases
 41061,"Union County, OR",0
 41063,"Wallowa County, OR",0
 41065,"Wasco County, OR",0
-41067,"Washington County, OR",23
+41067,"Washington County, OR",25
 41069,"Wheeler County, OR",0
 41071,"Yamhill County, OR",2
 42000,Pennsylvania,185
@@ -2350,23 +2350,23 @@ id,name,cases
 42129,"Westmoreland County, PA",2
 42131,"Wyoming County, PA",0
 42133,"York County, PA",2
-44000,Rhode Island,33
+44000,Rhode Island,44
 44001,"Bristol County, RI",0
 44003,"Kent County, RI",0
 44005,"Newport County, RI",0
 44007,"Providence County, RI",4
 44009,"Washington County, RI",2
-45000,South Carolina,59
-45001,"Abbeville County, SC",0
+45000,South Carolina,80
+45001,"Abbeville County, SC",1
 45003,"Aiken County, SC",0
 45005,"Allendale County, SC",0
-45007,"Anderson County, SC",2
+45007,"Anderson County, SC",3
 45009,"Bamberg County, SC",0
 45011,"Barnwell County, SC",0
-45013,"Beaufort County, SC",6
+45013,"Beaufort County, SC",7
 45015,"Berkeley County, SC",0
 45017,"Calhoun County, SC",1
-45019,"Charleston County, SC",4
+45019,"Charleston County, SC",5
 45021,"Cherokee County, SC",0
 45023,"Chester County, SC",0
 45025,"Chesterfield County, SC",0
@@ -2376,19 +2376,19 @@ id,name,cases
 45033,"Dillon County, SC",0
 45035,"Dorchester County, SC",0
 45037,"Edgefield County, SC",0
-45039,"Fairfield County, SC",0
+45039,"Fairfield County, SC",1
 45041,"Florence County, SC",0
 45043,"Georgetown County, SC",0
-45045,"Greenville County, SC",3
+45045,"Greenville County, SC",7
 45047,"Greenwood County, SC",0
 45049,"Hampton County, SC",0
-45051,"Horry County, SC",5
+45051,"Horry County, SC",6
 45053,"Jasper County, SC",0
-45055,"Kershaw County, SC",25
-45057,"Lancaster County, SC",2
+45055,"Kershaw County, SC",29
+45057,"Lancaster County, SC",3
 45059,"Laurens County, SC",0
 45061,"Lee County, SC",1
-45063,"Lexington County, SC",4
+45063,"Lexington County, SC",5
 45065,"McCormick County, SC",0
 45067,"Marion County, SC",0
 45069,"Marlboro County, SC",0
@@ -2396,16 +2396,16 @@ id,name,cases
 45073,"Oconee County, SC",0
 45075,"Orangeburg County, SC",0
 45077,"Pickens County, SC",0
-45079,"Richland County, SC",4
-45081,"Saluda County, SC",0
+45079,"Richland County, SC",8
+45081,"Saluda County, SC",1
 45083,"Spartanburg County, SC",1
 45085,"Sumter County, SC",0
 45087,"Union County, SC",0
 45089,"Williamsburg County, SC",0
 45091,"York County, SC",1
-46000,South Dakota,11
+46000,South Dakota,14
 46003,"Aurora County, SD",0
-46005,"Beadle County, SD",1
+46005,"Beadle County, SD",4
 46007,"Bennett County, SD",0
 46009,"Bon Homme County, SD",1
 46011,"Brookings County, SD",0
@@ -2470,7 +2470,7 @@ id,name,cases
 46129,"Walworth County, SD",0
 46135,"Yankton County, SD",0
 46137,"Ziebach County, SD",0
-47000,Tennessee,98
+47000,Tennessee,154
 47001,"Anderson County, TN",0
 47003,"Bedford County, TN",0
 47005,"Benton County, TN",0
@@ -2488,12 +2488,12 @@ id,name,cases
 47029,"Cocke County, TN",0
 47031,"Coffee County, TN",0
 47033,"Crockett County, TN",0
-47035,"Cumberland County, TN",0
-47037,"Davidson County, TN",58
+47035,"Cumberland County, TN",1
+47037,"Davidson County, TN",75
 47039,"Decatur County, TN",0
 47041,"DeKalb County, TN",0
 47043,"Dickson County, TN",0
-47045,"Dyer County, TN",0
+47045,"Dyer County, TN",1
 47047,"Fayette County, TN",0
 47049,"Fentress County, TN",0
 47051,"Franklin County, TN",0
@@ -2533,7 +2533,7 @@ id,name,cases
 47119,"Maury County, TN",0
 47121,"Meigs County, TN",0
 47123,"Monroe County, TN",0
-47125,"Montgomery County, TN",0
+47125,"Montgomery County, TN",1
 47127,"Moore County, TN",0
 47129,"Morgan County, TN",0
 47131,"Obion County, TN",0
@@ -2544,7 +2544,7 @@ id,name,cases
 47141,"Putnam County, TN",0
 47143,"Rhea County, TN",0
 47145,"Roane County, TN",0
-47147,"Robertson County, TN",1
+47147,"Robertson County, TN",2
 47149,"Rutherford County, TN",1
 47151,"Scott County, TN",0
 47153,"Sequatchie County, TN",0
@@ -2553,7 +2553,7 @@ id,name,cases
 47159,"Smith County, TN",0
 47161,"Stewart County, TN",0
 47163,"Sullivan County, TN",1
-47165,"Sumner County, TN",2
+47165,"Sumner County, TN",3
 47167,"Tipton County, TN",0
 47169,"Trousdale County, TN",0
 47171,"Unicoi County, TN",0
@@ -2564,8 +2564,8 @@ id,name,cases
 47181,"Wayne County, TN",0
 47183,"Weakley County, TN",0
 47185,"White County, TN",0
-47187,"Williamson County, TN",24
-47189,"Wilson County, TN",0
+47187,"Williamson County, TN",30
+47189,"Wilson County, TN",1
 48000,Texas,143
 48001,"Anderson County, TX",0
 48003,"Andrews County, TX",0
@@ -2821,7 +2821,7 @@ id,name,cases
 48503,"Young County, TX",0
 48505,"Zapata County, TX",0
 48507,"Zavala County, TX",0
-49000,Utah,65
+49000,Utah,78
 49001,"Beaver County, UT",0
 49003,"Box Elder County, UT",1
 49005,"Cache County, UT",2
@@ -2839,41 +2839,41 @@ id,name,cases
 49029,"Morgan County, UT",0
 49031,"Piute County, UT",0
 49033,"Rich County, UT",0
-49035,"Salt Lake County, UT",24
+49035,"Salt Lake County, UT",31
 49037,"San Juan County, UT",0
 49039,"Sanpete County, UT",0
 49041,"Sevier County, UT",0
-49043,"Summit County, UT",22
+49043,"Summit County, UT",26
 49045,"Tooele County, UT",1
 49047,"Uintah County, UT",0
 49049,"Utah County, UT",0
-49051,"Wasatch County, UT",2
+49051,"Wasatch County, UT",3
 49053,"Washington County, UT",1
 49055,"Wayne County, UT",0
 49057,"Weber County, UT",4
-50000,Vermont,19
+50000,Vermont,22
 50001,"Addison County, VT",0
-50003,"Bennington County, VT",3
+50003,"Bennington County, VT",4
 50005,"Caledonia County, VT",0
 50007,"Chittenden County, VT",5
 50009,"Essex County, VT",0
 50011,"Franklin County, VT",0
 50013,"Grand Isle County, VT",0
 50015,"Lamoille County, VT",0
-50017,"Orange County, VT",2
+50017,"Orange County, VT",3
 50019,"Orleans County, VT",0
 50021,"Rutland County, VT",0
 50023,"Washington County, VT",1
 50025,"Windham County, VT",0
 50027,"Windsor County, VT",1
-51000,Virginia,77
+51000,Virginia,94
 51001,"Accomack County, VA",0
 51003,"Albemarle County, VA",0
 51005,"Alleghany County, VA",0
 51007,"Amelia County, VA",0
 51009,"Amherst County, VA",0
 51011,"Appomattox County, VA",0
-51013,"Arlington County, VA",14
+51013,"Arlington County, VA",17
 51015,"Augusta County, VA",0
 51017,"Bath County, VA",0
 51019,"Bedford County, VA",0
@@ -2887,7 +2887,7 @@ id,name,cases
 51035,"Carroll County, VA",0
 51036,"Charles City County, VA",1
 51037,"Charlotte County, VA",0
-51041,"Chesterfield County, VA",5
+51041,"Chesterfield County, VA",6
 51043,"Clarke County, VA",0
 51045,"Craig County, VA",0
 51047,"Culpeper County, VA",0
@@ -2895,7 +2895,7 @@ id,name,cases
 51051,"Dickenson County, VA",0
 51053,"Dinwiddie County, VA",0
 51057,"Essex County, VA",0
-51059,"Fairfax County, VA",14
+51059,"Fairfax County, VA",16
 51061,"Fauquier County, VA",0
 51063,"Floyd County, VA",0
 51065,"Fluvanna County, VA",0
@@ -2909,11 +2909,11 @@ id,name,cases
 51081,"Greensville County, VA",0
 51083,"Halifax County, VA",0
 51085,"Hanover County, VA",1
-51087,"Henrico County, VA",2
+51087,"Henrico County, VA",3
 51089,"Henry County, VA",0
 51091,"Highland County, VA",0
 51093,"Isle of Wight County, VA",0
-51095,"James City County, VA",13
+51095,"James City County, VA",14
 51097,"King and Queen County, VA",0
 51099,"King George County, VA",0
 51101,"King William County, VA",0
@@ -2939,7 +2939,7 @@ id,name,cases
 51145,"Powhatan County, VA",0
 51147,"Prince Edward County, VA",1
 51149,"Prince George County, VA",0
-51153,"Prince William County, VA",4
+51153,"Prince William County, VA",11
 51155,"Pulaski County, VA",0
 51157,"Rappahannock County, VA",0
 51159,"Richmond County, VA",0
@@ -2962,7 +2962,7 @@ id,name,cases
 51195,"Wise County, VA",0
 51197,"Wythe County, VA",0
 51199,"York County, VA",1
-51510,"Alexandria city, VA",2
+51510,"Alexandria city, VA",4
 51515,"Bedford city, VA",0
 51520,"Bristol city, VA",0
 51530,"Buena Vista city, VA",0
@@ -3041,7 +3041,7 @@ id,name,cases
 53073,"Whatcom County, WA",7
 53075,"Whitman County, WA",0
 53077,"Yakima County, WA",7
-54000,West Virginia,2
+54000,West Virginia,5
 54001,"Barbour County, WV",0
 54003,"Berkeley County, WV",0
 54005,"Boone County, WV",0
@@ -3072,7 +3072,7 @@ id,name,cases
 54055,"Mercer County, WV",1
 54057,"Mineral County, WV",0
 54059,"Mingo County, WV",0
-54061,"Monongalia County, WV",0
+54061,"Monongalia County, WV",2
 54063,"Monroe County, WV",0
 54065,"Morgan County, WV",0
 54067,"Nicholas County, WV",0
@@ -3088,7 +3088,7 @@ id,name,cases
 54087,"Roane County, WV",0
 54089,"Summers County, WV",0
 54091,"Taylor County, WV",0
-54093,"Tucker County, WV",0
+54093,"Tucker County, WV",1
 54095,"Tyler County, WV",0
 54097,"Upshur County, WV",0
 54099,"Wayne County, WV",0
