@@ -1253,7 +1253,7 @@ id,name,cases
 25023,"Plymouth County, MA",5
 25025,"Suffolk County, MA",72
 25027,"Worcester County, MA",14
-26000,Michigan,334
+26000,Michigan,549
 26001,"Alcona County, MI",0
 26003,"Alger County, MI",0
 26005,"Allegan County, MI",0
@@ -1278,7 +1278,7 @@ id,name,cases
 26043,"Dickinson County, MI",0
 26045,"Eaton County, MI",2
 26047,"Emmet County, MI",0
-26049,"Genesee County, MI",0
+26049,"Genesee County, MI",1
 26051,"Gladwin County, MI",0
 26053,"Gogebic County, MI",0
 26055,"Grand Traverse County, MI",0
@@ -1286,7 +1286,7 @@ id,name,cases
 26059,"Hillsdale County, MI",0
 26061,"Houghton County, MI",0
 26063,"Huron County, MI",0
-26065,"Ingham County, MI",6
+26065,"Ingham County, MI",7
 26067,"Ionia County, MI",0
 26069,"Iosco County, MI",0
 26071,"Iron County, MI",0
@@ -1294,29 +1294,29 @@ id,name,cases
 26075,"Jackson County, MI",1
 26077,"Kalamazoo County, MI",0
 26079,"Kalkaska County, MI",0
-26081,"Kent County, MI",7
+26081,"Kent County, MI",12
 26083,"Keweenaw County, MI",0
 26085,"Lake County, MI",0
 26087,"Lapeer County, MI",0
 26089,"Leelanau County, MI",1
 26091,"Lenawee County, MI",0
-26093,"Livingston County, MI",1
+26093,"Livingston County, MI",3
 26095,"Luce County, MI",0
 26097,"Mackinac County, MI",0
-26099,"Macomb County, MI",55
+26099,"Macomb County, MI",86
 26101,"Manistee County, MI",0
 26103,"Marquette County, MI",0
 26105,"Mason County, MI",0
 26107,"Mecosta County, MI",0
 26109,"Menominee County, MI",0
-26111,"Midland County, MI",1
+26111,"Midland County, MI",3
 26113,"Missaukee County, MI",0
-26115,"Monroe County, MI",2
+26115,"Monroe County, MI",3
 26117,"Montcalm County, MI",1
 26119,"Montmorency County, MI",0
 26121,"Muskegon County, MI",0
 26123,"Newaygo County, MI",0
-26125,"Oakland County, MI",105
+26125,"Oakland County, MI",184
 26127,"Oceana County, MI",0
 26129,"Ogemaw County, MI",0
 26131,"Ontonagon County, MI",0
@@ -1327,15 +1327,15 @@ id,name,cases
 26141,"Presque Isle County, MI",0
 26143,"Roscommon County, MI",0
 26145,"Saginaw County, MI",0
-26147,"St. Clair County, MI",4
+26147,"St. Clair County, MI",7
 26149,"St. Joseph County, MI",0
 26151,"Sanilac County, MI",0
 26153,"Schoolcraft County, MI",0
 26155,"Shiawassee County, MI",0
 26157,"Tuscola County, MI",0
 26159,"Van Buren County, MI",0
-26161,"Washtenaw County, MI",14
-26163,"Wayne County, MI",119
+26161,"Washtenaw County, MI",16
+26163,"Wayne County, MI",216
 26165,"Wexford County, MI",0
 27000,Minnesota,89
 27001,"Aitkin County, MN",0
@@ -3097,7 +3097,7 @@ id,name,cases
 54105,"Wirt County, WV",0
 54107,"Wood County, WV",0
 54109,"Wyoming County, WV",0
-55000,Wisconsin,155
+55000,Wisconsin,206
 55001,"Adams County, WI",0
 55003,"Ashland County, WI",0
 55005,"Barron County, WI",0
@@ -3106,44 +3106,44 @@ id,name,cases
 55011,"Buffalo County, WI",0
 55013,"Burnett County, WI",0
 55015,"Calumet County, WI",1
-55017,"Chippewa County, WI",0
+55017,"Chippewa County, WI",1
 55019,"Clark County, WI",0
-55021,"Columbia County, WI",4
+55021,"Columbia County, WI",5
 55023,"Crawford County, WI",0
-55025,"Dane County, WI",27
+55025,"Dane County, WI",32
 55027,"Dodge County, WI",0
 55029,"Door County, WI",0
-55031,"Douglas County, WI",0
-55033,"Dunn County, WI",0
+55031,"Douglas County, WI",1
+55033,"Dunn County, WI",1
 55035,"Eau Claire County, WI",1
 55037,"Florence County, WI",0
 55039,"Fond du Lac County, WI",14
 55041,"Forest County, WI",0
 55043,"Grant County, WI",0
-55045,"Green County, WI",0
+55045,"Green County, WI",1
 55047,"Green Lake County, WI",0
 55049,"Iowa County, WI",0
 55051,"Iron County, WI",0
 55053,"Jackson County, WI",0
-55055,"Jefferson County, WI",0
+55055,"Jefferson County, WI",1
 55057,"Juneau County, WI",0
 55059,"Kenosha County, WI",4
 55061,"Kewaunee County, WI",0
-55063,"La Crosse County, WI",2
+55063,"La Crosse County, WI",4
 55065,"Lafayette County, WI",0
 55067,"Langlade County, WI",0
 55069,"Lincoln County, WI",0
 55071,"Manitowoc County, WI",0
-55073,"Marathon County, WI",0
+55073,"Marathon County, WI",1
 55075,"Marinette County, WI",0
 55077,"Marquette County, WI",0
 55078,"Menominee County, WI",0
-55079,"Milwaukee County, WI",62
+55079,"Milwaukee County, WI",85
 55081,"Monroe County, WI",0
 55083,"Oconto County, WI",0
 55085,"Oneida County, WI",0
-55087,"Outagamie County, WI",1
-55089,"Ozaukee County, WI",3
+55087,"Outagamie County, WI",2
+55089,"Ozaukee County, WI",7
 55091,"Pepin County, WI",0
 55093,"Pierce County, WI",1
 55095,"Polk County, WI",0
@@ -3151,10 +3151,10 @@ id,name,cases
 55099,"Price County, WI",0
 55101,"Racine County, WI",3
 55103,"Richland County, WI",0
-55105,"Rock County, WI",0
+55105,"Rock County, WI",1
 55107,"Rusk County, WI",0
-55109,"St. Croix County, WI",0
-55111,"Sauk County, WI",1
+55109,"St. Croix County, WI",2
+55111,"Sauk County, WI",2
 55113,"Sawyer County, WI",0
 55115,"Shawano County, WI",0
 55117,"Sheboygan County, WI",6
@@ -3162,10 +3162,10 @@ id,name,cases
 55121,"Trempealeau County, WI",0
 55123,"Vernon County, WI",0
 55125,"Vilas County, WI",0
-55127,"Walworth County, WI",2
+55127,"Walworth County, WI",3
 55129,"Washburn County, WI",0
-55131,"Washington County, WI",2
-55133,"Waukesha County, WI",12
+55131,"Washington County, WI",3
+55133,"Waukesha County, WI",15
 55135,"Waupaca County, WI",0
 55137,"Waushara County, WI",0
 55139,"Winnebago County, WI",5
