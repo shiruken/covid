@@ -189,18 +189,18 @@ id,name,cases
 5145,"White County, AR",0
 5147,"Woodruff County, AR",0
 5149,"Yell County, AR",0
-6000,California,1066
+6000,California,1289
 6000,California,21
-6001,"Alameda County, CA",35
+6001,"Alameda County, CA",45
 6003,"Alpine County, CA",0
-6005,"Amador County, CA",1
+6005,"Amador County, CA",2
 6007,"Butte County, CA",0
 6009,"Calaveras County, CA",2
 6011,"Colusa County, CA",0
-6013,"Contra Costa County, CA",42
+6013,"Contra Costa County, CA",46
 6015,"Del Norte County, CA",0
-6017,"El Dorado County, CA",0
-6019,"Fresno County, CA",3
+6017,"El Dorado County, CA",1
+6019,"Fresno County, CA",6
 6021,"Glenn County, CA",0
 6023,"Humboldt County, CA",1
 6025,"Imperial County, CA",4
@@ -209,45 +209,45 @@ id,name,cases
 6031,"Kings County, CA",0
 6033,"Lake County, CA",0
 6035,"Lassen County, CA",0
-6037,"Los Angeles County, CA",231
-6039,"Madera County, CA",3
-6041,"Marin County, CA",25
+6037,"Los Angeles County, CA",292
+6039,"Madera County, CA",2
+6041,"Marin County, CA",38
 6043,"Mariposa County, CA",0
 6045,"Mendocino County, CA",1
 6047,"Merced County, CA",0
 6049,"Modoc County, CA",0
-6051,"Mono County, CA",0
-6053,"Monterey County, CA",2
+6051,"Mono County, CA",1
+6053,"Monterey County, CA",5
 6055,"Napa County, CA",0
 6057,"Nevada County, CA",1
-6059,"Orange County, CA",53
+6059,"Orange County, CA",65
 6061,"Placer County, CA",9
 6063,"Plumas County, CA",0
-6065,"Riverside County, CA",22
-6067,"Sacramento County, CA",45
+6065,"Riverside County, CA",28
+6067,"Sacramento County, CA",53
 6069,"San Benito County, CA",5
-6071,"San Bernardino County, CA",5
-6073,"San Diego County, CA",89
-6075,"San Francisco County, CA",70
-6077,"San Joaquin County, CA",17
-6079,"San Luis Obispo County, CA",13
-6081,"San Mateo County, CA",97
-6083,"Santa Barbara County, CA",8
-6085,"Santa Clara County, CA",189
-6087,"Santa Cruz County, CA",14
+6071,"San Bernardino County, CA",9
+6073,"San Diego County, CA",120
+6075,"San Francisco County, CA",84
+6077,"San Joaquin County, CA",25
+6079,"San Luis Obispo County, CA",16
+6081,"San Mateo County, CA",110
+6083,"Santa Barbara County, CA",9
+6085,"Santa Clara County, CA",196
+6087,"Santa Cruz County, CA",15
 6089,"Shasta County, CA",1
 6091,"Sierra County, CA",0
 6093,"Siskiyou County, CA",0
 6095,"Solano County, CA",10
-6097,"Sonoma County, CA",9
+6097,"Sonoma County, CA",21
 6099,"Stanislaus County, CA",5
 6101,"Sutter County, CA",0
 6103,"Tehama County, CA",0
 6105,"Trinity County, CA",0
-6107,"Tulare County, CA",7
+6107,"Tulare County, CA",11
 6109,"Tuolumne County, CA",0
-6111,"Ventura County, CA",17
-6113,"Yolo County, CA",5
+6111,"Ventura County, CA",19
+6113,"Yolo County, CA",6
 6115,"Yuba County, CA",0
 8000,Colorado,363
 8001,"Adams County, CO",12
@@ -329,18 +329,18 @@ id,name,cases
 10005,"Sussex County, DE",7
 11000,District of Columbia,77
 11001,"Washington, DC",77
-12000,Florida,432
-12001,"Alachua County, FL",11
-12003,"Baker County, FL",0
-12005,"Bay County, FL",0
+12000,Florida,657
+12001,"Alachua County, FL",21
+12003,"Baker County, FL",1
+12005,"Bay County, FL",1
 12007,"Bradford County, FL",0
-12009,"Brevard County, FL",3
-12011,"Broward County, FL",96
+12009,"Brevard County, FL",4
+12011,"Broward County, FL",151
 12013,"Calhoun County, FL",0
-12015,"Charlotte County, FL",1
-12017,"Citrus County, FL",3
-12019,"Clay County, FL",4
-12021,"Collier County, FL",18
+12015,"Charlotte County, FL",2
+12017,"Citrus County, FL",7
+12019,"Clay County, FL",5
+12021,"Collier County, FL",27
 12023,"Columbia County, FL",0
 12027,"DeSoto County, FL",0
 12029,"Dixie County, FL",0
@@ -355,49 +355,49 @@ id,name,cases
 12047,"Hamilton County, FL",0
 12049,"Hardee County, FL",0
 12051,"Hendry County, FL",0
-12053,"Hernando County, FL",1
-12055,"Highlands County, FL",0
-12057,"Hillsborough County, FL",20
+12053,"Hernando County, FL",5
+12055,"Highlands County, FL",1
+12057,"Hillsborough County, FL",42
 12059,"Holmes County, FL",0
 12061,"Indian River County, FL",1
-12063,"Jackson County, FL",1
+12063,"Jackson County, FL",4
 12065,"Jefferson County, FL",0
 12067,"Lafayette County, FL",0
-12069,"Lake County, FL",3
-12071,"Lee County, FL",11
-12073,"Leon County, FL",4
+12069,"Lake County, FL",4
+12071,"Lee County, FL",14
+12073,"Leon County, FL",5
 12075,"Levy County, FL",0
 12077,"Liberty County, FL",0
 12079,"Madison County, FL",0
-12081,"Manatee County, FL",9
+12081,"Manatee County, FL",11
 12083,"Marion County, FL",0
 12085,"Martin County, FL",1
-12086,"Miami-Dade County, FL",101
-12087,"Monroe County, FL",0
+12086,"Miami-Dade County, FL",142
+12087,"Monroe County, FL",1
 12089,"Nassau County, FL",1
-12091,"Okaloosa County, FL",5
+12091,"Okaloosa County, FL",9
 12093,"Okeechobee County, FL",0
-12095,"Orange County, FL",19
-12097,"Osceola County, FL",13
-12099,"Palm Beach County, FL",29
-12101,"Pasco County, FL",5
-12103,"Pinellas County, FL",16
-12105,"Polk County, FL",4
-12107,"Putnam County, FL",0
-12109,"St. Johns County, FL",4
-12111,"St. Lucie County, FL",0
-12113,"Santa Rosa County, FL",2
-12115,"Sarasota County, FL",6
-12117,"Seminole County, FL",8
-12119,"Sumter County, FL",2
+12095,"Orange County, FL",23
+12097,"Osceola County, FL",14
+12099,"Palm Beach County, FL",45
+12101,"Pasco County, FL",8
+12103,"Pinellas County, FL",27
+12105,"Polk County, FL",10
+12107,"Putnam County, FL",1
+12109,"St. Johns County, FL",8
+12111,"St. Lucie County, FL",1
+12113,"Santa Rosa County, FL",3
+12115,"Sarasota County, FL",10
+12117,"Seminole County, FL",11
+12119,"Sumter County, FL",3
 12121,"Suwannee County, FL",0
 12123,"Taylor County, FL",0
 12125,"Union County, FL",0
-12127,"Volusia County, FL",9
+12127,"Volusia County, FL",10
 12129,"Wakulla County, FL",0
-12131,"Walton County, FL",1
+12131,"Walton County, FL",3
 12133,"Washington County, FL",0
-13000,Georgia,419
+13000,Georgia,484
 13001,"Appling County, GA",0
 13003,"Atkinson County, GA",0
 13005,"Bacon County, GA",0
@@ -405,7 +405,7 @@ id,name,cases
 13009,"Baldwin County, GA",0
 13011,"Banks County, GA",0
 13013,"Barrow County, GA",1
-13015,"Bartow County, GA",40
+13015,"Bartow County, GA",54
 13017,"Ben Hill County, GA",0
 13019,"Berrien County, GA",0
 13021,"Bibb County, GA",1
@@ -422,29 +422,29 @@ id,name,cases
 13045,"Carroll County, GA",7
 13047,"Catoosa County, GA",0
 13049,"Charlton County, GA",1
-13051,"Chatham County, GA",1
+13051,"Chatham County, GA",2
 13053,"Chattahoochee County, GA",0
 13055,"Chattooga County, GA",0
-13057,"Cherokee County, GA",13
+13057,"Cherokee County, GA",16
 13059,"Clarke County, GA",0
-13061,"Clay County, GA",9
-13063,"Clayton County, GA",9
+13061,"Clay County, GA",10
+13063,"Clayton County, GA",10
 13065,"Clinch County, GA",0
-13067,"Cobb County, GA",45
+13067,"Cobb County, GA",47
 13069,"Coffee County, GA",0
 13071,"Colquitt County, GA",0
 13073,"Columbia County, GA",1
 13075,"Cook County, GA",0
-13077,"Coweta County, GA",5
+13077,"Coweta County, GA",6
 13079,"Crawford County, GA",0
 13081,"Crisp County, GA",0
 13083,"Dade County, GA",0
 13085,"Dawson County, GA",1
 13087,"Decatur County, GA",0
-13089,"DeKalb County, GA",35
+13089,"DeKalb County, GA",36
 13091,"Dodge County, GA",0
 13093,"Dooly County, GA",0
-13095,"Dougherty County, GA",38
+13095,"Dougherty County, GA",44
 13097,"Douglas County, GA",1
 13099,"Early County, GA",2
 13101,"Echols County, GA",0
@@ -453,27 +453,27 @@ id,name,cases
 13107,"Emanuel County, GA",0
 13109,"Evans County, GA",0
 13111,"Fannin County, GA",0
-13113,"Fayette County, GA",10
-13115,"Floyd County, GA",6
+13113,"Fayette County, GA",9
+13115,"Floyd County, GA",7
 13117,"Forsyth County, GA",3
 13119,"Franklin County, GA",0
-13121,"Fulton County, GA",79
+13121,"Fulton County, GA",88
 13123,"Gilmer County, GA",0
 13125,"Glascock County, GA",0
 13127,"Glynn County, GA",2
 13129,"Gordon County, GA",3
 13131,"Grady County, GA",0
 13133,"Greene County, GA",0
-13135,"Gwinnett County, GA",20
+13135,"Gwinnett County, GA",23
 13137,"Habersham County, GA",0
-13139,"Hall County, GA",5
+13139,"Hall County, GA",6
 13141,"Hancock County, GA",0
 13143,"Haralson County, GA",0
 13145,"Harris County, GA",0
 13147,"Hart County, GA",0
 13149,"Heard County, GA",1
 13151,"Henry County, GA",6
-13153,"Houston County, GA",1
+13153,"Houston County, GA",2
 13155,"Irwin County, GA",0
 13157,"Jackson County, GA",0
 13159,"Jasper County, GA",0
@@ -482,14 +482,14 @@ id,name,cases
 13165,"Jenkins County, GA",0
 13167,"Johnson County, GA",0
 13169,"Jones County, GA",0
-13171,"Lamar County, GA",0
+13171,"Lamar County, GA",1
 13173,"Lanier County, GA",0
 13175,"Laurens County, GA",2
-13177,"Lee County, GA",8
+13177,"Lee County, GA",13
 13179,"Liberty County, GA",0
 13181,"Lincoln County, GA",0
 13183,"Long County, GA",0
-13185,"Lowndes County, GA",6
+13185,"Lowndes County, GA",7
 13187,"Lumpkin County, GA",0
 13189,"McDuffie County, GA",0
 13191,"McIntosh County, GA",0
@@ -509,24 +509,24 @@ id,name,cases
 13221,"Oglethorpe County, GA",0
 13223,"Paulding County, GA",3
 13225,"Peach County, GA",1
-13227,"Pickens County, GA",0
+13227,"Pickens County, GA",2
 13229,"Pierce County, GA",0
 13231,"Pike County, GA",0
-13233,"Polk County, GA",2
+13233,"Polk County, GA",3
 13235,"Pulaski County, GA",0
 13237,"Putnam County, GA",0
 13239,"Quitman County, GA",0
 13241,"Rabun County, GA",0
-13243,"Randolph County, GA",7
+13243,"Randolph County, GA",8
 13245,"Richmond County, GA",0
 13247,"Rockdale County, GA",1
 13249,"Schley County, GA",0
 13251,"Screven County, GA",0
 13253,"Seminole County, GA",0
-13255,"Spalding County, GA",1
+13255,"Spalding County, GA",2
 13257,"Stephens County, GA",0
 13259,"Stewart County, GA",0
-13261,"Sumter County, GA",0
+13261,"Sumter County, GA",2
 13263,"Talbot County, GA",0
 13265,"Taliaferro County, GA",0
 13267,"Tattnall County, GA",0
@@ -557,27 +557,27 @@ id,name,cases
 13317,"Wilkes County, GA",0
 13319,"Wilkinson County, GA",0
 13321,"Worth County, GA",2
-15000,Hawaii,26
+15000,Hawaii,37
 15001,"Hawaii County, HI",1
-15003,"Honolulu County, HI",18
+15003,"Honolulu County, HI",28
 15005,"Kalawao County, HI",0
-15007,"Kauai County, HI",2
+15007,"Kauai County, HI",3
 15009,"Maui County, HI",5
-16000,Idaho,23
-16001,"Ada County, ID",3
+16000,Idaho,31
+16001,"Ada County, ID",4
 16003,"Adams County, ID",0
 16005,"Bannock County, ID",0
 16007,"Bear Lake County, ID",0
 16009,"Benewah County, ID",0
 16011,"Bingham County, ID",0
-16013,"Blaine County, ID",16
+16013,"Blaine County, ID",19
 16015,"Boise County, ID",0
 16017,"Bonner County, ID",0
 16019,"Bonneville County, ID",0
 16021,"Boundary County, ID",0
 16023,"Butte County, ID",0
 16025,"Camas County, ID",0
-16027,"Canyon County, ID",0
+16027,"Canyon County, ID",1
 16029,"Caribou County, ID",0
 16031,"Cassia County, ID",0
 16033,"Clark County, ID",0
@@ -591,7 +591,7 @@ id,name,cases
 16049,"Idaho County, ID",0
 16051,"Jefferson County, ID",0
 16053,"Jerome County, ID",0
-16055,"Kootenai County, ID",1
+16055,"Kootenai County, ID",3
 16057,"Latah County, ID",0
 16059,"Lemhi County, ID",0
 16061,"Lewis County, ID",0
@@ -604,12 +604,12 @@ id,name,cases
 16075,"Payette County, ID",0
 16077,"Power County, ID",0
 16079,"Shoshone County, ID",0
-16081,"Teton County, ID",1
+16081,"Teton County, ID",2
 16083,"Twin Falls County, ID",1
 16085,"Valley County, ID",0
 16087,"Washington County, ID",0
-17000,Illinois,422
-17001,"Adams County, IL",0
+17000,Illinois,585
+17001,"Adams County, IL",1
 17003,"Alexander County, IL",0
 17005,"Bond County, IL",0
 17007,"Boone County, IL",0
@@ -624,13 +624,13 @@ id,name,cases
 17025,"Clay County, IL",0
 17027,"Clinton County, IL",3
 17029,"Coles County, IL",0
-17031,"Cook County, IL",278
+17031,"Cook County, IL",411
 17033,"Crawford County, IL",0
 17035,"Cumberland County, IL",1
 17037,"DeKalb County, IL",0
 17039,"De Witt County, IL",0
 17041,"Douglas County, IL",0
-17043,"DuPage County, IL",54
+17043,"DuPage County, IL",57
 17045,"Edgar County, IL",0
 17047,"Edwards County, IL",0
 17049,"Effingham County, IL",0
@@ -653,19 +653,19 @@ id,name,cases
 17083,"Jersey County, IL",0
 17085,"Jo Daviess County, IL",0
 17087,"Johnson County, IL",0
-17089,"Kane County, IL",6
+17089,"Kane County, IL",8
 17091,"Kankakee County, IL",1
 17093,"Kendall County, IL",2
 17095,"Knox County, IL",0
-17097,"Lake County, IL",37
+17097,"Lake County, IL",53
 17099,"LaSalle County, IL",1
 17101,"Lawrence County, IL",0
 17103,"Lee County, IL",0
 17105,"Livingston County, IL",0
 17107,"Logan County, IL",0
 17109,"McDonough County, IL",0
-17111,"McHenry County, IL",4
-17113,"McLean County, IL",0
+17111,"McHenry County, IL",8
+17113,"McLean County, IL",4
 17115,"Macon County, IL",0
 17117,"Macoupin County, IL",0
 17119,"Madison County, IL",1
@@ -707,9 +707,9 @@ id,name,cases
 17191,"Wayne County, IL",0
 17193,"White County, IL",0
 17195,"Whiteside County, IL",1
-17197,"Will County, IL",9
+17197,"Will County, IL",10
 17199,"Williamson County, IL",1
-17201,"Winnebago County, IL",1
+17201,"Winnebago County, IL",2
 17203,"Woodford County, IL",2
 18000,Indiana,126
 18001,"Adams County, IN",1
