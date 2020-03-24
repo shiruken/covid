@@ -2,7 +2,7 @@
 
 Zoomable choropleth of confirmed COVID-19 cases in the United States. Powered by [D3.js](https://d3js.org/). Hosted on [GitHub Pages](https://pages.github.com/).
 
-https://shiruken.github.io/covid_choropleth/
+https://covid.csullender.com/
 
 ### Sources
 
