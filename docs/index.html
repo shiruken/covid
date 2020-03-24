@@ -130,8 +130,6 @@ Promise.all(promises).then(function([us, data]) {
             return d.id > state.id*1000 && d.id < state.id*1000 + 1000
         })
 
-        console.log(stateCounties);
-
         var max_state = d3.max(stateCounties, function(d) { return d.cases; } );
 
         var index = domains.findIndex(function(x) {
