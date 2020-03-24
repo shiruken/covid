@@ -17,15 +17,15 @@
 <div id="content"></div>
 <div id="footer"><a href="https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/" target="_blank">Data by USAFacts</a> | <a href="https://github.com/shiruken/covid_choropleth" target="_blank">View on GitHub</a></div>
 
-<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
 <script>
 
 const width = 960,
     height = 600,
-    padding = 20
+    padding = 20;
 
 var projection = d3.geoAlbersUsa()
     .precision(0)
@@ -38,24 +38,23 @@ var svg = d3.select('#content')
     .attr('width', width)
     .attr('height', height)
 
-d3.queue()
-    .defer(d3.csv, 'data.csv', function (d) {
+var promises = [
+    d3.json("us-states.json"),
+    d3.json("us-counties.json"),
+    d3.csv("data.csv", function(d) { 
         return {
             id: +d.id,
             name: d.name,
             cases: +d.cases
         }
     })
-    .defer(d3.json, 'us-states.json')
-    .defer(d3.json, 'us-counties.json')
-    .awaitAll(initialize)
+]
 
-function initialize(error, results) {
-    if (error) { throw error }
+Promise.all(promises).then(function(results) {
 
-    var data = results[0]
-    var states = topojson.feature(results[1], results[1].objects.states).features
-    var counties = topojson.feature(results[2], results[2].objects.counties).features
+    var states = topojson.feature(results[0], results[0].objects.states).features;
+    var counties = topojson.feature(results[1], results[1].objects.counties).features;
+    var data = results[2];
 
     states.forEach(function (f) {
         f.properties = data.find(function (d) { return d.id === f.id })
@@ -185,7 +184,7 @@ function initialize(error, results) {
             .style('opacity', 0)
             .remove()
     }
-}
+});
 
 </script>
 
