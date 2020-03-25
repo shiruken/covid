@@ -8,6 +8,9 @@ df.drop_duplicates(subset=['countyFIPS', 'stateFIPS'], inplace=True)
 df['cases'] = df['confirmed'].apply(lambda x: x[-1])
 df['cases'] = df.apply(lambda x: x['cases'] if x['countyFIPS'] else df.groupby('stateAbbr')['cases'].sum()[x['stateAbbr']], axis=1)
 
+# Drop the row for the Grand Princess Cruise Ship (allocated to California)
+df.drop(df[df['county'] == 'Grand Princess Cruise Ship'].index, inplace=True)
+
 # Format FIPS codes for states
 df['id'] = df.apply(lambda x: x['countyFIPS'] if x['countyFIPS'] else x['stateFIPS']*1000, axis=1)
 
