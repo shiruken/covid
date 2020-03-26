@@ -7,7 +7,8 @@ df.rename(columns={"countyFIPS": "FIPS"}, inplace=True)
 
 # Extract most recent confirmed case counts and calculate state totals
 df['cases'] = df['confirmed'].apply(lambda x: x[-1])
-df['cases'] = df.apply(lambda x: x['cases'] if x['FIPS'] else df.groupby('stateAbbr')['cases'].sum()[x['stateAbbr']], axis=1)
+df_states = df.groupby('stateFIPS')['cases'].sum()
+df['cases'] = df.apply(lambda x: x['cases'] if x['FIPS'] else df_states[x['stateFIPS']], axis=1)
 
 # Copy state FIPS code to FIPS column
 df.loc[df['FIPS'] == 0, 'FIPS'] = df.loc[df['FIPS'] == 0, 'stateFIPS']
