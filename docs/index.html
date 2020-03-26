@@ -51,11 +51,11 @@ Promise.all(promises).then(function([us, data]) {
 
     var cases = {};
     data.forEach(function (d) {
-        cases[+d.id] = +d.cases;
+        cases[+d.FIPS] = +d.cases;
     });
 
     states.forEach(function (d) {
-        d.cases = cases[+d.id*1000] || 0;
+        d.cases = cases[+d.id] || 0;
     });
 
     counties.forEach(function (d) {
