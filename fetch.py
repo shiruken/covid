@@ -8,22 +8,17 @@ df.drop_duplicates(subset=['countyFIPS', 'stateFIPS'], inplace=True)
 df['cases'] = df['confirmed'].apply(lambda x: x[-1])
 df['cases'] = df.apply(lambda x: x['cases'] if x['countyFIPS'] else df.groupby('stateAbbr')['cases'].sum()[x['stateAbbr']], axis=1)
 
-# Drop the row for the Grand Princess Cruise Ship (allocated to California)
-df.drop(df[df['county'] == 'Grand Princess Cruise Ship'].index, inplace=True)
-
 # Format FIPS codes for states
 df['id'] = df.apply(lambda x: x['countyFIPS'] if x['countyFIPS'] else x['stateFIPS']*1000, axis=1)
 
-# Load the list of state and county FIPS codes
-df_counties = pd.read_csv('fips_codes.csv')
-
-# Merge the two DataFrames together
-df = pd.merge(df_counties, df, how='left', on='id')
-df.fillna(0, inplace=True)
-df['cases'] = df['cases'].astype(int)
+# Drop the row for the Grand Princess Cruise Ship (allocated to California)
+df.drop(df[df['county'] == 'Grand Princess Cruise Ship'].index, inplace=True)
 
 # Copy data from Washington, DC the 'county' to District of Columbia the 'state'
-df.loc[df['id'] == 11000, 'cases'] = df[df['id'] == 11001]['cases'].values[0]
+df = df.append(df[df['id'] == 11001])
+df.iloc[-1, df.columns.get_loc('countyFIPS')] = 0
+df.iloc[-1, df.columns.get_loc('id')] = 11000
 
-# Export to file
-df.to_csv('docs/data.csv', columns=['id', 'name', 'cases'], index=False)
+# Sort the rows and export to file
+df.sort_values(by=['id'], inplace=True)
+df.to_csv('docs/data.csv', columns=['id', 'cases'], index=False)
