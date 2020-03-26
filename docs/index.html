@@ -1,199 +1,249 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<style>
-    body { background: #333; font-family: Arial, Helvetica, sans-serif; color: #fff; }
-    h1 { text-align: center; }
-    div#content, div#footer { width: 1000px; margin: auto; }
-    div#footer { text-align: center; position: fixed; left: 0px; bottom: 0px; width: 100%; margin-bottom: 10px; }
-    path { stroke: #333; stroke-width: 1; }
-    path:hover { stroke-width: 3; }
-    .legend text.label { fill: white; }
-    a, a:visited { color: #ffffff; text-decoration: none; }
-    a:hover, a:active { border-bottom: 1px dotted #ffffff; }
-</style>
-<body>
-
-<h1>Confirmed COVID-19 Case Tracker</h1>
-<div id="content"></div>
-<div id="footer"><a href="https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/" target="_blank">Data by USAFacts</a> | <a href="https://github.com/shiruken/covid_choropleth" target="_blank">View on GitHub</a></div>
-
-<script src="https://d3js.org/d3.v5.min.js"></script>
-<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-<script src="https://d3js.org/topojson.v2.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
-<script>
-
-const width = 960,
-    height = 600;
-
-var projection = d3.geoAlbersUsa()
-    .precision(0)
-    .scale(height * 2)
-    .translate([width / 2, height / 2])
-
-var path = d3.geoPath()
-    .projection(projection)
-
-var svg = d3.select('#content')
-    .append('svg')
-    .attr('width', width)
-    .attr('height', height)
-
-var promises = [
-    d3.json("counties-10m.json"),
-    d3.csv("data.csv")
-]
-
-Promise.all(promises).then(function([us, data]) {
-
-    var states = topojson.feature(us, us.objects.states).features;
-    var counties = topojson.feature(us, us.objects.counties).features;
-
-    var cases = {};
-    data.forEach(function (d) {
-        cases[+d.FIPS] = +d.cases;
-    });
-
-    states.forEach(function (d) {
-        d.cases = cases[+d.id] || 0;
-    });
-
-    counties.forEach(function (d) {
-        d.cases = cases[+d.id] || 0;
-    })
-
-    var domains = [1, 10, 50, 100, 500, 1000, 5000];
-    var color = d3.scaleThreshold()
-        .domain(domains)
-        .range(d3.schemeReds[8])
-
-    var statePaths = svg.selectAll('.state')
-        .data(states)
-        .enter().append('path')
-        .attr('class', 'state')
-        .attr('d', path)
-        .style('fill', function (d) { return color(d.cases); })
-        .on('click', function (d) { stateZoom(d) })
-
-    statePaths.append('svg:title')
-        .text(function (d) { return d.properties.name + ": " + d.cases });
-
-    svg.append("g")
-        .attr("class", "legend")
-        .attr("transform", "translate(825,390)");
-
-    function labelGenerate(x) {
-        if (x.i === 0) {
-            return `None`;
-        } else if (x.i === x.genLength - 1) {
-            const values = x.generatedLabels[x.i].split(` ${x.labelDelimiter} `);
-            return `${values[0]} or more`;
-        } else {
-            const values = x.generatedLabels[x.i].split(` ${x.labelDelimiter} `);
-            return `${values[0]} to ${values[1] - 1}`;
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Confirmed COVID-19 Case Tracker</title>
+    <meta name="description" content="Zoomable COVID-19 case tracker map for the United States with county-level detail.">
+    <meta name="keywords" content="COVID-19, Coronavirus, SARS-CoV-2, D3, D3.js, Map, Interactive, United States, Cases, Outbreak, Pandemic">
+    <meta name="author" content="Colin Sullender">
+    <style>
+        html, body {
+            height: 100%; 
+            margin: 0;
         }
-    }
+        
+        body { 
+            display: flex; 
+            flex-direction: column; 
+            background: #333;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+        }
+        
+        header {
+            text-align: center;
+        }
 
-    var legend = d3.legendColor()
-        .labelFormat(d3.format("d"))
-        .labels(labelGenerate)
-        .scale(color)
-        .shapePadding(5);
+        div#map {
+            width: 1000px;
+            margin: 0 auto;
+        }
 
-    svg.select(".legend")
-        .call(legend);
+        footer {
+            margin-top: auto; 
+            text-align: center;
+        }
 
-    function usZoom() {
-        var t = d3.transition().duration(800)
+        path {
+            stroke: #333;
+            stroke-width: 1;
+        }
 
-        projection.scale(height * 2).translate([width / 2, height / 2])
+        path:hover {
+            stroke-width: 3;
+        }
 
-        statePaths.transition(t)
-            .attr('d', path)
-            .style('fill', function (d) { return color(d.cases); })
+        .legend text.label {
+            fill: white;
+        }
 
-        svg.selectAll('.county')
-            .data([])
-            .exit().transition(t)
-            .attr('d', path)
-            .style('opacity', 0)
-            .remove()
+        a, a:visited {
+            color: #ffffff;
+            text-decoration: none;
+        }
 
-        legend.scale(color);
-        svg.select(".legend")
-            .call(legend);
-    }
+        a:hover, a:active {
+            border-bottom: 1px dotted #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Confirmed COVID-19 Case Tracker</h1>
+    </header>
+    <div id="map"></div>
+    <footer>
+        <p><a href="https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/" target="_blank">Data by USAFacts</a> | 
+           <a href="https://github.com/shiruken/covid_choropleth" target="_blank">View on GitHub</a></p>
+    </footer>
 
-    function stateZoom(state) {
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/topojson.v2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+    <script>
 
-        var stateCounties = counties.filter(function (d) {
-            return d.id > state.id*1000 && d.id < state.id*1000 + 1000
+    const width = 960,
+        height = 600;
+
+    var projection = d3.geoAlbersUsa()
+        .precision(0)
+        .scale(height * 2)
+        .translate([width / 2, height / 2])
+
+    var path = d3.geoPath()
+        .projection(projection)
+
+    var svg = d3.select('#map')
+        .append('svg')
+        .attr('width', width)
+        .attr('height', height)
+
+    var promises = [
+        d3.json("counties-10m.json"),
+        d3.csv("data.csv")
+    ]
+
+    Promise.all(promises).then(function([us, data]) {
+
+        var states = topojson.feature(us, us.objects.states).features;
+        var counties = topojson.feature(us, us.objects.counties).features;
+
+        var cases = {};
+        data.forEach(function (d) {
+            cases[+d.FIPS] = +d.cases;
+        });
+
+        states.forEach(function (d) {
+            d.cases = cases[+d.id] || 0;
+        });
+
+        counties.forEach(function (d) {
+            d.cases = cases[+d.id] || 0;
         })
 
-        var max_state = d3.max(stateCounties, function(d) { return d.cases; } );
+        var domains = [1, 10, 50, 100, 500, 1000, 5000];
+        var color = d3.scaleThreshold()
+            .domain(domains)
+            .range(d3.schemeReds[8])
 
-        var index = domains.findIndex(function(x) {
-            return x > max_state;
-        });
-        
-        if (index == -1)
-            index = domains.length;
-        else if (index <= 1)
-            index = 2;
-
-        var color_state = d3.scaleThreshold()
-            .domain(domains.slice(0, index))
-            .range(d3.schemeReds[index + 1])
-
-        var t = d3.transition().duration(800)
-
-        var countyPaths = svg.selectAll('.county')
-            .data(stateCounties, function (d) { return d.id })
-
-        var enterCountyPaths = countyPaths.enter().append('path')
-            .attr('class', 'county')
+        var statePaths = svg.selectAll('.state')
+            .data(states)
+            .enter().append('path')
+            .attr('class', 'state')
             .attr('d', path)
-            .style('fill', function (d) { return color_state(d.cases); })
-            .style('opacity', 0)
-            .on('click', function () { usZoom() })
+            .style('fill', function (d) { return color(d.cases); })
+            .on('click', function (d) { stateZoom(d) })
 
-        enterCountyPaths.append('svg:title')
+        statePaths.append('svg:title')
             .text(function (d) { return d.properties.name + ": " + d.cases });
 
-        legend.scale(color_state);
+        svg.append("g")
+            .attr("class", "legend")
+            .attr("transform", "translate(825,390)");
+
+        function labelGenerate(x) {
+            if (x.i === 0) {
+                return `None`;
+            } else if (x.i === x.genLength - 1) {
+                const values = x.generatedLabels[x.i].split(` ${x.labelDelimiter} `);
+                return `${values[0]} or more`;
+            } else {
+                const values = x.generatedLabels[x.i].split(` ${x.labelDelimiter} `);
+                return `${values[0]} to ${values[1] - 1}`;
+            }
+        }
+
+        var legend = d3.legendColor()
+            .labelFormat(d3.format("d"))
+            .labels(labelGenerate)
+            .scale(color)
+            .shapePadding(5);
+
         svg.select(".legend")
             .call(legend);
 
-        projection.fitExtent(
-            [[80, 20], [width - 160, height - 20]],
-            state
-        )
+        function usZoom() {
+            var t = d3.transition().duration(800)
 
-        statePaths.transition(t)
-            .attr('d', path)
-            .style('fill', '#444')
+            projection.scale(height * 2).translate([width / 2, height / 2])
 
-        enterCountyPaths.transition(t)
-            .attr('d', path)
-            .style('opacity', 1)
+            statePaths.transition(t)
+                .attr('d', path)
+                .style('fill', function (d) { return color(d.cases); })
 
-        countyPaths.exit().transition(t)
-            .attr('d', path)
-            .style('opacity', 0)
-            .remove()
-    }
-});
+            svg.selectAll('.county')
+                .data([])
+                .exit().transition(t)
+                .attr('d', path)
+                .style('opacity', 0)
+                .remove()
 
-</script>
+            legend.scale(color);
+            svg.select(".legend")
+                .call(legend);
+        }
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26412009-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        function stateZoom(state) {
 
-  gtag('config', 'UA-26412009-1');
-</script>
+            var stateCounties = counties.filter(function (d) {
+                return d.id > state.id*1000 && d.id < state.id*1000 + 1000
+            })
+
+            var max_state = d3.max(stateCounties, function(d) { return d.cases; } );
+
+            var index = domains.findIndex(function(x) {
+                return x > max_state;
+            });
+            
+            if (index == -1)
+                index = domains.length;
+            else if (index <= 1)
+                index = 2;
+
+            var color_state = d3.scaleThreshold()
+                .domain(domains.slice(0, index))
+                .range(d3.schemeReds[index + 1])
+
+            var t = d3.transition().duration(800)
+
+            var countyPaths = svg.selectAll('.county')
+                .data(stateCounties, function (d) { return d.id })
+
+            var enterCountyPaths = countyPaths.enter().append('path')
+                .attr('class', 'county')
+                .attr('d', path)
+                .style('fill', function (d) { return color_state(d.cases); })
+                .style('opacity', 0)
+                .on('click', function () { usZoom() })
+
+            enterCountyPaths.append('svg:title')
+                .text(function (d) { return d.properties.name + ": " + d.cases });
+
+            legend.scale(color_state);
+            svg.select(".legend")
+                .call(legend);
+
+            projection.fitExtent(
+                [[80, 20], [width - 160, height - 20]],
+                state
+            )
+
+            statePaths.transition(t)
+                .attr('d', path)
+                .style('fill', '#444')
+
+            enterCountyPaths.transition(t)
+                .attr('d', path)
+                .style('opacity', 1)
+
+            countyPaths.exit().transition(t)
+                .attr('d', path)
+                .style('opacity', 0)
+                .remove()
+        }
+    });
+
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-26412009-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-26412009-1');
+    </script>
 
 </body>
+</html>
