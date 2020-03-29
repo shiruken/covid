@@ -1,25 +1,26 @@
 import pandas as pd
 
-# Load the COVID-19 dataset from USAFacts and reformat
+# Load and extract the county-level data from USAFacts
 df = pd.read_json("https://usafactsstatic.blob.core.windows.net/public/2020/coronavirus-timeline/allData.json")
 df.drop_duplicates(subset=['countyFIPS', 'stateFIPS'], inplace=True)
-df.rename(columns={"countyFIPS": "FIPS"}, inplace=True)
-
-# Extract most recent confirmed case counts and calculate state totals
 df['cases'] = df['confirmed'].apply(lambda x: x[-1])
-df_states = df.groupby('stateFIPS')['cases'].sum()
-df['cases'] = df.apply(lambda x: x['cases'] if x['FIPS'] else df_states[x['stateFIPS']], axis=1)
-
-# Copy state FIPS code to FIPS column
-df.loc[df['FIPS'] == 0, 'FIPS'] = df.loc[df['FIPS'] == 0, 'stateFIPS']
-
-# Drop the row for the Grand Princess Cruise Ship (allocated to California)
 df.drop(df[df['county'] == 'Grand Princess Cruise Ship'].index, inplace=True)
+df.drop(df[df['countyFIPS'] == 0].index, inplace=True)
+df_counties = pd.concat([df['countyFIPS'], df['cases']], axis=1, keys=['FIPS', 'cases'])
 
-# Copy data from Washington, DC the 'county' to District of Columbia the 'state'
-df = df.append(df[df['FIPS'] == 11001])
-df.iloc[-1, df.columns.get_loc('FIPS')] = 11
+# Load and extract the state-level data from The COVID Tracking Project
+df = pd.read_json("https://covidtracking.com/api/states")
+df.dropna(subset=['positive'], inplace=True)
+df_states = pd.concat([df['fips'], df['positive']], axis=1, keys=['FIPS', 'cases'])
+
+# Combine the state and county data
+df_output = df_counties.append(df_states)
+
+# Copy the data from Washington, DC the "state" to Washington, DC the "county"
+# Assumes that COVID Tracking Project is more up-to-date than USAFacts
+df_output.loc[df_output['FIPS'] == 11001, 'cases'] = df_output[df_output['FIPS'] == 11]['cases'].values[0]
 
 # Sort the rows and export to file
-df.sort_values(by=['FIPS'], inplace=True)
-df.to_csv('docs/data.csv', columns=['FIPS', 'cases'], index=False)
+df_output['cases'] = df_output['cases'].astype(int)
+df_output.sort_values(by=['FIPS'], inplace=True)
+df_output.to_csv('docs/data.csv', index=False)
