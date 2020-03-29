@@ -7,14 +7,7 @@
     <meta name="keywords" content="COVID-19, Coronavirus, SARS-CoV-2, D3, D3.js, Map, Interactive, United States, Cases, Outbreak, Pandemic">
     <meta name="author" content="Colin Sullender">
     <style>
-        html, body {
-            height: 100%; 
-            margin: 0;
-        }
-        
         body { 
-            display: flex; 
-            flex-direction: column; 
             background: #333;
             font-family: Arial, Helvetica, sans-serif;
             color: #fff;
@@ -41,8 +34,9 @@
         }
 
         footer {
-            margin-top: auto; 
             text-align: center;
+            margin-top: 50px;
+            color: #999;
         }
 
         path {
@@ -99,12 +93,12 @@
         }
 
         a, a:visited {
-            color: #ffffff;
+            color: #999;
             text-decoration: none;
         }
 
         a:hover, a:active {
-            border-bottom: 1px dotted #ffffff;
+            border-bottom: 1px dotted #999;
         }
     </style>
 </head>
@@ -146,7 +140,7 @@
         .attr('width', width)
         .attr('height', height)
 
-    var tooltip = d3.select("body")
+    var tooltip = d3.select("#map")
         .append("div")
         .attr("id", "tooltip")
         .style("opacity", 0);
