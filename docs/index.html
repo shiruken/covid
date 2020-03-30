@@ -105,7 +105,7 @@
 <body>
     <header>
         <h1 id="title">Confirmed COVID-19 Case Tracker</h1>
-        <h2 id="subtitle">Click a state to zoom in</h2>
+        <h2 id="subtitle"></h2>
     </header>
     <div id="map"></div>
     <footer>
@@ -122,7 +122,7 @@
     <script src="https://d3js.org/topojson.v2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
     <script>
-
+    
     const width = 960,
         height = 600;
     var isZoomed = false;
@@ -144,6 +144,14 @@
         .append("div")
         .attr("id", "tooltip")
         .style("opacity", 0);
+
+    var isTouch = !!('ontouchstart' in window || navigator.maxTouchPoints);
+    var subtitle = d3.select('#subtitle');
+
+    if (isTouch)
+        subtitle.text('Click a state for details. Double-click to zoom.');
+    else
+        subtitle.text('Click a state to zoom');
 
     var promises = [
         d3.json("counties-10m.json"),
@@ -178,13 +186,24 @@
             .enter().append('path')
             .attr('class', 'state')
             .attr('d', path)
-            .style('fill', function (d) { return color(d.cases); })
-            .on('click', function (d) { stateZoom(d); })
+            .style('fill', function (d) { return color(d.cases); });
+
+        if (isTouch) {
+            statePaths.on('dblclick', function (d) { stateZoom(d); })
+            .on("click", function(d) {
+                if (!isZoomed && (d.id != tooltip.attr("data-id") || tooltip.style("opacity") == 0))
+                    showTooltip(this,d);
+                else
+                    hideTooltip();
+            });
+        } else {
+            statePaths.on('click', function (d) { stateZoom(d); })
             .on("mouseover", function(d) {
                 if (!isZoomed)
                     showTooltip(this,d);
             })
             .on("mouseout", hideTooltip);
+        }
 
         svg.append("g")
             .attr("class", "legend")
@@ -237,7 +256,10 @@
             svg.select(".legend")
                 .call(legend);
 
-            d3.select("#subtitle").text("Click a state to zoom in");
+            if (isTouch)
+                subtitle.text('Click a state for details. Double-click to zoom.');
+            else
+                subtitle.text('Click a state to zoom');
 
             isZoomed = false;
         }
@@ -270,10 +292,21 @@
                 .attr('class', 'county')
                 .attr('d', path)
                 .style('fill', function (d) { return color_state(d.cases); })
-                .style('opacity', 0)
-                .on('click', usZoom)
+                .style('opacity', 0);
+
+            if (isTouch) {
+                enterCountyPaths.on('dblclick', usZoom)
+                .on("click", function(d) {
+                    if (d.id != tooltip.attr("data-id") || tooltip.style("opacity") == 0)
+                        showTooltip(this,d);
+                    else
+                        hideTooltip();
+                });
+            } else {
+                enterCountyPaths.on('click', usZoom)
                 .on("mouseover", function(d) { showTooltip(this,d); })
                 .on("mouseout", hideTooltip);
+            }
 
             legend.scale(color_state);
             svg.select(".legend")
@@ -302,17 +335,22 @@
                 .style('opacity', 0)
                 .remove();
 
-            d3.select("#subtitle").text("Click a county to zoom out. Click another state to swap.");
+            if (isTouch)
+                subtitle.text('Click a county for details. Double-click to zoom out.');
+            else
+                subtitle.text('Click a county to zoom out. Click another state to swap focus.');
 
             isZoomed = true;
         }
 
         function showTooltip(p,d) {
-            tooltip.html(
-                "<h2 class='tooltip-title'>" + d.properties.name + "</h2>" +
-                "<h3 class='tooltip-subtitle'>Confirmed Cases</h3>" + 
-                "<div class='tooltip-value'>" + d.cases.toLocaleString() + "</div>"
-            )
+
+            tooltip.attr("data-id", d.id)
+                .html(
+                    "<h2 class='tooltip-title'>" + d.properties.name + "</h2>" +
+                    "<h3 class='tooltip-subtitle'>Confirmed Cases</h3>" + 
+                    "<div class='tooltip-value'>" + d.cases.toLocaleString() + "</div>"
+                );
 
             var bounds = d3.select(p).node().getBoundingClientRect();
             var tooltip_width = tooltip.style('width').slice(0,-2);
