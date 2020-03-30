@@ -192,7 +192,7 @@
             d.cases = cases[+d.id] || 0;
         })
 
-        var domains = [1, 50, 100, 500, 1000, 5000, 10000];
+        var domains = [1, 100, 500, 1000, 5000, 10000, 50000];
         var color = d3.scaleThreshold()
             .domain(domains)
             .range(d3.schemeReds[8])
@@ -223,7 +223,7 @@
 
         svg.append("g")
             .attr("class", "legend")
-            .attr("transform", "translate(825,390)");
+            .attr("transform", "translate(820,390)");
 
         function labelGenerate(x) {
             if (x.i === 0) {
@@ -286,20 +286,21 @@
                 return d.id > state.id*1000 && d.id < state.id*1000 + 1000
             })
 
-            var max_state = d3.max(stateCounties, function(d) { return d.cases; } );
+            var maxStateCases = d3.max(stateCounties, function(d) { return d.cases; } );
 
-            var index = domains.findIndex(function(x) {
-                return x > max_state;
+            var stateDomains = [1, 10, 50, 100, 500, 1000, 5000];
+            var idx = stateDomains.findIndex(function(x) {
+                return x > maxStateCases;
             });
             
-            if (index == -1)
-                index = domains.length;
-            else if (index <= 1)
-                index = 2;
+            if (idx == -1)
+                idx = stateDomains.length;
+            else if (idx <= 1)
+                idx = 2;
 
             var color_state = d3.scaleThreshold()
-                .domain(domains.slice(0, index))
-                .range(d3.schemeReds[index + 1])
+                .domain(stateDomains.slice(0, idx))
+                .range(d3.schemeReds[idx + 1])
 
             var countyPaths = svg.selectAll('.county')
                 .data(stateCounties, function (d) { return d.id })
