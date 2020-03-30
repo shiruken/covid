@@ -45,6 +45,7 @@
 
         div#map {
             width: 1000px;
+            height: 600px;
             margin: 0 auto;
             touch-action: manipulation;
         }
@@ -144,7 +145,6 @@
     var isZoomed = false;
 
     var projection = d3.geoAlbersUsa()
-        .precision(0)
         .scale(height * 2)
         .translate([width / 2, height / 2])
 
