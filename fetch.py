@@ -5,6 +5,7 @@ df = pd.read_json("https://usafactsstatic.blob.core.windows.net/public/2020/coro
 df.drop_duplicates(subset=['countyFIPS', 'stateFIPS'], inplace=True)
 df['cases'] = df['confirmed'].apply(lambda x: x[-1])
 df.drop(df[df['county'] == 'Grand Princess Cruise Ship'].index, inplace=True)
+df.drop(df[df['county'] == 'New York City Unallocated'].index, inplace=True)
 df.drop(df[df['countyFIPS'] == 0].index, inplace=True)
 df_counties = pd.concat([df['countyFIPS'], df['cases']], axis=1, keys=['FIPS', 'cases'])
 
