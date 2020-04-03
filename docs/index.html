@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Confirmed COVID-19 Case Tracker</title>
-    <meta name="description" content="Zoomable COVID-19 case tracker map for the United States with county-level detail.">
+    <title>Zoomable COVID-19 Tracker</title>
+    <meta name="description" content="Zoomable COVID-19 map for the United States with county-level detail.">
     <meta name="keywords" content="COVID-19, Coronavirus, SARS-CoV-2, D3, D3.js, Map, Interactive, United States, Cases, Outbreak, Pandemic">
     <meta name="author" content="Colin Sullender">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@shiruken">
-    <meta name="twitter:title" content="Confirmed COVID-19 Case Tracker">
-    <meta name="twitter:description" content="Zoomable COVID-19 case tracker map for the United States with county-level detail.">
+    <meta name="twitter:title" content="Zoomable COVID-19 Tracker">
+    <meta name="twitter:description" content="Zoomable COVID-19 map for the United States with county-level detail.">
     <meta name="twitter:image" content="https://covid.csullender.com/social.png">
     
-    <meta property="og:title" content="Confirmed COVID-19 Case Tracker">
-    <meta property="og:description" content="Zoomable COVID-19 case tracker map for the United States with county-level detail.">
+    <meta property="og:title" content="Zoomable COVID-19 Tracker">
+    <meta property="og:description" content="Zoomable COVID-19 map for the United States with county-level detail.">
     <meta property="og:image" content="https://covid.csullender.com/social.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="628">
@@ -121,7 +121,7 @@
 </head>
 <body>
     <header>
-        <h1 id="title">Confirmed COVID-19 Case Tracker</h1>
+        <h1 id="title">Zoomable COVID-19 Tracker</h1>
         <h2 id="subtitle"></h2>
     </header>
     <div id="map"></div>
@@ -184,9 +184,13 @@
             cases[+d.FIPS] = +d.cases;
         });
 
+        var totalCases = 0;
         states.forEach(function (d) {
             d.cases = cases[+d.id] || 0;
+            totalCases += cases[+d.id];
         });
+
+        d3.select("#title").text(d3.select("#title").text() + " (" + totalCases.toLocaleString() + " cases)");
 
         counties.forEach(function (d) {
             d.cases = cases[+d.id] || 0;
