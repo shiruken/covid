@@ -68,7 +68,8 @@
         div#tooltip {
             position: absolute;
             text-align: center;
-            height: 90px;
+            height: 100px;
+            min-width: 150px;
             background: #ffffff;
             color: #333;
             padding: 0px 10px;
@@ -86,8 +87,20 @@
             border-color: #ffffff transparent transparent transparent;
         }
 
+        div.tooltip-left, div.tooltip-right {
+            width: 50%;
+        }
+
+        div.tooltip-left {
+            float: left;
+        }
+
+        div.tooltip-right {
+            float: right;
+        }
+
         h2.tooltip-title {
-            font-size: 1.0em;
+            font-size: 1.2em;
             margin: 10px;
         }
 
@@ -95,7 +108,7 @@
             font-size: 0.8em;
             color: #999;
             font-weight: lighter;
-            margin: 5px;
+            margin: 5px; 
             text-transform: uppercase
         }
 
@@ -180,20 +193,24 @@
         var counties = topojson.feature(us, us.objects.counties).features;
 
         var cases = {};
+        var deaths = {};
         data.forEach(function (d) {
             cases[+d.FIPS] = +d.cases;
+            deaths[+d.FIPS] = +d.deaths;
         });
 
         var totalCases = 0;
         states.forEach(function (d) {
             d.cases = cases[+d.id] || 0;
-            totalCases += cases[+d.id];
+            d.deaths = deaths[+d.id] || 0;
+            totalCases += d.cases;
         });
 
         d3.select("#title").text(d3.select("#title").text() + " (" + totalCases.toLocaleString() + " cases)");
 
         counties.forEach(function (d) {
             d.cases = cases[+d.id] || 0;
+            d.deaths = deaths[+d.id] || 0;
         })
 
         var domains = [1, 100, 500, 1000, 5000, 10000, 50000];
@@ -369,14 +386,20 @@
             tooltip.attr("data-id", d.id)
                 .html(
                     "<h2 class='tooltip-title'>" + d.properties.name + "</h2>" +
-                    "<h3 class='tooltip-subtitle'>Confirmed Cases</h3>" + 
-                    "<div class='tooltip-value'>" + d.cases.toLocaleString() + "</div>"
+                    "<div class='tooltip-left'>" +
+                        "<h3 class='tooltip-subtitle'>Cases</h3>" + 
+                        "<div class='tooltip-value'>" + d.cases.toLocaleString() + "</div>" + 
+                    "</div>" + 
+                    "<div class='tooltip-right'>" +
+                        "<h3 class='tooltip-subtitle'>Deaths</h3>" + 
+                        "<div class='tooltip-value'>" + d.deaths.toLocaleString() + "</div>" +
+                    "</div>"
                 );
 
             var bounds = d3.select(p).node().getBoundingClientRect();
             var tooltip_width = tooltip.style('width').slice(0,-2);
             tooltip.style("left", (bounds['left'] + bounds['width'] / 2 - tooltip_width / 2 - 10) + "px")
-                .style("top", (bounds['top'] - 100) + "px")
+                .style("top", (bounds['top'] - 110) + "px")
                 .transition()
                 .duration(200)
                 .style("opacity", 1);
