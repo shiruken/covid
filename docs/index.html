@@ -120,6 +120,7 @@
 
         .legend text.label {
             fill: white;
+            font-size: 0.9em;
         }
 
         a, a:visited {
@@ -213,7 +214,7 @@
             d.deaths = deaths[+d.id] || 0;
         })
 
-        var domains = [1, 100, 500, 1000, 5000, 10000, 50000, 100000];
+        var domains = [1, 500, 1000, 5000, 10000, 25000, 50000, 100000];
         var color = d3.scaleThreshold()
             .domain(domains)
             .range(d3.schemeReds[9])
@@ -244,17 +245,17 @@
 
         svg.append("g")
             .attr("class", "legend")
-            .attr("transform", "translate(820,390)");
+            .attr("transform", "translate(825,390)");
 
         function labelGenerate(x) {
             if (x.i === 0) {
                 return `None`;
             } else if (x.i === x.genLength - 1) {
                 const values = x.generatedLabels[x.i].split(` ${x.labelDelimiter} `);
-                return `${values[0]} or more`;
+                return `${parseInt(values[0]).toLocaleString()} or more`;
             } else {
                 const values = x.generatedLabels[x.i].split(` ${x.labelDelimiter} `);
-                return `${values[0]} to ${values[1] - 1}`;
+                return `${parseInt(values[0]).toLocaleString()} to ${(values[1] - 1).toLocaleString()}`;
             }
         }
 
