@@ -213,7 +213,7 @@
             d.deaths = deaths[+d.id] || 0;
         })
 
-        var domains = [1, 500, 1000, 5000, 10000, 25000, 50000, 100000];
+        var domains = [1, 1000, 5000, 10000, 25000, 50000, 100000, 250000];
         var color = d3.scaleThreshold()
             .domain(domains)
             .range(d3.schemeReds[9])
@@ -244,7 +244,7 @@
 
         svg.append("g")
             .attr("class", "legend")
-            .attr("transform", "translate(825,390)");
+            .attr("transform", "translate(810,390)");
 
         function labelGenerate(x) {
             if (x.i === 0) {
@@ -309,7 +309,7 @@
 
             var maxStateCases = d3.max(stateCounties, function(d) { return d.cases; } );
 
-            var stateDomains = [1, 10, 50, 100, 500, 1000, 5000, 10000];
+            var stateDomains = [1, 50, 100, 500, 1000, 5000, 10000, 25000];
             var idx = stateDomains.findIndex(function(x) {
                 return x > maxStateCases;
             });
