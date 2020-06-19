@@ -213,10 +213,10 @@
             d.deaths = deaths[+d.id] || 0;
         })
 
-        var domains = [1, 1000, 5000, 10000, 25000, 50000, 100000, 250000];
+        var domains = [1000, 5000, 10000, 25000, 50000, 100000, 250000];
         var color = d3.scaleThreshold()
             .domain(domains)
-            .range(d3.schemeReds[9])
+            .range(d3.schemeReds[8])
 
         var statePaths = svg.selectAll('.state')
             .data(states)
@@ -248,13 +248,16 @@
 
         function labelGenerate(x) {
             if (x.i === 0) {
-                return `None`;
+                if (x.domain[0] === 1)
+                    return 'None'; 
+                else
+                    return `Less than ${x.domain[0].toLocaleString()}`;
             } else if (x.i === x.genLength - 1) {
                 const values = x.generatedLabels[x.i].split(` ${x.labelDelimiter} `);
-                return `${parseInt(values[0]).toLocaleString()} or more`;
+                return `More than ${parseInt(values[0]).toLocaleString()}`;
             } else {
                 const values = x.generatedLabels[x.i].split(` ${x.labelDelimiter} `);
-                return `${parseInt(values[0]).toLocaleString()} to ${(values[1] - 1).toLocaleString()}`;
+                return `${x.domain[(x.i - 1)].toLocaleString()} to ${(x.domain[x.i] - 1).toLocaleString()}`;
             }
         }
 
@@ -307,24 +310,32 @@
                 return d.id > state.id*1000 && d.id < state.id*1000 + 1000
             })
 
-            var maxStateCases = d3.max(stateCounties, function(d) { return d.cases; } );
+            var stateDomains = [1, 100, 500, 1000, 5000, 10000, 25000, 50000];
 
-            var stateDomains = [1, 50, 100, 500, 1000, 5000, 10000, 25000];
-            var idx = stateDomains.findIndex(function(x) {
+            // Use the "Less than X" nomenclature when there are only nonzero counts in state view
+            var minStateCases = d3.min(stateCounties, function(d) { return d.cases; } );
+            if (minStateCases === 0)
+                idx_start = 0;
+            else
+                idx_start = 1;
+
+            // Truncate colormap above the maximum case count when in state view
+            var maxStateCases = d3.max(stateCounties, function(d) { return d.cases; } );
+            var idx_stop = stateDomains.findIndex(function(x) {
                 return x > maxStateCases;
             });
             
-            if (idx == -1)
-                idx = stateDomains.length;
-            else if (idx <= 1)
-                idx = 2;
+            if (idx_stop == -1)
+                idx_stop = stateDomains.length;
+            else if (idx_stop <= 1)
+                idx_stop = 2;
 
             var color_state = d3.scaleThreshold()
-                .domain(stateDomains.slice(0, idx))
-                .range(d3.schemeReds[idx + 1])
+                .domain(stateDomains.slice(idx_start, idx_stop))
+                .range(d3.schemeReds[idx_stop + 1 - idx_start]);
 
             var countyPaths = svg.selectAll('.county')
-                .data(stateCounties, function (d) { return d.id })
+                .data(stateCounties, function (d) { return d.id });
 
             var enterCountyPaths = countyPaths.enter().append('path')
                 .attr('class', 'county')
