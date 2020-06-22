@@ -68,8 +68,8 @@
         div#tooltip {
             position: absolute;
             text-align: center;
-            height: 100px;
-            min-width: 150px;
+            height: 120px;
+            min-width: 225px;
             background: #ffffff;
             color: #333;
             padding: 0px 10px;
@@ -87,8 +87,8 @@
             border-color: #ffffff transparent transparent transparent;
         }
 
-        div.tooltip-left, div.tooltip-right {
-            width: 50%;
+        div.tooltip-left, div.tooltip-center, div.tooltip-right {
+            width: 33%;
         }
 
         div.tooltip-left {
@@ -99,16 +99,28 @@
             float: right;
         }
 
+        div.tooltip-center {
+            display: inline-block;
+        }
+
         h2.tooltip-title {
             font-size: 1.2em;
             margin: 10px;
         }
 
+        h3.tooltip-subtitle, h5.tooltip-desc {
+            color: #666;
+        }
+
         h3.tooltip-subtitle {
             font-size: 0.8em;
-            color: #666;
-            margin: 5px; 
+            margin: 5px 5px 0px 5px; 
             text-transform: uppercase
+        }
+
+        h5.tooltip-desc {
+            margin: 0px;
+            font-size: 0.7em;
         }
 
         div.tooltip-value {
@@ -193,15 +205,18 @@
         var counties = topojson.feature(us, us.objects.counties).features;
 
         var cases = {};
+        var cases_percapita = {};
         var deaths = {};
         data.forEach(function (d) {
             cases[+d.FIPS] = +d.cases;
+            cases_percapita[+d.FIPS] = +d.cases_percapita;
             deaths[+d.FIPS] = +d.deaths;
         });
 
         var totalCases = 0;
         states.forEach(function (d) {
             d.cases = cases[+d.id] || 0;
+            d.cases_percapita = cases_percapita[+d.id] || 0.0;
             d.deaths = deaths[+d.id] || 0;
             totalCases += d.cases;
         });
@@ -210,6 +225,7 @@
 
         counties.forEach(function (d) {
             d.cases = cases[+d.id] || 0;
+            d.cases_percapita = cases_percapita[+d.id] || 0.0;
             d.deaths = deaths[+d.id] || 0;
         })
 
@@ -397,12 +413,19 @@
             tooltip.attr("data-id", d.id)
                 .html(
                     "<h2 class='tooltip-title'>" + d.properties.name + "</h2>" +
+                    "<div class='tooltip-center'>" +
+                        "<h3 class='tooltip-subtitle'>Cases</h3>" + 
+                        "<h5 class='tooltip-desc'>Total</h5>" +
+                        "<div class='tooltip-value'>" + d.cases.toLocaleString() + "</div>" + 
+                    "</div>" + 
                     "<div class='tooltip-left'>" +
                         "<h3 class='tooltip-subtitle'>Cases</h3>" + 
-                        "<div class='tooltip-value'>" + d.cases.toLocaleString() + "</div>" + 
+                        "<h5 class='tooltip-desc'>Per 100k</h5>" +
+                        "<div class='tooltip-value'>" + d.cases_percapita.toLocaleString() + "</div>" + 
                     "</div>" + 
                     "<div class='tooltip-right'>" +
                         "<h3 class='tooltip-subtitle'>Deaths</h3>" + 
+                        "<h5 class='tooltip-desc'>Total</h5>" +
                         "<div class='tooltip-value'>" + d.deaths.toLocaleString() + "</div>" +
                     "</div>"
                 );
@@ -410,7 +433,7 @@
             var bounds = d3.select(p).node().getBoundingClientRect();
             var tooltip_width = tooltip.style('width').slice(0,-2);
             tooltip.style("left", (bounds['left'] + bounds['width'] / 2 - tooltip_width / 2 - 10) + "px")
-                .style("top", (bounds['top'] - 110) + "px")
+                .style("top", (bounds['top'] - 130) + "px")
                 .transition()
                 .duration(200)
                 .style("opacity", 1);
