@@ -43,6 +43,20 @@
             color: #999;
         }
 
+        div#controls {
+            text-align: center;
+        }
+
+        #controls button {
+            padding: 5px;
+            font-size: 1em;
+        }
+
+        button.selected {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
         div#map {
             width: 1000px;
             height: 600px;
@@ -74,6 +88,7 @@
             color: #333;
             padding: 0px 10px;
             pointer-events: none;
+            filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.5));
         }
 
         div#tooltip::after {
@@ -129,6 +144,11 @@
             font-weight: bold;
         }
 
+        .legend text.legendTitle {
+            fill: white;
+            font-weight: bold;
+        }
+
         .legend text.label {
             fill: white;
             font-size: 0.9em;
@@ -147,6 +167,12 @@
 <body>
     <header>
         <h1 id="title">Zoomable COVID-19 Tracker</h1>
+        <div id="controls">
+            Data to Display: 
+            <button type="button" id="cases_percapita" class="selected" title="View cases per capita">Cases Per Capita</button> 
+            <button type="button" id="cases" title="View total cases">Cases</button>
+            <button type="button" id="deaths" title="View total deaths">Deaths</button>
+        </div>
         <h2 id="subtitle"></h2>
     </header>
     <div id="map"></div>
@@ -159,15 +185,24 @@
         </p>
     </footer>
 
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-    <script src="https://d3js.org/topojson.v2.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
-    <script>
+    <script src="https://d3js.org/d3.v5.min.js" type="text/javascript"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js" type="text/javascript"></script>
+    <script src="https://d3js.org/topojson.v2.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
     
     const width = 960,
         height = 600;
     var isZoomed = false;
+    var currentView = "cases_percapita"; // Default view
+
+    // Define colormap thresholds for each data view
+    var domains_us_cases_percapita = [100, 250, 500, 750, 1000, 1500, 2000]
+        domains_state_cases_percapita = [1, 100, 250, 500, 750, 1000, 1500, 2000, 5000]
+        domains_us_cases = [1000, 5000, 10000, 25000, 50000, 100000, 250000]
+        domains_state_cases = [1, 100, 500, 1000, 5000, 10000, 25000, 50000]
+        domains_us_deaths = [50, 100, 500, 1000, 2500, 5000, 10000]
+        domains_state_deaths = [1, 10, 50, 100, 500, 1000, 2500, 5000];
 
     var projection = d3.geoAlbersUsa()
         .scale(height * 2)
@@ -229,17 +264,27 @@
             d.deaths = deaths[+d.id] || 0;
         })
 
-        var domains = [1000, 5000, 10000, 25000, 50000, 100000, 250000];
-        var color = d3.scaleThreshold()
-            .domain(domains)
-            .range(d3.schemeReds[8])
+        // Calculate colormaps for all country-level views and select starting view
+        var color_us_cases_percapita = d3.scaleThreshold()
+            .domain(domains_us_cases_percapita)
+            .range(d3.schemeReds[domains_us_cases_percapita.length + 1]);
+        var color_us_cases = d3.scaleThreshold()
+            .domain(domains_us_cases)
+            .range(d3.schemeReds[domains_us_cases.length + 1]);
+        var color_us_deaths = d3.scaleThreshold()
+            .domain(domains_us_deaths)
+            .range(d3.schemeReds[domains_us_deaths.length + 1]);
+        var color_us = color_us_cases_percapita;
 
         var statePaths = svg.selectAll('.state')
             .data(states)
             .enter().append('path')
             .attr('class', 'state')
             .attr('d', path)
-            .style('fill', function (d) { return color(d.cases); });
+            .style('fill', function (d) { return color_us(d.cases_percapita); });
+
+        var stateCounties;
+        var enterCountyPaths;
 
         if (isTouch) {
             statePaths.on('dblclick', function (d) { stateZoom(d); })
@@ -280,20 +325,31 @@
         var legend = d3.legendColor()
             .labelFormat(d3.format("d"))
             .labels(labelGenerate)
-            .scale(color)
-            .shapePadding(5);
+            .scale(color_us)
+            .shapePadding(5)
+            .title("Cases Per 100,000");
 
         svg.select(".legend")
             .call(legend);
 
         function usZoom() {
+
+            isZoomed = false;
+
             var t = d3.transition().duration(800)
 
             projection.scale(height * 2).translate([width / 2, height / 2])
 
             statePaths.transition(t)
                 .attr('d', path)
-                .style('fill', function (d) { return color(d.cases); })
+                .style('fill', function (d) {
+                    if (currentView == "cases_percapita")
+                        return color_us(d.cases_percapita);
+                    else if (currentView == "cases")
+                        return color_us(d.cases);
+                    else if (currentView == "deaths")
+                        return color_us(d.deaths);
+                })
                 .on('end', function() {
                     tooltip.style('visibility', 'visible');
                 })
@@ -308,7 +364,7 @@
                 .style('opacity', 0)
                 .remove()
 
-            legend.scale(color);
+            legend.scale(color_us);
             svg.select(".legend")
                 .call(legend);
 
@@ -316,36 +372,53 @@
                 subtitle.text('Click a state for details. Double-click to zoom.');
             else
                 subtitle.text('Click a state to zoom');
-
-            isZoomed = false;
         }
 
         function stateZoom(state) {
 
-            var stateCounties = counties.filter(function (d) {
-                return d.id > state.id*1000 && d.id < state.id*1000 + 1000
-            })
+            isZoomed = true;
 
-            var stateDomains = [1, 100, 500, 1000, 5000, 10000, 25000, 50000];
+            stateCounties = counties.filter(function (d) {
+                return d.id > state.id*1000 && d.id < state.id*1000 + 1000
+            });
+
+            // Get state-level domains and extract minimum and maximum values from county-level data
+            var stateDomains = [];
+            var minStateCases = [];
+            var maxStateCases = [];
+            if (currentView == "cases_percapita") {
+                stateDomains = domains_state_cases_percapita;
+                minStateCases = d3.min(stateCounties, function(d) { return d.cases_percapita; } );
+                maxStateCases = d3.max(stateCounties, function(d) { return d.cases_percapita; } );
+            } else if (currentView == "cases") {
+                stateDomains = domains_state_cases;
+                minStateCases = d3.min(stateCounties, function(d) { return d.cases; } );
+                maxStateCases = d3.max(stateCounties, function(d) { return d.cases; } );
+            } else if (currentView == "deaths") {
+                stateDomains = domains_state_deaths;
+                minStateCases = d3.min(stateCounties, function(d) { return d.deaths; } );
+                maxStateCases = d3.max(stateCounties, function(d) { return d.deaths; } );
+            }
 
             // Use the "Less than X" nomenclature when there are only nonzero counts in state view
-            var minStateCases = d3.min(stateCounties, function(d) { return d.cases; } );
             if (minStateCases === 0)
                 idx_start = 0;
             else
                 idx_start = 1;
 
-            // Truncate colormap above the maximum case count when in state view
-            var maxStateCases = d3.max(stateCounties, function(d) { return d.cases; } );
+            // Truncate colormap at index above maximum value in county-level data
             var idx_stop = stateDomains.findIndex(function(x) {
                 return x > maxStateCases;
             });
             
-            if (idx_stop == -1)
+            // Handle edge cases in determining domain range
+            if (idx_stop == -1) {
                 idx_stop = stateDomains.length;
-            else if (idx_stop <= 1)
+                idx_start = 1;
+            } else if (idx_stop <= 1)
                 idx_stop = 2;
 
+            // Define the county-level colormap
             var color_state = d3.scaleThreshold()
                 .domain(stateDomains.slice(idx_start, idx_stop))
                 .range(d3.schemeReds[idx_stop + 1 - idx_start]);
@@ -353,10 +426,17 @@
             var countyPaths = svg.selectAll('.county')
                 .data(stateCounties, function (d) { return d.id });
 
-            var enterCountyPaths = countyPaths.enter().append('path')
+            enterCountyPaths = countyPaths.enter().append('path')
                 .attr('class', 'county')
                 .attr('d', path)
-                .style('fill', function (d) { return color_state(d.cases); })
+                .style('fill', function (d) { 
+                    if (currentView == "cases_percapita")
+                        return color_state(d.cases_percapita);
+                    else if (currentView == "cases")
+                        return color_state(d.cases);
+                    else if (currentView == "deaths")
+                        return color_state(d.deaths);
+                })
                 .style('opacity', 0);
 
             if (isTouch) {
@@ -404,9 +484,96 @@
                 subtitle.text('Click a county for details. Double-click to zoom out.');
             else
                 subtitle.text('Click a county to zoom out. Click another state to swap focus.');
-
-            isZoomed = true;
         }
+
+        // Listen for button press to change displayed data
+        d3.selectAll("div#controls button").on("click", function() {
+
+            currentView = this.id;
+
+            // Update selected control button
+            d3.selectAll('div#controls button').classed("selected", false);
+            d3.select(this).classed("selected", true);
+
+            // Update data shown on map
+            if (isZoomed) {
+                var stateDomains = [];
+                var minStateCases = [];
+                var maxStateCases = [];
+                if (this.id === "cases_percapita") {
+                    stateDomains = domains_state_cases_percapita;
+                    minStateCases = d3.min(stateCounties, function(d) { return d.cases_percapita; } );
+                    maxStateCases = d3.max(stateCounties, function(d) { return d.cases_percapita; } );
+                } else if (this.id === "cases") {
+                    stateDomains = domains_state_cases;
+                    minStateCases = d3.min(stateCounties, function(d) { return d.cases; } );
+                    maxStateCases = d3.max(stateCounties, function(d) { return d.cases; } );
+                } else if (this.id === "deaths") {
+                    stateDomains = domains_state_deaths;
+                    minStateCases = d3.min(stateCounties, function(d) { return d.deaths; } );
+                    maxStateCases = d3.max(stateCounties, function(d) { return d.deaths; } );
+                }
+
+                // Use the "Less than X" nomenclature when there are only nonzero counts in state view
+                if (minStateCases === 0)
+                    idx_start = 0;
+                else
+                    idx_start = 1;
+
+                // Truncate colormap at index above maximum value in county-level data
+                var idx_stop = stateDomains.findIndex(function(x) {
+                    return x > maxStateCases;
+                });
+                
+                // Handle edge cases in determining domain range
+                if (idx_stop == -1) {
+                    idx_stop = stateDomains.length;
+                    idx_start = 1;
+                } else if (idx_stop <= 1)
+                    idx_stop = 2;
+
+                // Define the county-level colormap
+                var color_state = d3.scaleThreshold()
+                    .domain(stateDomains.slice(idx_start, idx_stop))
+                    .range(d3.schemeReds[idx_stop + 1 - idx_start]);    
+
+                if (this.id === "cases_percapita") {
+                    enterCountyPaths.style('fill', function (d) { return color_state(d.cases_percapita); });
+                } else if (this.id === "cases") {
+                    enterCountyPaths.style('fill', function (d) { return color_state(d.cases); });
+                } else if (this.id === "deaths") {
+                    enterCountyPaths.style('fill', function (d) { return color_state(d.deaths); });
+                }
+
+                legend.scale(color_state);
+
+            } else {
+                if (this.id === "cases_percapita") {
+                    statePaths.style('fill', function (d) { return color_us_cases_percapita(d.cases_percapita); });
+                    legend.scale(color_us_cases_percapita);
+                } else if (this.id === "cases") {
+                    statePaths.style('fill', function (d) { return color_us_cases(d.cases); });
+                    legend.scale(color_us_cases);
+                } else if (this.id === "deaths") {
+                    statePaths.style('fill', function (d) { return color_us_deaths(d.deaths); });
+                    legend.scale(color_us_deaths);
+                }
+            }
+
+            if (this.id === "cases_percapita") {
+                color_us = color_us_cases_percapita;
+                legend.title('Cases Per 100,000');
+            } else if (this.id === "cases") {
+                color_us = color_us_cases;
+                legend.title('Cases');
+            } else if (this.id === "deaths") {
+                color_us = color_us_deaths;
+                legend.title('Deaths');
+            }
+
+            // Draw updated legend
+            svg.select(".legend").call(legend);
+        });
 
         function showTooltip(p,d) {
 
