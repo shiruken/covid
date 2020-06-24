@@ -21,6 +21,8 @@
     <meta property="og:url" content="https://covid.csullender.com/">
     <meta property="og:type" content="website">
 
+    <meta name="viewport" content="width=1000px, initial-scale=0.5, maximum-scale=0.5">
+
     <style>
         body { 
             background: #333;
@@ -171,6 +173,27 @@
 
         a:hover, a:active {
             border-bottom: 1px dotted #999;
+        }
+
+        @media (max-width: 1000px) {
+
+            header h1#title {
+                font-size: 3.5em;
+            }
+
+            #controls button {
+                font-size: 1.5em;
+                padding: 10px;
+            }
+
+            h2#instructions {
+                font-size: 1.3em;
+            }
+
+            footer {
+                font-size: 1.8em;
+            }
+
         }
     </style>
 </head>
