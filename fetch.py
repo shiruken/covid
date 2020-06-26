@@ -30,11 +30,6 @@ df_output.loc[df_output['FIPS'] == 11001, 'deaths'] = df_output[df_output['FIPS'
 # Drop all rows where no cases or deaths were reported
 df_output = df_output[~((df_output['cases'] == 0) & (df_output['deaths'] == 0))]
 
-# Calculate the case rate per 100,000 residents
-df_output['cases_percapita'] = df_output['cases']/df_output['population']*100000
-df_output.replace(np.inf, 0, inplace=True)
-
 # Sort the rows and export to file
-df_output.drop(columns='population', inplace=True)
 df_output.sort_values(by=['FIPS'], inplace=True)
 df_output.to_csv('docs/data.csv', index=False, float_format='%.1f')
