@@ -189,6 +189,7 @@
         <h2 id="subtitle"></h2>
     </header>
     <div id="controls">
+        <button type="button" id="hot" title="View hot spots based on change in new cases over last two weeks">Hot Spots</button>
         <button type="button" id="cases" title="View total cases">Cases</button>
         <button type="button" id="cases_percapita" class="selected" title="View cases per capita">Cases Per Capita</button> 
         <button type="button" id="deaths" title="View total deaths">Deaths</button>
@@ -223,10 +224,14 @@
         domains_state_cases_percapita = [1, 100, 250, 500, 750, 1000, 1500, 2000, 5000],
         domains_us_cases = [1000, 5000, 10000, 25000, 50000, 100000, 250000],
         domains_state_cases = [1, 100, 500, 1000, 5000, 10000, 25000, 50000],
+        domains_hot = [0, 0.9, 1.2, 2, 3],
         domains_us_deaths = [50, 100, 500, 1000, 2500, 5000, 10000],
         domains_state_deaths = [1, 10, 50, 100, 500, 1000, 2500, 5000],
         domains_us_deaths_percapita = [1, 5, 10, 25, 50, 75, 100],
         domains_state_deaths_percapita = [1, 5, 10, 25, 50, 75, 100, 200];
+
+    var colors_hot = ['#FDF5F1', '#C1DDE7', '#F0DF9B', '#F4B159', '#EE7632', '#BE2A1D'];
+    var labels_hot = ['Few or No Cases', 'Falling', 'About the Same', '↑ Rising', '↑↑', '↑↑↑'];
 
     // Create the d3 map
     var projection = d3.geoAlbersUsa()
@@ -263,10 +268,12 @@
         var counties = topojson.feature(us, us.objects.counties).features;
 
         var cases = [];
+        var hot = [];
         var population = [];
         var deaths = [];
         data.forEach(function (d) {
             cases[+d.FIPS] = +d.cases;
+            hot[+d.FIPS] = +d.hot;
             population[+d.FIPS] = +d.population;
             deaths[+d.FIPS] = +d.deaths;
         });
@@ -276,6 +283,7 @@
         states.forEach(function (d) {
             d.cases = cases[+d.id] || 0;
             d.cases_percapita = cases[+d.id]/population[+d.id]*100000 || 0.0;
+            d.hot = hot[+d.id] || -1;
             d.deaths = deaths[+d.id] || 0;
             d.deaths_percapita = deaths[+d.id]/population[+d.id]*100000 || 0.0;
             totalCases += d.cases;
@@ -285,6 +293,7 @@
         counties.forEach(function (d) {
             d.cases = cases[+d.id] || 0;
             d.cases_percapita = cases[+d.id]/population[+d.id]*100000 || 0.0;
+            d.hot = hot[+d.id] || -1;
             d.deaths = deaths[+d.id] || 0;
             d.deaths_percapita = deaths[+d.id]/population[+d.id]*100000 || 0.0;
         })
@@ -328,7 +337,8 @@
             .labels(labelGenerate)
             .scale(color)
             .shapePadding(5)
-            .title("Cases Per 100,000");
+            .title("Cases Per 100,000")
+            .titleWidth(150);
 
         svg.append("g")
             .attr("class", "legend")
@@ -358,6 +368,8 @@
                         return color(d.cases_percapita);
                     else if (CURRENT_VIEW == "cases")
                         return color(d.cases);
+                    else if (CURRENT_VIEW == "hot")
+                        return color(d.hot);
                     else if (CURRENT_VIEW == "deaths")
                         return color(d.deaths);
                     else if (CURRENT_VIEW == "deaths_percapita")
@@ -409,6 +421,8 @@
                         return color(d.cases_percapita);
                     else if (CURRENT_VIEW == "cases")
                         return color(d.cases);
+                    else if (CURRENT_VIEW == "hot")
+                        return color(d.hot);
                     else if (CURRENT_VIEW == "deaths")
                         return color(d.deaths);
                     else if (CURRENT_VIEW == "deaths_percapita")
@@ -483,6 +497,9 @@
                 } else if (CURRENT_VIEW == "cases") {
                     countyPaths.style('fill', function (d) { return color(d.cases); });
                     legend.title('Cases');
+                } else if (CURRENT_VIEW == "hot") {
+                    countyPaths.style('fill', function (d) { return color(d.hot); });
+                    legend.title('Change in number of new cases over last two weeks')
                 } else if (CURRENT_VIEW == "deaths") {
                     countyPaths.style('fill', function (d) { return color(d.deaths); });
                     legend.title('Deaths');
@@ -498,6 +515,9 @@
                 } else if (CURRENT_VIEW == "cases") {
                     statePaths.style('fill', function (d) { return color(d.cases); });
                     legend.title('Cases');
+                } else if (CURRENT_VIEW == "hot") {
+                    statePaths.style('fill', function (d) { return color(d.hot); });
+                    legend.title('Change in number of new cases over last two weeks')
                 } else if (CURRENT_VIEW == "deaths") {
                     statePaths.style('fill', function (d) { return color(d.deaths); });
                     legend.title('Deaths');
@@ -508,6 +528,11 @@
             }
 
             // Update the legend
+            if (CURRENT_VIEW == "hot")
+                legend.labels(labels_hot);
+            else
+                legend.labels(labelGenerate)
+
             legend.scale(color);
             svg.select(".legend").call(legend);
 
@@ -520,14 +545,20 @@
                 domains = domains_us_cases_percapita;
             else if (CURRENT_VIEW == "cases")
                 domains = domains_us_cases;
+            else if (CURRENT_VIEW == "hot")
+                domains = domains_hot;
             else if (CURRENT_VIEW == "deaths")
                 domains = domains_us_deaths;
             else if (CURRENT_VIEW == "deaths_percapita")
                 domains = domains_us_deaths_percapita;
 
             var color = d3.scaleThreshold()
-                .domain(domains)
-                .range(d3.schemeReds[domains.length + 1]);
+                .domain(domains);
+
+            if (CURRENT_VIEW == "hot")
+                color.range(colors_hot);
+            else
+                color.range(d3.schemeReds[domains.length + 1]);
 
             return color;
         }
@@ -550,6 +581,12 @@
             } else if (CURRENT_VIEW == "deaths_percapita") {
                 domains = domains_state_deaths_percapita;
                 extent = d3.extent(stateCounties, function(d) { return d.deaths_percapita; } );
+            }
+
+            if (CURRENT_VIEW == "hot") {
+                return d3.scaleThreshold()
+                    .domain(domains_hot)
+                    .range(colors_hot);
             }
 
             // Force the "Less than X" nomenclature when there are only nonzero county counts
