@@ -35,7 +35,7 @@ df.loc[new_cases_1_wk.sum(axis=1) < 20, 'hot'] = -1
 df['deaths'] = df['death'].iloc[:,-1]
 
 df_states = pd.concat([df['fips'], df['cases'], df['hot'], df['deaths']], axis=1, keys=['FIPS', 'cases', 'hot', 'deaths'])
-df_states = df_states.convert_dtypes()
+df_states[['cases', 'deaths']] = df_states[['cases','deaths']].astype(int)
 
 # Calculate the state populations using the county-level data
 df_states['population'] = df_states['FIPS'].apply(lambda x: df_counties[df_counties['FIPS'].between(x*1000, (x + 1)*1000, inclusive=False)]['population'].sum())
