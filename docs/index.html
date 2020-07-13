@@ -125,7 +125,7 @@
             margin: 10px 10px 5px 10px;
         }
 
-        h3.tooltip-subtitle, h5.tooltip-desc {
+        h3.tooltip-subtitle, h5.tooltip-desc, h3.tooltip-hot-title {
             color: #666;
         }
 
@@ -144,6 +144,26 @@
             font-size: 1.0em;
             margin: 5px;
             font-weight: bold;
+        }
+
+        div.section-hot {
+            float: left;
+            width: 33%;
+        }
+        
+        h3.tooltip-hot-title {
+            font-size: 0.8em;
+            margin: 10px 5px 5px 5px; 
+            text-transform: uppercase;
+        }
+
+        h3.tooltip-hot-title.blank {
+            margin: 20px auto 0px auto;
+            width: 200px;
+        }
+
+        h5.tooltip-desc.hot {
+            font-size: 0.8em;
         }
 
         .legend text.legendTitle {
@@ -268,12 +288,14 @@
         var counties = topojson.feature(us, us.objects.counties).features;
 
         var cases = [];
-        var hot = [];
+        var new_cases = [];
+        var old_cases = [];
         var population = [];
         var deaths = [];
         data.forEach(function (d) {
             cases[+d.FIPS] = +d.cases;
-            hot[+d.FIPS] = +d.hot;
+            new_cases[+d.FIPS] = +d.new_cases_last_week;
+            old_cases[+d.FIPS] = +d.new_cases_2_week_ago;
             population[+d.FIPS] = +d.population;
             deaths[+d.FIPS] = +d.deaths;
         });
@@ -283,19 +305,31 @@
         states.forEach(function (d) {
             d.cases = cases[+d.id] || 0;
             d.cases_percapita = cases[+d.id]/population[+d.id]*100000 || 0.0;
-            d.hot = hot[+d.id] || -1;
             d.deaths = deaths[+d.id] || 0;
             d.deaths_percapita = deaths[+d.id]/population[+d.id]*100000 || 0.0;
             totalCases += d.cases;
             totalDeaths += d.deaths;
+
+            if (new_cases[+d.id] >= 20) {
+                d.new_cases = Math.round(new_cases[+d.id] / 7 * 10) / 10;
+                d.old_cases = Math.round(old_cases[+d.id] / 7 * 10) / 10;
+                d.hot = d.new_cases / d.old_cases;
+            } else
+                d.hot = -1;
         });
 
         counties.forEach(function (d) {
             d.cases = cases[+d.id] || 0;
             d.cases_percapita = cases[+d.id]/population[+d.id]*100000 || 0.0;
-            d.hot = hot[+d.id] || -1;
             d.deaths = deaths[+d.id] || 0;
             d.deaths_percapita = deaths[+d.id]/population[+d.id]*100000 || 0.0;
+
+            if (new_cases[+d.id] >= 20) {
+                d.new_cases = Math.round(new_cases[+d.id] / 7 * 10) / 10;
+                d.old_cases = Math.round(old_cases[+d.id] / 7 * 10) / 10;
+                d.hot = d.new_cases / d.old_cases;
+            } else
+                d.hot = -1;
         })
 
         // Update subtitle with the case and deaths counts
@@ -616,10 +650,40 @@
         }
 
         function showTooltip(p,d) {
+            if (CURRENT_VIEW == "hot") {
+                if (d.hot === -1) {
+                    var html = "" + 
+                        "<h2 class='tooltip-title'>" + d.properties.name + "</h2>" +
+                        "<h3 class='tooltip-hot-title blank'>Fewer than 20 new cases over the last week</h3>"
+                } else {
 
-            var options = {minimumFractionDigits: 1, maximumFractionDigits: 1};
-            tooltip.attr("data-id", d.id)
-                .html(
+                    var options_none = {minimumFractionDigits: 0, maximumFractionDigits: 0}; // No decimals if number has 2+ digits
+                    var options_one = {minimumFractionDigits: 1, maximumFractionDigits: 1};  // One decimal if number has <2 digits
+                    var new_cases_formatted = d.new_cases.toLocaleString(undefined, (d.new_cases >= 100 ? options_none : options_one));
+                    var old_cases_formatted = d.old_cases.toLocaleString(undefined, (d.old_cases >= 100 ? options_none : options_one));
+
+                    var rate = (d.hot - 1) * 100;
+                    var rate_formatted = (rate < 0 ? "" : "+") + Math.round(rate);
+
+                    var html = "" + 
+                        "<h2 class='tooltip-title'>" + d.properties.name + "</h2>" +
+                        "<h3 class='tooltip-hot-title'>Daily New Cases (7-Day Average)</h3>" +
+                        "<div class='section-hot'>" +
+                            "<h5 class='tooltip-desc hot'>2 Weeks Ago</h5>" + 
+                            "<div class='tooltip-value'>" + old_cases_formatted + "</div>" + 
+                        "</div>" + 
+                        "<div class='section-hot'>" +
+                            "<h5 class='tooltip-desc hot'>Today</h5>" + 
+                            "<div class='tooltip-value'>" + new_cases_formatted + "</div>" + 
+                        "</div>" + 
+                        "<div class='section-hot'>" +
+                            "<h5 class='tooltip-desc hot'>Rel. Change</h5>" + 
+                            "<div class='tooltip-value'>" + rate_formatted + "%</div>" +
+                        "</div>"
+                }
+            } else {
+                var options = {minimumFractionDigits: 1, maximumFractionDigits: 1};
+                var html = "" + 
                     "<h2 class='tooltip-title'>" + d.properties.name + "</h2>" +
                     "<div class='section'>" +
                         "<h3 class='tooltip-subtitle'>Cases</h3>" + 
@@ -641,7 +705,9 @@
                         "<h5 class='tooltip-desc'>Per 100k</h5>" +
                         "<div class='tooltip-value'>" + d.deaths_percapita.toLocaleString(undefined, options) + "</div>" + 
                     "</div>"
-                );
+            }
+
+            tooltip.attr("data-id", d.id).html(html);
 
             var bounds = d3.select(p).node().getBoundingClientRect();
             var tooltip_width = tooltip.style('width').slice(0,-2);
