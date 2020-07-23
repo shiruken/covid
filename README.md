@@ -13,4 +13,4 @@ https://covid.csullender.com/
 
 ## About the Data
 
-Data from the COVID Tracking Project are used for all state metrics. Data from USAFacts are used for all county metrics. County-level population data from USAFacts is aggregated to calculate the total state population. The "Hot Spot" metric represents the week-over-week change in average daily cases and is intended to showcase the current dynamics of COVID-19 infections (inspired by [a New York Times map](https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html)). Regions with fewer than 20 new cases over the last 7 days are not shaded.
+Data from the COVID Tracking Project are used for all state metrics. Data from USAFacts are used for all county metrics. County-level population data from USAFacts is aggregated to calculate the total state population. The "Hot Spot" metric is the average daily new cases per 100,000 people in the past week and is intended to showcase the current dynamics of COVID-19 infections (inspired by [a New York Times map](https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html)). Regions with fewer than 20 new cases over the last 7 days are not shaded.

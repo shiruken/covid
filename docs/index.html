@@ -244,14 +244,15 @@
         domains_state_cases_percapita = [1, 100, 250, 500, 750, 1000, 1500, 2000, 5000],
         domains_us_cases = [5000, 10000, 25000, 50000, 100000, 250000, 500000],
         domains_state_cases = [1, 100, 500, 1000, 5000, 10000, 25000, 50000],
-        domains_hot = [0, 0.9, 1.1, 2, 3],
         domains_us_deaths = [100, 500, 1000, 2500, 5000, 10000, 20000],
         domains_state_deaths = [1, 10, 50, 100, 500, 1000, 2500, 5000],
         domains_us_deaths_percapita = [1, 10, 25, 50, 75, 100, 150],
         domains_state_deaths_percapita = [1, 5, 10, 25, 50, 75, 100, 200];
 
-    var colors_hot = ['#FDF5F1', '#C1DDE7', '#F0DF9B', '#F4B159', '#EE7632', '#BE2A1D'];
-    var labels_hot = ['Few or No Cases', 'Falling', 'About the Same', '↑ Rising', '↑↑', '↑↑↑'];
+    var domains_hot = [0, 10, 20, 40, 50, 100],
+        colors_hot = d3.schemeReds[domains_hot.length + 1];
+        labels_hot = ["Few or No Cases", "0 to 10", "10 to 19", "20 to 39", "40 to 49", "50 to 99", "More than 100"];
+    colors_hot[0] = "#FFFFFF";
 
     // Create the d3 map
     var projection = d3.geoAlbersUsa()
@@ -304,18 +305,19 @@
         var totalDeaths = 0;
         states.forEach(function (d) {
             d.cases = cases[+d.id] || 0;
-            d.cases_percapita = cases[+d.id]/population[+d.id]*100000 || 0.0;
+            d.cases_percapita = cases[+d.id]/population[+d.id]*100000 || 0.0;            
             d.deaths = deaths[+d.id] || 0;
             d.deaths_percapita = deaths[+d.id]/population[+d.id]*100000 || 0.0;
             totalCases += d.cases;
             totalDeaths += d.deaths;
 
             if (new_cases[+d.id] >= 20) {
-                d.new_cases = Math.round(new_cases[+d.id] / 7 * 10) / 10;
-                d.old_cases = Math.round(old_cases[+d.id] / 7 * 10) / 10;
-                d.hot = d.new_cases / d.old_cases;
-            } else
-                d.hot = -1;
+                d.new_cases_percapita = new_cases[+d.id] / 7 / population[+d.id]*100000;
+                d.old_cases_percapita = old_cases[+d.id] / 7 / population[+d.id]*100000;
+            } else {
+                d.new_cases_percapita = -1;
+                d.old_cases_percapita = -1;
+            }
         });
 
         counties.forEach(function (d) {
@@ -325,11 +327,12 @@
             d.deaths_percapita = deaths[+d.id]/population[+d.id]*100000 || 0.0;
 
             if (new_cases[+d.id] >= 20) {
-                d.new_cases = Math.round(new_cases[+d.id] / 7 * 10) / 10;
-                d.old_cases = Math.round(old_cases[+d.id] / 7 * 10) / 10;
-                d.hot = d.new_cases / d.old_cases;
-            } else
-                d.hot = -1;
+                d.new_cases_percapita = new_cases[+d.id] / 7 / population[+d.id]*100000;
+                d.old_cases_percapita = old_cases[+d.id] / 7 / population[+d.id]*100000;
+            } else {
+                d.new_cases_percapita = -1;
+                d.old_cases_percapita = -1;
+            }
         })
 
         // Update subtitle with the case and deaths counts
@@ -403,7 +406,7 @@
                     else if (CURRENT_VIEW == "cases")
                         return color(d.cases);
                     else if (CURRENT_VIEW == "hot")
-                        return color(d.hot);
+                        return color(d.new_cases_percapita);
                     else if (CURRENT_VIEW == "deaths")
                         return color(d.deaths);
                     else if (CURRENT_VIEW == "deaths_percapita")
@@ -456,7 +459,7 @@
                     else if (CURRENT_VIEW == "cases")
                         return color(d.cases);
                     else if (CURRENT_VIEW == "hot")
-                        return color(d.hot);
+                        return color(d.new_cases_percapita);
                     else if (CURRENT_VIEW == "deaths")
                         return color(d.deaths);
                     else if (CURRENT_VIEW == "deaths_percapita")
@@ -532,8 +535,8 @@
                     countyPaths.style('fill', function (d) { return color(d.cases); });
                     legend.title('Cases');
                 } else if (CURRENT_VIEW == "hot") {
-                    countyPaths.style('fill', function (d) { return color(d.hot); });
-                    legend.title('Change in number of new cases over last two weeks')
+                    countyPaths.style('fill', function (d) { return color(d.new_cases_percapita); });
+                    legend.title('Average Daily New Cases Per 100,000 in the Past Week')
                 } else if (CURRENT_VIEW == "deaths") {
                     countyPaths.style('fill', function (d) { return color(d.deaths); });
                     legend.title('Deaths');
@@ -550,8 +553,8 @@
                     statePaths.style('fill', function (d) { return color(d.cases); });
                     legend.title('Cases');
                 } else if (CURRENT_VIEW == "hot") {
-                    statePaths.style('fill', function (d) { return color(d.hot); });
-                    legend.title('Change in number of new cases over last two weeks')
+                    statePaths.style('fill', function (d) { return color(d.new_cases_percapita); });
+                    legend.title('Average Daily New Cases Per 100,000 in the Past Week')
                 } else if (CURRENT_VIEW == "deaths") {
                     statePaths.style('fill', function (d) { return color(d.deaths); });
                     legend.title('Deaths');
@@ -574,31 +577,37 @@
 
         // Generate colormap for state-level national view
         function calculateColor() {
+
+            if (CURRENT_VIEW == "hot") {
+                return d3.scaleThreshold()
+                    .domain(domains_hot)
+                    .range(colors_hot);
+            }
+
             var domains = [];
             if (CURRENT_VIEW == "cases_percapita")
                 domains = domains_us_cases_percapita;
             else if (CURRENT_VIEW == "cases")
                 domains = domains_us_cases;
-            else if (CURRENT_VIEW == "hot")
-                domains = domains_hot;
             else if (CURRENT_VIEW == "deaths")
                 domains = domains_us_deaths;
             else if (CURRENT_VIEW == "deaths_percapita")
                 domains = domains_us_deaths_percapita;
 
             var color = d3.scaleThreshold()
-                .domain(domains);
-
-            if (CURRENT_VIEW == "hot")
-                color.range(colors_hot);
-            else
-                color.range(d3.schemeReds[domains.length + 1]);
-
+                .domain(domains)
+                .range(d3.schemeReds[domains.length + 1]);
             return color;
         }
 
         // Generate colormap for county-level state view
         function calculateStateColor() {
+
+            if (CURRENT_VIEW == "hot") {
+                return d3.scaleThreshold()
+                    .domain(domains_hot)
+                    .range(colors_hot);
+            }
 
             // Get state-level domains and extract minimum and maximum values from county-level data
             var domains = [];
@@ -615,12 +624,6 @@
             } else if (CURRENT_VIEW == "deaths_percapita") {
                 domains = domains_state_deaths_percapita;
                 extent = d3.extent(stateCounties, function(d) { return d.deaths_percapita; } );
-            }
-
-            if (CURRENT_VIEW == "hot") {
-                return d3.scaleThreshold()
-                    .domain(domains_hot)
-                    .range(colors_hot);
             }
 
             // Force the "Less than X" nomenclature when there are only nonzero county counts
@@ -650,39 +653,31 @@
         }
 
         function showTooltip(p,d) {
+            var options = {minimumFractionDigits: 1, maximumFractionDigits: 1};
             if (CURRENT_VIEW == "hot") {
-                if (d.hot === -1) {
+                if (d.new_cases_percapita === -1) {
                     var html = "" + 
                         "<h2 class='tooltip-title'>" + d.properties.name + "</h2>" +
                         "<h3 class='tooltip-hot-title blank'>Fewer than 20 new cases over the last week</h3>"
                 } else {
-
-                    var options_none = {minimumFractionDigits: 0, maximumFractionDigits: 0}; // No decimals if number has 2+ digits
-                    var options_one = {minimumFractionDigits: 1, maximumFractionDigits: 1};  // One decimal if number has <2 digits
-                    var new_cases_formatted = d.new_cases.toLocaleString(undefined, (d.new_cases >= 100 ? options_none : options_one));
-                    var old_cases_formatted = d.old_cases.toLocaleString(undefined, (d.old_cases >= 100 ? options_none : options_one));
-
-                    var rate = (d.hot - 1) * 100;
-                    var rate_formatted = (rate < 0 ? "" : "+") + Math.round(rate);
-
+                    var rate = (d.new_cases_percapita / d.old_cases_percapita - 1) * 100;
                     var html = "" + 
                         "<h2 class='tooltip-title'>" + d.properties.name + "</h2>" +
-                        "<h3 class='tooltip-hot-title'>Daily New Cases (7-Day Average)</h3>" +
+                        "<h3 class='tooltip-hot-title'>Daily Cases Per 100k (7-Day Avg.)</h3>" +
                         "<div class='section-hot'>" +
                             "<h5 class='tooltip-desc hot'>2 Weeks Ago</h5>" + 
-                            "<div class='tooltip-value'>" + old_cases_formatted + "</div>" + 
+                            "<div class='tooltip-value'>" + d.old_cases_percapita.toLocaleString(undefined, options) + "</div>" + 
                         "</div>" + 
                         "<div class='section-hot'>" +
                             "<h5 class='tooltip-desc hot'>Today</h5>" + 
-                            "<div class='tooltip-value'>" + new_cases_formatted + "</div>" + 
+                            "<div class='tooltip-value'>" + d.new_cases_percapita.toLocaleString(undefined, options) + "</div>" + 
                         "</div>" + 
                         "<div class='section-hot'>" +
                             "<h5 class='tooltip-desc hot'>Rel. Change</h5>" + 
-                            "<div class='tooltip-value'>" + rate_formatted + "%</div>" +
+                            "<div class='tooltip-value'>" + ((rate < 0 ? "" : "+") + Math.round(rate)) + "%</div>" +
                         "</div>"
                 }
             } else {
-                var options = {minimumFractionDigits: 1, maximumFractionDigits: 1};
                 var html = "" + 
                     "<h2 class='tooltip-title'>" + d.properties.name + "</h2>" +
                     "<div class='section'>" +
