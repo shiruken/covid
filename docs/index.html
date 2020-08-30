@@ -756,7 +756,7 @@
             if (x.domain[0] === 1)
                 return 'None';
             else
-                return `Less than ${x.domain[0].toLocaleString()}`;
+                return `Fewer than ${x.domain[0].toLocaleString()}`;
         } else if (x.i === x.genLength - 1) {
             const values = x.generatedLabels[x.i].split(` ${x.labelDelimiter} `);
             return `More than ${parseInt(values[0]).toLocaleString()}`;
