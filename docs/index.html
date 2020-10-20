@@ -106,6 +106,10 @@
             color: #999;
         }
 
+        footer p#last_updated {
+            color: #666;
+        }
+
         path {
             stroke: #333;
             stroke-width: 1;
@@ -247,6 +251,7 @@
             and <a href="https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/" target="_blank">USAFacts</a> · 
             <a href="https://github.com/shiruken/covid_choropleth" target="_blank">View on GitHub</a>
         </p>
+        <p id="last_updated"></p>
     </footer>
 
     <script src="https://d3js.org/d3.v5.min.js" type="text/javascript"></script>
@@ -732,6 +737,12 @@
                 .duration(500)
                 .style("opacity", 0);	
         }
+    });
+
+    // Inject last repository update time
+    d3.json("https://api.github.com/repos/shiruken/covid").then(function(data) {
+        ts = new Date(data['pushed_at'])
+        d3.select("#last_updated").text("Last Updated " + ts.toLocaleString());
     });
 
     // Update instructions text depending on zoom level and device touch compatibility
