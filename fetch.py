@@ -9,8 +9,6 @@ df_population = pd.read_csv("https://usafactsstatic.blob.core.windows.net/public
 df_cases['cases'] = df_cases.iloc[:,-1]
 df_cases['new_cases_last_week'] = df_cases.iloc[:,-1] - df_cases.iloc[:,-9]
 df_cases['new_cases_2_week_ago'] = df_cases.iloc[:,-16] - df_cases.iloc[:,-24]
-
-df_deaths = df_deaths.iloc[:-1,:-1] # Fix for extra row and column in dataset
 df_deaths['deaths'] = df_deaths.iloc[:,-1]
 
 df = pd.merge(df_cases, df_deaths, how='left', on=['countyFIPS', 'stateFIPS', 'State'])
