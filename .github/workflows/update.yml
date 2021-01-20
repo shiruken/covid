@@ -4,8 +4,8 @@ on:
   #  - cron: '*/30 * * * *'
   workflow_dispatch:
 jobs:
-  scrape-data:
-    name: Scrape
+  update-data:
+    name: Update COVID-19 Data
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
