@@ -4,8 +4,8 @@ on:
   #  - cron: '*/30 * * * *'
   workflow_dispatch:
 jobs:
-  update-data:
-    name: Update COVID-19 Data
+  scrape-data:
+    name: Scrape
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -20,3 +20,7 @@ jobs:
           pip install -r requirements.txt
       - name: Run Script
         run: python fetch.py
+      - name: Commit Changes to Repository
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Data Updated
