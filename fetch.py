@@ -11,7 +11,7 @@ df_cases['new_cases_last_week'] = df_cases.iloc[:,-1] - df_cases.iloc[:,-9]
 df_cases['new_cases_2_week_ago'] = df_cases.iloc[:,-16] - df_cases.iloc[:,-24]
 df_deaths['deaths'] = df_deaths.iloc[:,-1]
 
-df = pd.merge(df_cases, df_deaths, how='left', on=['countyFIPS', 'stateFIPS', 'State'])
+df = pd.merge(df_cases, df_deaths, how='left', on=['countyFIPS', 'StateFIPS', 'State'])
 df = pd.merge(df, df_population, how='left', on=['countyFIPS', 'State'])
 df.drop(df[df['County Name_x'] == 'Grand Princess Cruise Ship'].index, inplace=True)
 df.drop(df[df['County Name_x'] == 'New York City Unallocated/Probable'].index, inplace=True)
