@@ -247,9 +247,7 @@
     <div id="map"></div>
     <footer>
         <p>
-            Data from 
-            <a href="https://covidtracking.com/" target="_blank">COVID Tracking Project</a>  
-            and <a href="https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/" target="_blank">USAFacts</a> · 
+            Data from <a href="https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/" target="_blank">USAFacts</a> · 
             <a href="https://github.com/shiruken/covid_choropleth" target="_blank">View on GitHub</a>
         </p>
         <p id="last_updated"></p>
@@ -269,15 +267,15 @@
     var CURRENT_VIEW = "cases_percapita";
 
     // Define colormap thresholds for each data view
-    const domains_us_cases_percapita = [2000, 3000, 4000, 5000, 7500, 10000, 12000],
-        domains_state_cases_percapita = [500, 1000, 1500, 2000, 2500, 5000, 7500, 10000],
-        domains_us_cases = [10000, 25000, 50000, 100000, 250000, 500000, 750000, 1000000],
+    const domains_us_cases_percapita = [4000, 6000, 8000, 10000, 12000, 14000],
+        domains_state_cases_percapita = [1, 1000, 2000, 5000, 7500, 10000, 12500, 15000],
+        domains_us_cases = [50000, 100000, 250000, 500000, 750000, 1e6, 2e6, 3e6],
         domains_state_cases = [1, 100, 500, 1000, 5000, 10000, 25000, 50000, 100000],
         domains_hot = [0, 10, 20, 40, 50, 100, 150],
-        domains_us_deaths = [500, 1000, 2500, 5000, 10000, 20000, 30000],
-        domains_state_deaths = [1, 10, 50, 100, 500, 1000, 2500, 5000, 7500],
-        domains_us_deaths_percapita = [25, 50, 75, 100, 125, 150, 175, 200],
-        domains_state_deaths_percapita = [1, 10, 25, 50, 75, 100, 200, 300, 400];
+        domains_us_deaths = [500, 1000, 2500, 5000, 10000, 25000, 50000],
+        domains_state_deaths = [1, 50, 100, 500, 1000, 2500, 5000, 7500, 10000],
+        domains_us_deaths_percapita = [50, 75, 100, 125, 150, 175, 200, 250],
+        domains_state_deaths_percapita = [1, 50, 75, 100, 200, 300, 400, 500];
 
     const labels_hot = ["Few or No Cases", "0 to 10", "10 to 19", "20 to 39", "40 to 49", "50 to 99", "100 to 149", "More than 150"];
 
@@ -770,20 +768,24 @@
 
     // Helper function for generating the legend entry labels
     function labelGenerate(x) {
+        const values = x.generatedLabels[x.i].split(` ${x.labelDelimiter} `);
         if (x.i === 0) {
             if (x.domain[0] === 1)
                 return 'None';
             else
                 return `Fewer than ${x.domain[0].toLocaleString()}`;
         } else if (x.i === x.genLength - 1) {
-            const values = x.generatedLabels[x.i].split(` ${x.labelDelimiter} `);
-            if (values[0] >= 1e6)
-                return `More than 1 million`;
+            if (values[0] >= 3e6)
+                return `More than 3 million`;
             else
                 return `More than ${parseInt(values[0]).toLocaleString()}`;
         } else {
-            const values = x.generatedLabels[x.i].split(` ${x.labelDelimiter} `);
-            return `${x.domain[(x.i - 1)].toLocaleString()} to ${(x.domain[x.i] - 1).toLocaleString()}`;
+            if (values[0] == 1e6 && values[1] == 2e6)
+                return `1 to 2 million`;
+            else if (values[0] == 2e6 && values[1] == 3e6)
+                return `2 to 3 million`;
+            else
+                return `${x.domain[(x.i - 1)].toLocaleString()} to ${(x.domain[x.i] - 1).toLocaleString()}`;
         }
     }
 
