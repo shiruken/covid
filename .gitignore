@@ -3,4 +3,3 @@
 *.log
 env/
 .direnv/
-*.ipynb
