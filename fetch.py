@@ -1,16 +1,26 @@
-import numpy as np
+import requests
+from io import StringIO
 import pandas as pd
+import numpy as np
 
 # Load county-level data from USAFacts
-df_cases = pd.read_csv("https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_confirmed_usafacts.csv")
+headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:66.0) Gecko/20100101 Firefox/66.0"}
+
+url = "https://static.usafacts.org/public/data/covid-19/covid_confirmed_usafacts.csv"
+r = requests.get(url, headers=headers)
+df_cases = pd.read_csv(StringIO(r.text))
 df_cases['cases'] = df_cases.iloc[:,-1]
 df_cases['new_cases_last_week'] = df_cases.iloc[:,-1] - df_cases.iloc[:,-9]
 df_cases['new_cases_2_week_ago'] = df_cases.iloc[:,-16] - df_cases.iloc[:,-24]
 
-df_deaths = pd.read_csv("https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_deaths_usafacts.csv")
+url = "https://static.usafacts.org/public/data/covid-19/covid_deaths_usafacts.csv"
+r = requests.get(url, headers=headers)
+df_deaths = pd.read_csv(StringIO(r.text))
 df_deaths['deaths'] = df_deaths.iloc[:,-1]
 
-df_population = pd.read_csv("https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_county_population_usafacts.csv")
+url = "https://static.usafacts.org/public/data/covid-19/covid_county_population_usafacts.csv"
+r = requests.get(url, headers=headers)
+df_population = pd.read_csv((StringIO(r.text)))
 
 df = pd.merge(df_cases, df_deaths, how='left', on=['countyFIPS', 'StateFIPS', 'State'])
 df = pd.merge(df, df_population, how='left', on=['countyFIPS', 'State'])
