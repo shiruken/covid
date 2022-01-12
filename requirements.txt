@@ -1,5 +1,5 @@
 certifi==2021.10.8
-charset-normalizer==2.0.9
+charset-normalizer==2.0.10
 idna==3.3
 lxml==4.7.1
 numpy==1.21.5
