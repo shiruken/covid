@@ -230,7 +230,7 @@
 </head>
 <body>
 
-    <a id="badge" href="https://covid-texas.csullender.com/">Texas Hospital Tracker</a>
+    <a id="badge" href="https://covid-texas.csullender.com/" data-umami-event="texas-button-click"">Texas Hospital Tracker</a>
 
     <header>
         <h1 id="title">Zoomable COVID-19 Tracker</h1>
@@ -457,6 +457,7 @@
             svg.select(".legend").call(legend);
 
             updateInstructionsText();
+            umami.track("state-unzoom");
         }
 
         // Zoom in from state-level national view to county-level state view
@@ -538,6 +539,7 @@
                 .remove();
 
             updateInstructionsText();
+            umami.track("state-zoom", { state: state['properties']['name'] });
         }
 
         // Listen for button press to change displayed data
@@ -598,6 +600,7 @@
             legend.scale(color);
             svg.select(".legend").call(legend);
 
+            umami.track(CURRENT_VIEW + "-button-click");
         });
 
         // Generate colormap for state-level national view
@@ -818,7 +821,7 @@
 
     <script defer data-domain="covid.csullender.com,/csullender.com" src="https://p.csullender.com/js/script.outbound-links.js"></script>
 
-    <script async defer data-website-id="b17291a4-fa1c-489c-a4d5-1674d4b0bc4c" src="https://u.csullender.com/u.js"></script>
+    <script async defer src="https://u.csullender.com/u.js" data-website-id="b17291a4-fa1c-489c-a4d5-1674d4b0bc4c" data-domain="covid.csullender.com"></script> 
 
 </body>
 </html>
